@@ -1,0 +1,7 @@
+*.swp
+*.o
+*.so
+*.c
+*.pyc
+*.DS_Store
+*.cache
