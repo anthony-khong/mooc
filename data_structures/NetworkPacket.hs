@@ -1,14 +1,12 @@
+import           Control.Applicative
 import           Control.Monad
+import           Data.Monoid
 
 type BSize = Int
-type ATime = Int
-type PTime = Int
-type Packet = (ATime, PTime)
-type Queue = (Int, [Packet])
-type Outcome = Int
-
-dropped :: Int
-dropped = (-1)
+type ArrivalT = Int
+type ProcessT = Int
+type Packet = (ArrivalT, ProcessT)
+type Queue = (Int, [ProcessT])
 
 newtype Logged a = Logged { runWriter :: (a, [Int]) } deriving (Show)
 
@@ -23,43 +21,49 @@ instance Applicative Logged where
     pure x = Logged (x, [])
     Logged (f, fLogs) <*> Logged (x, xLogs) = Logged (f x, fLogs ++ xLogs)
 
+dropped :: Int
+dropped = (-1)
+
 {---------------------------------------------------------------------}
 
 main :: IO ()
 main = do
     (bSize, nPacks) <- fmap parsePair getLine
     packets <- replicateM nPacks (fmap parsePair getLine)
-    {-print (solve bSize packets)-}
-    print ()
+    let (Logged (_, logs)) = solve bSize packets
+    mapM_ print logs
 
 parsePair :: String -> (Int, Int)
 parsePair str = (x, y) where [x, y] = map read . words $ str
 
-{-solve :: BSize -> [Packet] -> [Outcome]-}
-{-solve bSize packets = scanl (processPacket bSize) emptyQueue packets-}
-    {-where emptyQueue = []-}
+solve :: BSize -> [Packet] -> Logged Queue
+solve bSize packets = foldl process emptyQueue packets
+    where emptyQueue = return (0, [])
+          process queue packet = (queue >>= processPacket bSize packet)
 
-processPacket :: BSize -> Queue -> Packet -> Logged (Int, Queue)
-processPacket bSize queue p@(aTime, _)
-  | bSize < length aQueue = Logged ((aTime, aQueue), [dropped])
-  | otherwise = Logged ((aTime, aQueue ++ [p]), [aTime + fTime])
-  where aQueue = queueAtArrival queue aTime
-        fTime = sum (map snd aQueue)
+processPacket :: BSize -> Packet -> Queue -> Logged Queue
+processPacket bSize (aTime, pTime) queue
+  | bSize <= length qs' = Logged (queue', [dropped])
+  | otherwise = Logged ((start', qs' ++ [pTime]), [beginTime])
+  where queue'@(start', qs') = fastForward queue aTime
+        beginTime = start' + sum qs'
 
-{-DEBUG: What's the state of the queue when the packet arrives? This function should just fast-forward the queue. -}
-queueAtArrival :: Queue -> ATime -> Queue
-queueAtArrival (sTime, qs) aTime =
-    let pTimes = map snd qs
-        fTimes = scanl (+) sTime $ pTimes
-        lenQueue = length . filter (>aTime) $ fTimes
-     in drop (length qs - lenQueue) qs
+fastForward :: Queue -> ArrivalT -> Queue
+fastForward (start, qs) aTime =
+    let finTimes = tail $ scanl (+) start qs
+        nFins = length $ filter (<=aTime) finTimes
+        (fqs, qs') = splitAt nFins qs
+        start' = if null qs' then aTime else start + sum fqs
+    in (start', qs')
 
 {-
 bSize = 4
-queue@(sTime, qs) = (10, [(3, 2), (5, 5), (6, 10), (8, 10)])
-packet@(aTime, pTime) = (15, 1)
-{-processPacket bSize (sTime, qs) packet-}
+queue@(start, qs) = (10, [5, 2, 10, 10])
+packet@(aTime, process) = (15, 1)
 
-aQueue = queueAtArrival queue aTime
+queue'@(start', qs') = fastForward queue aTime
 fTime = sum (map snd aQueue)
+
+processPacket bSize (start, qs) packet
+
 -}
