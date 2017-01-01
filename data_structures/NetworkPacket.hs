@@ -8,8 +8,10 @@ type Arr a = S.Seq a
 type BSize = Int
 type ArrivalT = Int
 type ProcessT = Int
+type StartT = Int
+type EndT = Int
 type Packet = (ArrivalT, ProcessT)
-type Queue = (Int, Arr ProcessT)
+type Queue = (StartT, EndT, Arr ProcessT)
 
 newtype Logged a = Logged { runWriter :: (a, Arr Int) } deriving (Show)
 
@@ -47,32 +49,27 @@ parsePair str = (x, y) where [x, y] = map read . words $ str
 
 solve :: BSize -> [Packet] -> Logged Queue
 solve bSize packets = foldl process emptyQueue packets
-    where emptyQueue = return (0, S.empty)
+    where emptyQueue = return (0, 0, S.empty)
           process queue packet = (queue >>= processPacket bSize packet)
 
 processPacket :: BSize -> Packet -> Queue -> Logged Queue
 processPacket bSize (aTime, pTime) queue
   | bSize <= S.length qs' = Logged (queue', singleton dropped)
-  | otherwise = Logged ((start', qs' S.|> pTime), singleton beginTime)
-  where queue'@(start', qs') = fastForward queue aTime
-        beginTime = start' + sum' qs'
+  | otherwise = Logged (queueIfProcessed, singleton beginTime)
+  where queue'@(start', end', qs') = fastForward queue aTime
+        beginTime = start' + end'
+        queueIfProcessed = (start', end' + pTime, qs' S.|> pTime)
 
 fastForward :: Queue -> ArrivalT -> Queue
-fastForward (start, qs) aTime =
+fastForward queue@(start, end, qs) aTime =
+    let nPacks = nPacksFinishedBeforeArrival queue aTime
+        (finished, qs') = S.splitAt nPacks qs
+        timeToFinish = sum' finished
+        start' = if S.null qs' then aTime else start + timeToFinish
+        end' = end - timeToFinish
+     in (start', end', qs')
+
+nPacksFinishedBeforeArrival :: Queue -> ArrivalT -> Int
+nPacksFinishedBeforeArrival (start, _, qs) aTime =
     let finTimes = S.drop 1 $ S.scanl (+) start qs
-        nFins = S.length $ S.takeWhileL (<=aTime) finTimes
-        (fqs, qs') = S.splitAt nFins qs
-        start' = if S.null qs' then aTime else start + sum' fqs
-    in (start', qs')
-
-{-
-bSize = 4
-queue@(start, qs) = (10, [5, 2, 10, 10])
-packet@(aTime, process) = (15, 1)
-
-queue'@(start', qs') = fastForward queue aTime
-fTime = sum (map snd aQueue)
-
-processPacket bSize (start, qs) packet
-
--}
+     in S.length $ S.takeWhileL (<=aTime) finTimes
