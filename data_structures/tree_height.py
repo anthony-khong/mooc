@@ -20,9 +20,9 @@ class Tree(object):
         self.parent = parent
         parent.children.append(self)
 
-    def slow_height(self):
+    def get_height(self):
         if self.children:
-            return 1 + max([c.slow_height() for c in self.children])
+            return 1 + max([c.get_height() for c in self.children])
         else:
             return 1
 
