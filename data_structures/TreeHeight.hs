@@ -19,28 +19,19 @@ main = do
 parseInts :: String -> [Int]
 parseInts = map read . words
 
-toArray :: [a] -> Arr a
-toArray xs = A.listArray (0, length xs - 1) xs
-
-aLength :: Arr a -> Int
-aLength = (+1) . negate . uncurry (-) . A.bounds
-
-sMaximum :: (Ord a, Bounded a) => Seq a -> a
-sMaximum = S.foldlWithIndex (\x _ y -> max x y) minBound
-
-fromList :: [Int] -> Tree Int
-fromList xs = fromList' root table
-    where table = makeLookUpTable . toArray $ xs
-          (Just root) = elemIndex (-1) xs
-
-fromList' :: Int -> Table -> Tree Int
-fromList' root table = subtree root
-    where subtree x = Node x (fmap subtree (table A.! x))
-
 height :: Tree a -> Int
 height (Node _ ts)
   | S.null ts = 1
   | otherwise = 1 + sMaximum (fmap height ts)
+
+fromList :: [Int] -> Tree Int
+fromList xs = fromTable root table
+    where table = makeLookUpTable . toArray $ xs
+          (Just root) = elemIndex (-1) xs
+
+fromTable :: Int -> Table -> Tree Int
+fromTable root table = subtree root
+    where subtree x = Node x (fmap subtree (table A.! x))
 
 makeLookUpTable :: Arr Int -> Table
 makeLookUpTable xs = STA.runSTArray $ do
@@ -55,7 +46,11 @@ makeLookUpTable xs = STA.runSTArray $ do
                STA.writeArray table parentIx (children S.|> i)
     return table
 
-{-
-xs = [4,-1,4,1,1]
-xs = [8, 8, 5, 6, 7, 3, 1, 6, -1, 5]
--}
+toArray :: [a] -> Arr a
+toArray xs = A.listArray (0, length xs - 1) xs
+
+aLength :: Arr a -> Int
+aLength = (+1) . negate . uncurry (-) . A.bounds
+
+sMaximum :: (Ord a, Bounded a) => Seq a -> a
+sMaximum = S.foldlWithIndex (\x _ y -> max x y) minBound
