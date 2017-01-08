@@ -8,6 +8,9 @@ type Arr a = A.Array Int a
 type BSTArr s a = ST s (STA.STArray s Int a)
 type STArr s a = STA.STArray s Int a
 
+{-TODO: check correctness-}
+{-TODO: swap ST Array to IO Array-}
+
 main :: IO ()
 main = do
     _ <- getLine
