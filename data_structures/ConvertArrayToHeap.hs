@@ -1,21 +1,22 @@
 import           Control.Monad
 import qualified Data.Array    as A
 import qualified Data.Array.IO as MA
+import           Data.Foldable (toList)
 import           Data.List
+import qualified Data.Sequence as S
 
 type Arr a = A.Array Int a
+type Seq a = S.Seq a
 type MArr a = MA.IOArray Int a
-type HMArr a = IO (MArr a, [(Int, Int)])
+type HMArr a = IO (MArr a, Seq (Int, Int))
 
 main :: IO ()
 main = do
     _ <- getLine
     xs <- getInts
-    (heap, hs) <- buildHeap xs
-    heap' <- mapM (MA.readArray heap) [0..4]
-    print heap'
-    print (length hs)
-    mapM_ printSwap (reverse hs)
+    (_, hs) <- buildHeap xs
+    print (S.length hs)
+    mapM_ printSwap (toList hs)
 
 getInts :: IO [Int]
 getInts = getLine >>= return . map read . words
@@ -27,8 +28,8 @@ buildHeap :: [Int] -> HMArr Int
 buildHeap xs = buildHeap' initHistArr initIter
     where initHistArr = do
             initArr <- toSTArr . toArray $ xs
-            return (initArr, [])
-          initIter = (length xs `div` 2) - 1
+            return (initArr, S.empty)
+          initIter = (length xs `div` 2) + 1
 
 buildHeap' :: HMArr Int -> Int -> HMArr Int
 buildHeap' xs i =
@@ -53,7 +54,9 @@ siftDown i hxs = do
        then hxs
        else do
            xs' <- (return xs) >>= swapIndex i j
-           siftDown j (return (xs', (i,j):hs))
+           let hs' = hs S.|> (i, j)
+               hxs' = return (xs', hs')
+           siftDown j hxs'
 
 getSwapIx :: [Int] -> MArr Int -> IO Int
 getSwapIx ixs xs = do
