@@ -29,17 +29,13 @@ def parse_vertices_from_input():
 class CycleTracker(object):
     def __init__(self, vertices):
         self.explored = {k: False for k in vertices}
-        self.unvisited = list(vertices)
-        self.post_count = {k: None for k in vertices}
-        self.current_post_count = 0
+        self.post_order = []
 
     def pre_visit(self, key):
         self.explored[key] = True
 
     def post_visit(self, key):
-        self.unvisited.remove(key)
-        self.current_post_count = self.current_post_count + 1
-        self.post_count[key] = self.current_post_count
+        self.post_order.insert(0, key)
 
     def explore(self, vertices, key):
         self.pre_visit(key)
@@ -49,36 +45,33 @@ class CycleTracker(object):
         self.post_visit(key)
 
     def get_result(self, vertices):
-        for key, vertex in vertices.items():
-            post_counts = [self.post_count[k] for k in vertex.outgoing]
-            max_post_count = max(post_counts) if post_counts else 0
-            if self.post_count[key] < max_post_count:
-                return True
-        return False
+        return ' '.join(str(x) for x in self.post_order)
 
 if __name__ == '__main__':
     vertices = parse_vertices_from_input()
     tracker = CycleTracker(vertices)
-    while tracker.unvisited:
-        next_key = tracker.unvisited[0]
-        tracker.explore(vertices, next_key)
-    print(int(tracker.get_result(vertices)))
+    for key in vertices:
+        if not tracker.explored[key]:
+            tracker.explore(vertices, key)
+    print(tracker.get_result(vertices))
 
 '''
 
-4 4
+4 3
 1 2
 4 1
-2 3
+3 1
+
+4 1
 3 1
 
 5 7
-1 2
-2 3
-1 3
-3 4
-1 4
-2 5
-3 5
+2 1
+3 2
+3 1
+4 3
+4 1
+5 2
+5 3
 
 '''
