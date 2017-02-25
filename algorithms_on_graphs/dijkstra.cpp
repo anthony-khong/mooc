@@ -8,13 +8,26 @@ struct Edge {
     int weight;
 };
 
+Edge create_edge(int key, int weight) {
+    Edge edge;
+    edge.key = key;
+    edge.weight = weight;
+    return edge;
+}
+
 class Vertex {
     public:
         int key;
         std::vector<Edge> incoming;
         std::vector<Edge> outgoing;
-        std::map<int,int> weights;
 };
+
+Vertex create_singleton_vertex(int key) {
+    Vertex vertex;
+    vertex.key = key;
+    std::vector<Edge> incoming, outgoing;
+    return vertex;
+}
 
 template <typename T>
 std::string to_str(T x) {
@@ -29,40 +42,48 @@ std::string to_str(Edge edge) {
 
 template <typename T>
 std::string vector_to_str(std::vector<T> xs) {
-    std::string result = "Vector[";
+    std::string result = "[";
     for (std::size_t i = 0; i < xs.size(); ++i) {
         result.append(to_str(xs[i]));
         if (i != (xs.size() - 1)) {
             result.append(", ");
         }
     }
-    result.append("]\n");
+    result.append("]");
     return result;
 }
 
-std::string vertex_to_str(Vertex vertex) {
+std::string to_str(Vertex vertex) {
     std::string key_str = to_str(vertex.key);
     std::string incoming_str = vector_to_str(vertex.incoming);
     std::string outgoing_str = vector_to_str(vertex.outgoing);
 
-    return "";
+    return "V(" + key_str + ")(in=" + incoming_str + ", out=" + outgoing_str + ")";
 }
 
+std::map<int,Vertex> parse_vertices() {
+    int n_vertices, n_edges;
+    std::cin >> n_vertices >> n_edges;
+    std::map<int,Vertex> vertices;
+    for (int i = 0; i < n_vertices; ++i) {
+        vertices[i] = create_singleton_vertex(i + 1);
+    }
+    for (int j = 0; j < n_edges; ++j) {
+        int u, v, weight;
+        std::cin >> u >> v >> weight;
+        vertices[u].outgoing.push_back(create_edge(v, weight));
+        vertices[v].incoming.push_back(create_edge(u, weight));
+    }
+    return vertices;
+}
 
 int main() {
-    Vertex vertex;
-    vertex.key = 10;
-    std::cout << vertex_to_str(vertex) << '\n';
-
-    Edge edge;
-    edge.key = 0;
-    edge.weight = 1;
-    std::cout << to_str(edge) << '\n';
-
-    std::vector<Edge> x;
-    x.push_back(edge);
-    x.push_back(edge);
-    std::cout << vector_to_str(x) << '\n';
+    std::map<int,Vertex> vertices = parse_vertices();
+    for (auto& kv: vertices) {
+        int key = kv.first;
+        Vertex vertex = kv.second;
+        std::cout << key << ": " << to_str(vertex) << std::endl;
+    }
 }
 
 /*
