@@ -1,16 +1,16 @@
+#include <cmath>
+#include <iomanip>
 #include <iostream>
 #include <limits>
 #include <map>
-#include <cmath>
-#include <vector>
 #include <queue>
 #include <tuple>
+#include <vector>
 
 const double INF = std::numeric_limits<double>::max();
-const int INT_INF = std::numeric_limits<int>::max();
-using IntPair = std::tuple<int,int>;
+using WeightKey = std::tuple<double,int>;
 
-IntPair pair(int x, int y) {
+WeightKey pair(double x, int y) {
     return std::make_tuple(x, y);
 }
 
@@ -102,13 +102,27 @@ double distance(Point a, Point b) {
     return std::sqrt(dx*dx + dy*dy);
 }
 
-std::priority_queue<IntPair> initialise_queue(PointMap points, std::map<int,double> distances) {
-    std::priority_queue<IntPair> queue;
+std::priority_queue<WeightKey> initialise_queue(PointMap points, std::map<int,double> distances) {
+    std::priority_queue<WeightKey> queue;
     for (auto& kv: points) {
         int key = kv.first;
         queue.push(pair(-distances[key], key));
     }
     return queue;
+}
+
+void print_queue(std::priority_queue<WeightKey> queue) {
+    std::vector<WeightKey> pairs;
+    int n = queue.size();
+    for (int i = 0; i < n; ++i) {
+        WeightKey p = queue.top();
+        std::cout << "(" << std::get<0>(p) << "," << std::get<1>(p) << ")\n";
+        pairs.push_back(p);
+        queue.pop();
+    }
+    for (int i = 0; i < n; ++i) {
+        queue.push(pairs[i]);
+    }
 }
 
 std::map<int,int> min_dist_parent_map(PointMap points) {
@@ -117,11 +131,10 @@ std::map<int,int> min_dist_parent_map(PointMap points) {
 
     int start = 0;
     distances[start] = 0;
-    std::priority_queue<IntPair> queue = initialise_queue(points, distances);
+    std::priority_queue<WeightKey> queue = initialise_queue(points, distances);
     std::map<int,bool> in_queue = initialise_map(points, true);
-    for (unsigned int i = 0; i < (points.size() - 1); ++i) {
-        IntPair dk_pair = queue.top();
-        int key = std::get<1>(dk_pair);
+    while (!queue.empty()) {
+        int key = std::get<1>(queue.top());
         Point point = points[key];
 
         queue.pop();
@@ -135,7 +148,6 @@ std::map<int,int> min_dist_parent_map(PointMap points) {
                 parents[next_key] = key;
                 queue.push(pair(-next_dist, next_key));
                 in_queue[next_key] = true;
-                print(distances);
             }
         }
     }
@@ -157,8 +169,8 @@ double sum_distances(PointMap points, std::map<int,int> parents) {
 
 int main() {
     PointMap points = parse_points();
-    print(points);
     std::map<int,int> parent_map = min_dist_parent_map(points);
-    print(parent_map);
-    print(sum_distances(points, parent_map));
+    std::cout << std::fixed;
+    std::cout << std::setprecision(9);
+    std::cout << sum_distances(points, parent_map);
 }
