@@ -151,8 +151,33 @@ struct DijkstraTracker {
         std::cout << "Queue:\n" << to_str(queue) << '\n';
     }
 
+    void process(bool reverse, Vertices vertices, int key) {
+        //TODO
+        std::cout << to_str(vertices);
+        std::cout << key;
+    }
+
+    void process_forward(Vertices vertices, int key) {
+        process(false, vertices, key);
+    }
+
+    void process_reverse(Vertices vertices, int key) {
+        process(true, vertices, key);
+    }
+
+    bool is_key_processed(int key) {
+        std::vector<int> v = processed;
+        return std::find(v.begin(), v.end(), key) != v.end();
+    }
+
     bool is_queue_empty() {
         return queue.empty();
+    }
+
+    WeightKeyPair extract_min() {
+        WeightKeyPair top = queue.top();
+        queue.pop();
+        return top;
     }
 };
 
