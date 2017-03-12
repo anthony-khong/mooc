@@ -6,7 +6,7 @@
 #include <tuple>
 #include <vector>
 
-//const int INF = std::numeric_limits<int>::max();
+const int INF = std::numeric_limits<int>::max();
 
 struct Edge {
     int key;
@@ -21,11 +21,10 @@ Edge create_edge(int key, int weight) {
     return edge;
 }
 
-class Vertex {
-    public:
-        int key;
-        Edges incoming;
-        Edges outgoing;
+struct Vertex {
+    int key;
+    Edges incoming;
+    Edges outgoing;
 };
 using Vertices = std::map<int,Vertex>;
 
@@ -151,36 +150,70 @@ struct DijkstraTracker {
         std::cout << "Queue:\n" << to_str(queue) << '\n';
     }
 
-    void process(bool reverse, Vertices vertices, int key) {
-        //TODO
-        std::cout << to_str(vertices);
-        std::cout << key;
-    }
+    void process(bool reverse, Vertex vertex) {
+        Edges edges_to_explore;
+        if (reverse) { edges_to_explore = vertex.incoming; }
+        else { edges_to_explore = vertex.outgoing; }
+        int distance = distances[vertex.key];
 
-    void process_forward(Vertices vertices, int key) {
-        process(false, vertices, key);
+        for (auto& next_edge: edges_to_explore) {
+            int next_key = next_edge.key;
+            int next_weight = next_edge.weight;
+            int old_dist = distances[next_key];
+            int new_dist = distance + next_weight;
+            if (old_dist > new_dist) {
+                distances[next_key] = new_dist;
+                push_pair(new_dist, next_key);
+            }
+        }
+        processed.push_back(vertex.key);
     }
-
-    void process_reverse(Vertices vertices, int key) {
-        process(true, vertices, key);
-    }
+    void process_forward(Vertex vertex) { process(false, vertex); }
+    void process_reverse(Vertex vertex) { process(true, vertex); }
 
     bool is_key_processed(int key) {
         std::vector<int> v = processed;
         return std::find(v.begin(), v.end(), key) != v.end();
     }
 
-    bool is_queue_empty() {
-        return queue.empty();
-    }
+    bool is_queue_empty() { return queue.empty(); }
 
     WeightKeyPair extract_min() {
         WeightKeyPair top = queue.top();
         queue.pop();
         return top;
     }
+
+    void push_pair(int weight, int key) {
+        queue.push(std::make_tuple(-weight, key));
+    }
 };
 
+template <typename K, typename A, typename B>
+std::map<K,A> initialise_map(std::map<K,B> base_map, A value) {
+    std::map<K,A> new_map;
+    for (auto& kv: base_map) { new_map[kv.first] = value; }
+    return new_map;
+}
+
+DijkstraTracker create_tracker(Vertices vertices, int start) {
+    DijkstraTracker tracker;
+    tracker.distances = initialise_map(vertices, INF);
+    tracker.push_pair(0, start);
+    return tracker;
+}
+
+int bidirectional_dijkstra(Vertices vertices, int start, int end) {
+    DijkstraTracker ftracker = create_tracker(vertices, start);
+    DijkstraTracker btracker = create_tracker(vertices, end);
+    ftracker.print();
+    btracker.print();
+    while ((!ftracker.is_queue_empty()) && (!btracker.is_queue_empty())) {
+        //TODO
+        std::cout << "hello" << '\n';
+    }
+    return -1;
+}
 
 int main() {
     Vertices vertices = parse_vertices();
@@ -188,4 +221,5 @@ int main() {
 
     std::cout << to_str(vertices);
     std::cout << to_str(queries) << '\n';
+    std::cout << bidirectional_dijkstra(vertices, 0, 1) << '\n';
 }
