@@ -51,14 +51,6 @@ Vertices parse_vertices() {
     return vertices;
 }
 
-using Query = std::tuple<int,int>;
-Query parse_query() {
-    int u, v;
-    std::cin >> u >> v;
-    Query query = std::make_tuple(u, v);
-    return query;
-}
-
 using WeightKeyPair = std::tuple<int, int>;
 
 /***********************************************************************/
@@ -146,16 +138,28 @@ struct DijkstraTracker {
         std::cout << "Queue:\n" << to_str(queue) << '\n';
     }
 
+    int get_distance(int key) {
+        if (key_is_visited(key)) {
+            return INF;
+        } else {
+            return distances[key];
+        }
+    }
+
+    bool key_is_visited(int key) {
+        return distances.find(key) == distances.end();
+    }
+
     void process(Vertex vertex) {
         Edges edges_to_explore;
         if (reverse) { edges_to_explore = vertex.incoming; }
         else { edges_to_explore = vertex.outgoing; }
-        int distance = distances[vertex.key];
+        int distance = get_distance(vertex.key);
 
         for (auto& next_edge: edges_to_explore) {
             int next_key = next_edge.key;
             int next_weight = next_edge.weight;
-            int old_dist = distances[next_key];
+            int old_dist = get_distance(next_key);
             int new_dist = distance + next_weight;
             if (old_dist > new_dist) {
                 distances[next_key] = new_dist;
@@ -191,7 +195,8 @@ struct DijkstraTracker {
     }
 
     void clear() {
-        for (int& key: visited) { distances[key] = INF; }
+        std::map<int,int> empty_distances;
+        distances = empty_distances;
         std::vector<int> empty_processed;
         processed = empty_processed;
         std::priority_queue<WeightKeyPair> empty_queue;
@@ -199,20 +204,11 @@ struct DijkstraTracker {
         std::vector<int> empty_visited;
         visited = empty_visited;
     }
-
 };
 
-template <typename K, typename A, typename B>
-std::map<K,A> initialise_map(std::map<K,B> base_map, A value) {
-    std::map<K,A> new_map;
-    for (auto& kv: base_map) { new_map[kv.first] = value; }
-    return new_map;
-}
-
-DijkstraTracker create_tracker(bool reverse, Vertices vertices) {
+DijkstraTracker create_tracker(bool reverse) {
     DijkstraTracker tracker;
     tracker.reverse = reverse;
-    tracker.distances = initialise_map(vertices, INF);
     return tracker;
 }
 
@@ -226,8 +222,8 @@ int minimum_distance(DijkstraTracker ftracker, DijkstraTracker btracker) {
 
     int min_dist = INF;
     for (int& key: processed) {
-        int fdist = ftracker.distances[key];
-        int bdist = btracker.distances[key];
+        int fdist = ftracker.get_distance(key);
+        int bdist = btracker.get_distance(key);
         if ((fdist != INF) && (bdist != INF)) {
             int sum_dist = fdist + bdist;
             if (sum_dist < min_dist) {
@@ -255,18 +251,16 @@ int bidirectional_dijkstra(Vertices vertices, DijkstraTracker &ftracker, Dijkstr
     return -1;
 }
 
-// TODO: avoid any kind of O(N) operation!
 int main() {
     Vertices vertices = parse_vertices();
-    DijkstraTracker ftracker = create_tracker(false, vertices);
-    DijkstraTracker btracker = create_tracker(true, vertices);
+    DijkstraTracker ftracker = create_tracker(false);
+    DijkstraTracker btracker = create_tracker(true);
 
     int n_queries;
     std::cin >> n_queries;
     for (int i = 0; i < n_queries; ++i) {
-        Query query = parse_query();
-        int start = std::get<0>(query);
-        int end = std::get<1>(query);
+        int start, end;
+        std::cin >> start >> end;
 
         ftracker.set_init_vertex(start);
         btracker.set_init_vertex(end);
