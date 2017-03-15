@@ -137,7 +137,7 @@ struct DijkstraTracker {
 
     long long get_distance(int key) { return distances[key - 1]; }
 
-    void process(Vertex vertex) {
+    void process(Vertex& vertex) {
         Edges edges_to_explore;
         if (reverse) { edges_to_explore = vertex.incoming; }
         else { edges_to_explore = vertex.outgoing; }
@@ -202,7 +202,7 @@ DijkstraTracker create_tracker(int n_vertices, bool reverse) {
     return tracker;
 }
 
-int minimum_distance(DijkstraTracker ftracker, DijkstraTracker btracker) {
+int minimum_distance(DijkstraTracker &ftracker, DijkstraTracker &btracker) {
     std::vector<int> processed;
     if (ftracker.processed.size() < btracker.processed.size()) {
         processed = ftracker.processed;
@@ -222,7 +222,7 @@ int minimum_distance(DijkstraTracker ftracker, DijkstraTracker btracker) {
     return min_dist;
 }
 
-int bidirectional_dijkstra(Vertices vertices, DijkstraTracker &ftracker, DijkstraTracker &btracker) {
+int bidirectional_dijkstra(Vertices &vertices, DijkstraTracker &ftracker, DijkstraTracker &btracker) {
     while ((!ftracker.queue.empty()) && (!btracker.queue.empty())) {
         int fkey = ftracker.extract_min();
         ftracker.process(vertices[fkey - 1]);
