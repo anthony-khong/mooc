@@ -1,3 +1,5 @@
+// TODO: find nuggets to be implemented from starter kit
+// TODO: swap all unordered_map with vector
 #include <iostream>
 #include <limits>
 #include <unordered_map>
@@ -6,7 +8,7 @@
 #include <tuple>
 #include <vector>
 
-const int INF = std::numeric_limits<int>::max();
+const long long INF = std::numeric_limits<long long>::max() / 4;
 
 struct Edge {
     int key;
@@ -126,10 +128,10 @@ std::string to_str(std::priority_queue<T> queue) {
 /***********************************************************************/
 struct DijkstraTracker {
     int start;
-    std::unordered_map<int,int> distances;
-    std::vector<int> visited;
+    std::unordered_map<int,long long> distances; //distance
+    std::vector<int> visited; //workset
     std::vector<int> processed;
-    std::unordered_map<int,bool> processed_map;
+    std::unordered_map<int,bool> processed_map;//visited_
     std::priority_queue<WeightKeyPair> queue;
     bool reverse;
 
@@ -142,22 +144,22 @@ struct DijkstraTracker {
         std::cout << "Reverse: " << reverse << '\n';
     }
 
-    int get_distance(int key) { return distances[key]; }
+    long long get_distance(int key) { return distances[key]; }
 
     void process(Vertex vertex) {
         Edges edges_to_explore;
         if (reverse) { edges_to_explore = vertex.incoming; }
         else { edges_to_explore = vertex.outgoing; }
-        int distance = get_distance(vertex.key);
+        long long distance = get_distance(vertex.key);
 
         for (auto& next_edge: edges_to_explore) {
             int next_key = next_edge.key;
             int next_weight = next_edge.weight;
-            int old_dist = get_distance(next_key);
+            long long old_dist = get_distance(next_key);
             int new_dist = distance + next_weight;
             if (old_dist > new_dist) {
                 distances[next_key] = new_dist;
-                push_pair(new_dist, next_key);
+                queue_pair(new_dist, next_key);
                 visited.push_back(next_key);
             }
         }
@@ -173,26 +175,24 @@ struct DijkstraTracker {
         return std::get<1>(top);
     }
 
-    void push_pair(int weight, int key) {
+    void queue_pair(int weight, int key) {
         queue.push(std::make_tuple(-weight, key));
     }
 
     void set_init_vertex(int key) {
         start = key;
         distances[key] = 0;
-        push_pair(0, key);
+        queue_pair(0, key);
         visited.push_back(key);
     }
 
     void clear() {
         for (int& key: visited) { distances[key] = INF; }
         for (int& key: processed) { processed_map[key] = false; }
-        std::vector<int> empty_processed;
-        processed = empty_processed;
+        processed.clear();
+        visited.clear();
         std::priority_queue<WeightKeyPair> empty_queue;
         queue = empty_queue;
-        std::vector<int> empty_visited;
-        visited = empty_visited;
     }
 };
 
@@ -215,12 +215,12 @@ int minimum_distance(DijkstraTracker ftracker, DijkstraTracker btracker) {
         processed = btracker.processed;
     }
 
-    int min_dist = INF;
+    long long min_dist = INF;
     for (int& key: processed) {
-        int fdist = ftracker.get_distance(key);
-        int bdist = btracker.get_distance(key);
-        if ((fdist != INF) && (bdist != INF)) {
-            int sum_dist = fdist + bdist;
+        long long fdist = ftracker.get_distance(key);
+        long long bdist = btracker.get_distance(key);
+        if ((fdist < INF) && (bdist < INF)) {
+            long long sum_dist = fdist + bdist;
             if (sum_dist < min_dist) { min_dist = sum_dist; }
         }
     }
@@ -258,27 +258,8 @@ int main() {
         ftracker.set_init_vertex(start);
         btracker.set_init_vertex(end);
         int min_dist = bidirectional_dijkstra(vertices, ftracker, btracker);
-
-        //std::cout << "********************\n";
-        //std::cout << "Forward Tracker:\n";
-        //ftracker.print();
-        //std::cout << "********************\n";
-        //std::cout << "********************\n";
-        //std::cout << "Back Tracker:\n";
-        //btracker.print();
-        //std::cout << "********************\n";
-
         ftracker.clear();
         btracker.clear();
-
-        //std::cout << "********************\n";
-        //std::cout << "Forward Tracker:\n";
-        //ftracker.print();
-        //std::cout << "********************\n";
-        //std::cout << "********************\n";
-        //std::cout << "Back Tracker:\n";
-        //btracker.print();
-        //std::cout << "********************\n";
 
         std::cout << min_dist;
         if (i != (n_queries - 1)) {
