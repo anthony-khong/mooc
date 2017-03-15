@@ -1,8 +1,6 @@
 // TODO: find nuggets to be implemented from starter kit
-// TODO: swap all unordered_map with vector
 #include <iostream>
 #include <limits>
-#include <unordered_map>
 #include <queue>
 #include <string>
 #include <tuple>
@@ -28,7 +26,7 @@ struct Vertex {
     Edges incoming;
     Edges outgoing;
 };
-using Vertices = std::unordered_map<int,Vertex>;
+using Vertices = std::vector<Vertex>;
 
 Vertex create_singleton_vertex(int key) {
     Vertex vertex;
@@ -41,14 +39,16 @@ Vertices parse_vertices() {
     int n_vertices, n_edges;
     std::cin >> n_vertices >> n_edges;
     Vertices vertices;
+    vertices.reserve(n_vertices);
     for (int i = 0; i < n_vertices; ++i) {
-        vertices[i + 1] = create_singleton_vertex(i + 1);
+        Vertex v = create_singleton_vertex(i + 1);
+        vertices.push_back(v);
     }
     for (int j = 0; j < n_edges; ++j) {
         int u, v, weight;
         std::cin >> u >> v >> weight;
-        vertices[u].outgoing.push_back(create_edge(v, weight));
-        vertices[v].incoming.push_back(create_edge(u, weight));
+        vertices[u - 1].outgoing.push_back(create_edge(v, weight));
+        vertices[v - 1].incoming.push_back(create_edge(u, weight));
     }
     return vertices;
 }
@@ -88,15 +88,6 @@ std::string to_str(std::vector<T> xs) {
     return result;
 }
 
-template <typename K, typename V>
-std::string to_str(std::unordered_map<K,V> map) {
-    std::string result = "";
-    for (auto& kv: map) {
-        result = result + to_str(kv.first) + ": " + to_str(kv.second) + "\n";
-    }
-    return result;
-}
-
 std::string to_str(Vertex vertex) {
     std::string key_str = to_str(vertex.key);
     std::string in_str = to_str(vertex.incoming);
@@ -128,10 +119,10 @@ std::string to_str(std::priority_queue<T> queue) {
 /***********************************************************************/
 struct DijkstraTracker {
     int start;
-    std::unordered_map<int,long long> distances; //distance
-    std::vector<int> visited; //workset
+    std::vector<long long> distances;
+    std::vector<int> visited;
     std::vector<int> processed;
-    std::unordered_map<int,bool> processed_map;//visited_
+    std::vector<bool> processed_flags;
     std::priority_queue<WeightKeyPair> queue;
     bool reverse;
 
@@ -144,7 +135,7 @@ struct DijkstraTracker {
         std::cout << "Reverse: " << reverse << '\n';
     }
 
-    long long get_distance(int key) { return distances[key]; }
+    long long get_distance(int key) { return distances[key - 1]; }
 
     void process(Vertex vertex) {
         Edges edges_to_explore;
@@ -158,16 +149,16 @@ struct DijkstraTracker {
             long long old_dist = get_distance(next_key);
             int new_dist = distance + next_weight;
             if (old_dist > new_dist) {
-                distances[next_key] = new_dist;
+                distances[next_key - 1] = new_dist;
                 queue_pair(new_dist, next_key);
                 visited.push_back(next_key);
             }
         }
         processed.push_back(vertex.key);
-        processed_map[vertex.key] = true;
+        processed_flags[vertex.key - 1] = true;
     }
 
-    bool is_key_processed(int key) { return processed_map[key]; }
+    bool is_key_processed(int key) { return processed_flags[key - 1]; }
 
     int extract_min() {
         WeightKeyPair top = queue.top();
@@ -181,14 +172,14 @@ struct DijkstraTracker {
 
     void set_init_vertex(int key) {
         start = key;
-        distances[key] = 0;
+        distances[key - 1] = 0;
         queue_pair(0, key);
         visited.push_back(key);
     }
 
     void clear() {
-        for (int& key: visited) { distances[key] = INF; }
-        for (int& key: processed) { processed_map[key] = false; }
+        for (int& key: visited) { distances[key - 1] = INF; }
+        for (int& key: processed) { processed_flags[key - 1] = false; }
         processed.clear();
         visited.clear();
         std::priority_queue<WeightKeyPair> empty_queue;
@@ -196,13 +187,17 @@ struct DijkstraTracker {
     }
 };
 
-DijkstraTracker create_tracker(Vertices vertices, bool reverse) {
+DijkstraTracker create_tracker(int n_vertices, bool reverse) {
     DijkstraTracker tracker;
     tracker.reverse = reverse;
-    for (auto& kv: vertices) {
-        int key = kv.first;
-        tracker.distances[key] = INF;
-        tracker.processed_map[key] = false;
+
+    tracker.distances.reserve(n_vertices);
+    tracker.visited.reserve(n_vertices);
+    tracker.processed.reserve(n_vertices);
+    tracker.processed_flags.reserve(n_vertices);
+    for (int key = 1; key <= n_vertices; ++key) {
+        tracker.distances.push_back(INF);
+        tracker.processed_flags.push_back(false);
     }
     return tracker;
 }
@@ -230,13 +225,13 @@ int minimum_distance(DijkstraTracker ftracker, DijkstraTracker btracker) {
 int bidirectional_dijkstra(Vertices vertices, DijkstraTracker &ftracker, DijkstraTracker &btracker) {
     while ((!ftracker.queue.empty()) && (!btracker.queue.empty())) {
         int fkey = ftracker.extract_min();
-        ftracker.process(vertices[fkey]);
+        ftracker.process(vertices[fkey - 1]);
         if (btracker.is_key_processed(fkey)) {
             return minimum_distance(ftracker, btracker);
         }
 
         int bkey = btracker.extract_min();
-        btracker.process(vertices[bkey]);
+        btracker.process(vertices[bkey - 1]);
         if (ftracker.is_key_processed(bkey)) {
             return minimum_distance(ftracker, btracker);
         }
@@ -246,8 +241,8 @@ int bidirectional_dijkstra(Vertices vertices, DijkstraTracker &ftracker, Dijkstr
 
 int main() {
     Vertices vertices = parse_vertices();
-    DijkstraTracker ftracker = create_tracker(vertices, false);
-    DijkstraTracker btracker = create_tracker(vertices, true);
+    DijkstraTracker ftracker = create_tracker(vertices.size(), false);
+    DijkstraTracker btracker = create_tracker(vertices.size(), true);
 
     int n_queries;
     std::cin >> n_queries;
@@ -255,11 +250,16 @@ int main() {
         int start, end;
         std::cin >> start >> end;
 
-        ftracker.set_init_vertex(start);
-        btracker.set_init_vertex(end);
-        int min_dist = bidirectional_dijkstra(vertices, ftracker, btracker);
-        ftracker.clear();
-        btracker.clear();
+        int min_dist;
+        if (start == end) {
+            min_dist = 0;
+        } else {
+            ftracker.set_init_vertex(start);
+            btracker.set_init_vertex(end);
+            min_dist = bidirectional_dijkstra(vertices, ftracker, btracker);
+            ftracker.clear();
+            btracker.clear();
+        }
 
         std::cout << min_dist;
         if (i != (n_queries - 1)) {
