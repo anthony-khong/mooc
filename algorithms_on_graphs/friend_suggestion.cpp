@@ -1,4 +1,3 @@
-// TODO: find nuggets to be implemented from starter kit
 #include <iostream>
 #include <limits>
 #include <queue>
