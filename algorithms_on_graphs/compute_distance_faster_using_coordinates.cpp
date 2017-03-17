@@ -1,3 +1,4 @@
+#include <cmath>
 #include <iostream>
 #include <limits>
 #include <queue>
@@ -10,8 +11,9 @@ const long long INF = std::numeric_limits<long long>::max() / 4;
 /***********************************************************************/
 // Data Structutures
 struct Edge {
-    int key;
-    int weight;
+    int origin;
+    int destination;
+    long long weight;
 };
 using Edges = std::vector<Edge>;
 
@@ -24,9 +26,9 @@ struct Vertex {
 };
 using Vertices = std::vector<Vertex>;
 
-using WeightKeyPair = std::tuple<int, int>;
+using WeightKeyPair = std::tuple<long long, int>;
 
-Edge create_edge(int key, int weight);
+Edge create_edge(int origin, int destination, long long weight);
 Vertex create_singleton_vertex(int key, int x, int y);
 Vertices parse_vertices();
 
@@ -47,7 +49,8 @@ template <typename T> std::string to_str(std::priority_queue<T> queue);
 /***********************************************************************/
 // Main Algorithm
 struct AStarTracker {
-    int start;
+    Vertex start;
+    Vertex end;
     std::vector<long long> distances;
     std::vector<int> visited;
     std::vector<int> processed;
@@ -60,17 +63,53 @@ struct AStarTracker {
     bool get_processed_flag(int key) { return processed_flags[key - 1]; }
     void set_processed_flag(int key, bool flag) { processed_flags[key - 1] = flag; }
 
+    long long get_astar_weight(Vertices &vertices, Edge &edge) {
+        long long origin_potential = get_potential(vertices, edge.origin);
+        long long dest_potential = get_potential(vertices, edge.destination);
+        if (reverse) {
+            return edge.weight - dest_potential + origin_potential;
+        } else {
+            return edge.weight - origin_potential + dest_potential;
+        }
+    };
+
+    long long get_potential(Vertices &vertices, int key) {
+         long long fpotential = get_forward_potential(vertices, key);
+         long long bpotential = get_backward_potential(vertices, key);
+         return (fpotential + bpotential) / 2;
+    }
+
+    long long get_forward_potential(Vertices &vertices, int key) {
+        Vertex end_vertex = vertices[end.key - 1];
+        Vertex current_vertex = vertices[key - 1];
+        return euclidean_distance(end_vertex, current_vertex);
+    }
+
+    long long get_backward_potential(Vertices &vertices, int key) {
+        Vertex start_vertex = vertices[start.key - 1];
+        Vertex current_vertex = vertices[key - 1];
+        return euclidean_distance(start_vertex, current_vertex);
+    }
+
+    long long euclidean_distance(Vertex &target_vertex, Vertex &current_vertex) {
+        long long dx = target_vertex.x - current_vertex.x;
+        long long dy = target_vertex.y - current_vertex.y;
+        return std::sqrt(dx*dx + dy*dy);
+    }
+
     void process(Vertex& vertex) {
         Edges edges_to_explore;
         if (reverse) { edges_to_explore = vertex.incoming; }
         else { edges_to_explore = vertex.outgoing; }
         long long distance = get_distance(vertex.key);
 
+        // TODO: scan for all set_distance and queue_pair. Make sure that all distances are modified weights.
+        // next_weight needs to be changed.
         for (auto& next_edge: edges_to_explore) {
-            int next_key = next_edge.key;
-            int next_weight = next_edge.weight;
+            int next_key = next_edge.destination;
+            long long next_weight = next_edge.weight;
             long long old_dist = get_distance(next_key);
-            int new_dist = distance + next_weight;
+            long long new_dist = distance + next_weight;
             if (old_dist > new_dist) {
                 set_distance(next_key, new_dist);
                 queue_pair(new_dist, next_key);
@@ -87,15 +126,16 @@ struct AStarTracker {
         return std::get<1>(top);
     }
 
-    void queue_pair(int weight, int key) {
+    void queue_pair(long long weight, int key) {
         queue.push(std::make_tuple(-weight, key));
     }
 
-    void set_init_vertex(int key) {
-        start = key;
-        set_distance(key, 0);
-        queue_pair(0, key);
-        visited.push_back(key);
+    void set_init_vertex(Vertex start_vertex, Vertex end_vertex) {
+        start = start_vertex;
+        end = end_vertex;
+        set_distance(start_vertex.key, 0);
+        queue_pair(0, start_vertex.key);
+        visited.push_back(start_vertex.key);
     }
 
     void clear() {
@@ -166,8 +206,8 @@ int main() {
         int start, end;
         std::cin >> start >> end;
 
-        ftracker.set_init_vertex(start);
-        btracker.set_init_vertex(end);
+        ftracker.set_init_vertex(vertices[start - 1], vertices[end - 1]);
+        btracker.set_init_vertex(vertices[end - 1], vertices[start - 1]);
         long long min_dist = bidirectional_astar(vertices, ftracker, btracker);
         ftracker.clear();
         btracker.clear();
@@ -178,9 +218,10 @@ int main() {
 }
 
 /***********************************************************************/
-Edge create_edge(int key, int weight) {
+Edge create_edge(int origin, int destination, long long weight) {
     Edge edge;
-    edge.key = key;
+    edge.origin = origin;
+    edge.destination = destination;
     edge.weight = weight;
     return edge;
 }
@@ -205,10 +246,11 @@ Vertices parse_vertices() {
         vertices.push_back(v);
     }
     for (int j = 0; j < n_edges; ++j) {
-        int u, v, weight;
+        int u, v;
+        long long weight;
         std::cin >> u >> v >> weight;
-        vertices[u - 1].outgoing.push_back(create_edge(v, weight));
-        vertices[v - 1].incoming.push_back(create_edge(u, weight));
+        vertices[u - 1].outgoing.push_back(create_edge(u, v, weight));
+        vertices[v - 1].incoming.push_back(create_edge(v, u, weight));
     }
     return vertices;
 }
@@ -221,14 +263,17 @@ std::string to_str(T x) {
 }
 
 std::string to_str(Edge edge) {
-    std::string key_str = to_str(edge.key);
+    std::string origin_str = to_str(edge.origin);
+    std::string destination_str = to_str(edge.destination);
+    std::string direction_str = origin_str + "->" + destination_str;
     std::string weight_str = to_str(edge.weight);
-    return "(key=" + key_str + ", weight=" + weight_str + ")";
+    return "(" + direction_str + ", weight=" + weight_str + ")";
 }
 
-std::string to_str(std::tuple<int,int> query) {
-    int u = std::get<0>(query);
-    int v = std::get<1>(query);
+template <typename A, typename B>
+std::string to_str(std::tuple<A,B> query) {
+    A u = std::get<0>(query);
+    B v = std::get<1>(query);
     std::string result = "(" + to_str(u) + "," + to_str(v) + ")";
     return result;
 }
@@ -276,7 +321,8 @@ std::string to_str(std::priority_queue<T> queue) {
 }
 
 void to_str(AStarTracker tracker) {
-    std::cout << "Start: " << tracker.start << '\n';
+    std::cout << "Start: " << to_str(tracker.start) << '\n';
+    std::cout << "End: " << to_str(tracker.end) << '\n';
     std::cout << "\nDistances:\n" << to_str(tracker.distances);
     std::cout << "Visited:\n" << to_str(tracker.visited);
     std::cout << "Processed:\n" << to_str(tracker.processed) << '\n';
