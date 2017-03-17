@@ -63,32 +63,31 @@ struct AStarTracker {
     bool get_processed_flag(int key) { return processed_flags[key - 1]; }
     void set_processed_flag(int key, bool flag) { processed_flags[key - 1] = flag; }
 
+    // TODO: the signs are all messed up. Write down the potentials with pen and paper!
     long long get_astar_weight(Vertices &vertices, Edge &edge) {
         long long origin_potential = get_potential(vertices, edge.origin);
         long long dest_potential = get_potential(vertices, edge.destination);
-        if (reverse) {
-            return edge.weight - dest_potential + origin_potential;
-        } else {
-            return edge.weight - origin_potential + dest_potential;
-        }
+        return edge.weight + origin_potential - dest_potential;
     };
 
     long long get_potential(Vertices &vertices, int key) {
          long long fpotential = get_forward_potential(vertices, key);
          long long bpotential = get_backward_potential(vertices, key);
-         return (fpotential + bpotential) / 2;
+         return (fpotential - bpotential) / 2;
     }
 
     long long get_forward_potential(Vertices &vertices, int key) {
-        Vertex end_vertex = vertices[end.key - 1];
+        int target_key = end.key;
+        Vertex target_vertex = vertices[target_key - 1];
         Vertex current_vertex = vertices[key - 1];
-        return euclidean_distance(end_vertex, current_vertex);
+        return euclidean_distance(target_vertex, current_vertex);
     }
 
     long long get_backward_potential(Vertices &vertices, int key) {
-        Vertex start_vertex = vertices[start.key - 1];
+        int target_key = start.key;
+        Vertex target_vertex = vertices[target_key - 1];
         Vertex current_vertex = vertices[key - 1];
-        return euclidean_distance(start_vertex, current_vertex);
+        return euclidean_distance(target_vertex, current_vertex);
     }
 
     long long euclidean_distance(Vertex &target_vertex, Vertex &current_vertex) {
@@ -97,17 +96,15 @@ struct AStarTracker {
         return std::sqrt(dx*dx + dy*dy);
     }
 
-    void process(Vertex& vertex) {
+    void process(Vertices &vertices, Vertex &vertex) {
         Edges edges_to_explore;
         if (reverse) { edges_to_explore = vertex.incoming; }
         else { edges_to_explore = vertex.outgoing; }
         long long distance = get_distance(vertex.key);
 
-        // TODO: scan for all set_distance and queue_pair. Make sure that all distances are modified weights.
-        // next_weight needs to be changed.
         for (auto& next_edge: edges_to_explore) {
             int next_key = next_edge.destination;
-            long long next_weight = next_edge.weight;
+            long long next_weight = get_astar_weight(vertices, next_edge);
             long long old_dist = get_distance(next_key);
             long long new_dist = distance + next_weight;
             if (old_dist > new_dist) {
@@ -181,13 +178,13 @@ int minimum_distance(AStarTracker &ftracker, AStarTracker &btracker) {
 int bidirectional_astar(Vertices &vertices, AStarTracker &ftracker, AStarTracker &btracker) {
     while ((!ftracker.queue.empty()) && (!btracker.queue.empty())) {
         int fkey = ftracker.extract_min();
-        ftracker.process(vertices[fkey - 1]);
+        ftracker.process(vertices, vertices[fkey - 1]);
         if (btracker.get_processed_flag(fkey)) {
             return minimum_distance(ftracker, btracker);
         }
 
         int bkey = btracker.extract_min();
-        btracker.process(vertices[bkey - 1]);
+        btracker.process(vertices, vertices[bkey - 1]);
         if (ftracker.get_processed_flag(bkey)) {
             return minimum_distance(ftracker, btracker);
         }
@@ -216,6 +213,19 @@ int main() {
         if (i != (n_queries - 1)) { std::cout << '\n'; }
     }
 }
+
+/*
+6854
+2363
+2139
+4679
+6078
+9935
+8037
+5830
+3419
+10983
+*/
 
 /***********************************************************************/
 Edge create_edge(int origin, int destination, long long weight) {
