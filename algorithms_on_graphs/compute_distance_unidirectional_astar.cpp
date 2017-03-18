@@ -19,17 +19,16 @@ using Edges = std::vector<Edge>;
 
 struct Vertex {
     int key;
-    int x;
-    int y;
-    Edges incoming;
-    Edges outgoing;
+    Length x;
+    Length y;
+    Edges edges;
 };
 using Vertices = std::vector<Vertex>;
 
 using WeightKeyPair = std::tuple<Length, int>;
 
 Edge create_edge(int key, Length weight);
-Vertex create_singleton_vertex(int key, int x, int y);
+Vertex create_singleton_vertex(int key, Length x, Length y);
 Vertices parse_vertices();
 
 class AStarTracker;
@@ -52,9 +51,9 @@ std::string to_str(AStarTracker tracker);
 
 /***********************************************************************/
 // Main Algorithm
-Length euclidean_distance(Vertex &target_vertex, Vertex &current_vertex) {
-    double dx = (double)target_vertex.x - (double)current_vertex.x;
-    double dy = (double)target_vertex.y - (double)current_vertex.y;
+Length euclidean_distance(const Vertex& target_vertex, const Vertex& current_vertex) {
+    Length dx = target_vertex.x - current_vertex.x;
+    Length dy = target_vertex.y - current_vertex.y;
     return std::sqrt(dx*dx + dy*dy);
 }
 
@@ -67,7 +66,7 @@ class AStarTracker {
         std::vector<int> processed;
         std::vector<bool> processed_flags;
 
-    Vertex get_vertex(int key) { return vertices[key - 1]; }
+    const Vertex& get_vertex(int key) { return vertices[key - 1]; }
     Length get_distance(int key) { return distances[key - 1]; }
     void set_distance(int key, Length dist) { distances[key - 1] = dist; }
     bool get_proc_flag(int key) { return processed_flags[key - 1]; }
@@ -99,8 +98,8 @@ class AStarTracker {
         while (!queue.empty()) {
             int key = extract_top_of_queue();
             if (key == end) { return get_real_distance(start, end); }
-            Vertex vertex = get_vertex(key);
-            for (auto& edge: vertex.outgoing) {
+            const Vertex& vertex = get_vertex(key);
+            for (const Edge& edge: vertex.edges) {
                 if (get_proc_flag(edge.key)) continue;
                 relax(vertex, edge, end);
             }
@@ -110,7 +109,7 @@ class AStarTracker {
         return -1;
     }
 
-    void relax(Vertex &vertex, Edge &edge, int end) {
+    void relax(const Vertex& vertex, const Edge& edge, int end) {
         Length old_dist = get_distance(edge.key);
         Length base_dist = get_distance(vertex.key);
         Length weight = get_astar_weight(vertex, edge, end);
@@ -122,23 +121,23 @@ class AStarTracker {
         }
     }
 
-    Length get_astar_weight(Vertex &origin_vertex, Edge &edge, int end) {
-        Vertex dest_vertex = get_vertex(edge.key);
-        Vertex end_vertex = get_vertex(end);
+    Length get_astar_weight(const Vertex& origin_vertex, const Edge& edge, int end) {
+        const Vertex& dest_vertex = get_vertex(edge.key);
+        const Vertex& end_vertex = get_vertex(end);
         Length origin_to_end = euclidean_distance(origin_vertex, end_vertex);
         Length dest_to_end = euclidean_distance(dest_vertex, end_vertex);
         return edge.weight - origin_to_end + dest_to_end;
     }
 
     Length get_real_distance(int start, int end) {
-        Vertex start_vertex = get_vertex(start);
-        Vertex end_vertex = get_vertex(end);
+        const Vertex& start_vertex = get_vertex(start);
+        const Vertex& end_vertex = get_vertex(end);
         Length start_to_end = euclidean_distance(start_vertex, end_vertex);
         return get_distance(end) + start_to_end;
     }
 };
 
-AStarTracker create_tracker(Vertices &vertices) {
+AStarTracker create_tracker(const Vertices& vertices) {
     AStarTracker tracker;
     tracker.vertices = vertices;
     int n_vertices = vertices.size();
@@ -159,18 +158,12 @@ int main() {
         int start, end;
         std::cin >> start >> end;
 
-        Length min_dist;
-        if (start == end) {
-            min_dist = 0;
-        } else {
-            tracker.clear_state();
-            min_dist = tracker.compute_distance(start, end);
-        }
+        tracker.clear_state();
+        Length min_dist = tracker.compute_distance(start, end);
 
         std::cout << min_dist;
         if (i != (n_queries - 1)) { std::cout << '\n'; }
     }
-
 }
 
 /*
@@ -194,12 +187,12 @@ Edge create_edge(int key, Length weight) {
     return edge;
 }
 
-Vertex create_singleton_vertex(int key, int x, int y) {
+Vertex create_singleton_vertex(int key, Length x, Length y) {
     Vertex vertex;
     vertex.key = key;
     vertex.x = x;
     vertex.y = y;
-    Edges incoming, outgoing;
+    Edges edges;
     return vertex;
 }
 
@@ -208,7 +201,7 @@ Vertices parse_vertices() {
     std::cin >> n_vertices >> n_edges;
     Vertices vertices;
     for (int i = 0; i < n_vertices; ++i) {
-        int x, y;
+        Length x, y;
         std::cin >> x >> y;
         Vertex v = create_singleton_vertex(i + 1, x, y);
         vertices.push_back(v);
@@ -217,8 +210,7 @@ Vertices parse_vertices() {
         int u, v;
         Length weight;
         std::cin >> u >> v >> weight;
-        vertices[u - 1].outgoing.push_back(create_edge(v, weight));
-        vertices[v - 1].incoming.push_back(create_edge(u, weight));
+        vertices[u - 1].edges.push_back(create_edge(v, weight));
     }
     return vertices;
 }
@@ -260,9 +252,8 @@ std::string to_str(std::vector<T> xs) {
 std::string to_str(Vertex vertex) {
     std::string key_str = to_str(vertex.key);
     std::string coord_str = to_str(vertex.x) + ", " + to_str(vertex.y);
-    std::string in_str = to_str(vertex.incoming);
-    std::string out_str = to_str(vertex.outgoing);
-    return "V(" + key_str + ")(" + coord_str + ")(in=" + in_str + ", out=" + out_str + ")";
+    std::string out_str = to_str(vertex.edges);
+    return "V(" + key_str + ")(" + coord_str + ")(" + out_str + ")";
 }
 
 template <typename T>
