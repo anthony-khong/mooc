@@ -19,18 +19,16 @@ using Edges = std::vector<Edge>;
 
 struct Vertex {
     int key;
-    int x;
-    int y;
-    Edges incoming;
-    Edges outgoing;
+    Length x;
+    Length y;
+    Edges edges;
 };
 using Vertices = std::vector<Vertex>;
 
 using WeightKeyPair = std::tuple<Length, int>;
 
 Edge create_edge(int key, Length weight);
-Vertex create_singleton_vertex(int key, int x, int y);
-Vertices parse_vertices();
+Vertex create_singleton_vertex(int key, Length x, Length y);
 Vertices reverse_graph(Vertices vertices);
 
 class AStarTracker;
@@ -53,7 +51,7 @@ std::string to_str(AStarTracker tracker);
 
 /***********************************************************************/
 // Main Algorithm
-Length euclidean_distance(Vertex &target_vertex, Vertex &current_vertex) {
+Length euclidean_distance(const Vertex& target_vertex, const Vertex& current_vertex) {
     double dx = (double)target_vertex.x - (double)current_vertex.x;
     double dy = (double)target_vertex.y - (double)current_vertex.y;
     return std::sqrt(dx*dx + dy*dy);
@@ -70,10 +68,11 @@ class AStarTracker {
         std::vector<int> processed;
         std::vector<bool> processed_flags;
 
-    Vertex get_vertex(int key) { return vertices[key - 1]; }
-    Length get_distance(int key) { return distances[key - 1]; }
+    const Vertex& get_vertex(int key) { return vertices[key - 1]; }
+    const Length& get_distance(int key) { return distances[key - 1]; }
     void set_distance(int key, Length dist) { distances[key - 1] = dist; }
-    bool is_key_processed(int key) { return processed_flags[key - 1]; }
+    bool get_proc_flag(int key) { return processed_flags[key - 1]; }
+    void set_proc_flag(int key, bool flag) { processed_flags[key - 1] = flag;}
 
     int extract_top_of_queue() {
         WeightKeyPair top = queue.top();
@@ -96,21 +95,20 @@ class AStarTracker {
     void clear_state() {
         for (int& key: visited) { set_distance(key, INF); }
         visited.clear();
-        for (int& key: processed) { processed_flags[key - 1] = false; }
+        for (int& key: processed) { set_proc_flag(key, false); }
         processed.clear();
         std::priority_queue<WeightKeyPair> empty_queue;
         queue = empty_queue;
     }
 
     void process(int key) {
-        Vertex vertex = get_vertex(key);
-        Edges edges_to_explore = vertex.outgoing;
-        for (auto& edge: edges_to_explore) { relax(vertex, edge); }
+        const Vertex& vertex = get_vertex(key);
+        for (const Edge& edge: vertex.edges) { relax(vertex, edge); }
         processed.push_back(vertex.key);
-        processed_flags[vertex.key - 1] = true;
+        set_proc_flag(vertex.key, true);
     }
 
-    void relax(Vertex &vertex, Edge &edge) {
+    void relax(const Vertex& vertex, const Edge& edge) {
         Length old_dist = get_distance(edge.key);
         Length base_dist = get_distance(vertex.key);
         Length weight = get_astar_weight(vertex, edge);
@@ -122,18 +120,17 @@ class AStarTracker {
         }
     }
 
-    Length get_astar_weight(Vertex &origin_vertex, Edge &edge) {
-        Vertex destination_vertex = get_vertex(edge.key);
-        Length potential = get_potential(origin_vertex, destination_vertex);
+    Length get_astar_weight(const Vertex& origin_vertex, const Edge& edge) {
+        Length potential = get_potential(origin_vertex, vertices[edge.key - 1]);
         return edge.weight + potential;
     }
 
     Length get_real_distance(int key) {
-        Vertex destination_vertex = get_vertex(key);
-        return get_distance(key) - get_potential(start, destination_vertex);
+        const Vertex& vertex = get_vertex(key);
+        return get_distance(key) - get_potential(start, vertex);
     }
 
-    Length get_potential(Vertex &origin_vertex, Vertex &destination_vertex) {
+    Length get_potential(const Vertex& origin_vertex, const Vertex& destination_vertex) {
         Length pi_f_u = euclidean_distance(origin_vertex, end);
         Length pi_r_u = euclidean_distance(start, origin_vertex);
         Length pi_f_v = euclidean_distance(destination_vertex, end);
@@ -173,13 +170,13 @@ int bidirectional_astar(AStarTracker &ftracker, AStarTracker &btracker) {
     while ((!ftracker.queue.empty()) && (!btracker.queue.empty())) {
         int fkey = ftracker.extract_top_of_queue();
         ftracker.process(fkey);
-        if (btracker.is_key_processed(fkey)) {
+        if (btracker.get_proc_flag(fkey)) {
             return minimum_distance(ftracker, btracker);
         }
 
         int bkey = btracker.extract_top_of_queue();
         btracker.process(bkey);
-        if (ftracker.is_key_processed(bkey)) {
+        if (ftracker.get_proc_flag(bkey)) {
             return minimum_distance(ftracker, btracker);
         }
     }
@@ -187,8 +184,25 @@ int bidirectional_astar(AStarTracker &ftracker, AStarTracker &btracker) {
 }
 
 int main() {
-    Vertices vertices = parse_vertices();
-    Vertices rvertices = reverse_graph(vertices);
+    int n_vertices, n_edges;
+    std::cin >> n_vertices >> n_edges;
+    Vertices vertices, rvertices;
+    for (int i = 0; i < n_vertices; ++i) {
+        Length x, y;
+        std::cin >> x >> y;
+        Vertex v = create_singleton_vertex(i + 1, x, y);
+        vertices.push_back(v);
+        Vertex rv = create_singleton_vertex(i + 1, x, y);
+        rvertices.push_back(rv);
+    }
+    for (int j = 0; j < n_edges; ++j) {
+        int u, v;
+        Length weight;
+        std::cin >> u >> v >> weight;
+        vertices[u - 1].edges.push_back(create_edge(v, weight));
+        rvertices[v - 1].edges.push_back(create_edge(u, weight));
+    }
+
     AStarTracker ftracker = create_tracker(vertices);
     AStarTracker btracker = create_tracker(rvertices);
 
@@ -203,21 +217,6 @@ int main() {
         Length min_dist = bidirectional_astar(ftracker, btracker);
         ftracker.clear_state();
         btracker.clear_state();
-
-        //for (int j = 0; j < 10; ++j) {
-            //std::cout << "j -> " << vertices[j].outgoing[0].key << '\n';
-            //std::cout << "j -> " << rvertices[j].outgoing[0].key << '\n';
-            //Vertex vertex = vertices[j];
-            //Edge edge = vertices[j].outgoing[0];
-            //Vertex rvertex = vertices[edge.key - 1];
-            //Edge redge;
-            //redge.key = vertex.key;
-            //redge.weight = edge.weight;
-
-            //Length fpot = ftracker.get_astar_weight(vertex, edge);
-            //Length rpot = btracker.get_astar_weight(rvertex, redge);
-            //std::cout << "Sum pot: " << fpot + rpot - 2*edge.weight<< '\n';
-        //}
 
         std::cout << min_dist;
         if (i != (n_queries - 1)) { std::cout << '\n'; }
@@ -246,42 +245,13 @@ Edge create_edge(int key, Length weight) {
     return edge;
 }
 
-Vertex create_singleton_vertex(int key, int x, int y) {
+Vertex create_singleton_vertex(int key, Length x, Length y) {
     Vertex vertex;
     vertex.key = key;
     vertex.x = x;
     vertex.y = y;
-    Edges incoming, outgoing;
+    Edges edges;
     return vertex;
-}
-
-Vertices parse_vertices() {
-    int n_vertices, n_edges;
-    std::cin >> n_vertices >> n_edges;
-    Vertices vertices;
-    for (int i = 0; i < n_vertices; ++i) {
-        int x, y;
-        std::cin >> x >> y;
-        Vertex v = create_singleton_vertex(i + 1, x, y);
-        vertices.push_back(v);
-    }
-    for (int j = 0; j < n_edges; ++j) {
-        int u, v;
-        Length weight;
-        std::cin >> u >> v >> weight;
-        vertices[u - 1].outgoing.push_back(create_edge(v, weight));
-        vertices[v - 1].incoming.push_back(create_edge(u, weight));
-    }
-    return vertices;
-}
-
-Vertices reverse_graph(Vertices vertices) {
-    for (auto& vertex: vertices) {
-        Edges temp = vertex.outgoing;
-        vertex.outgoing = vertex.incoming;
-        vertex.incoming = temp;
-    }
-    return vertices;
 }
 
 /***********************************************************************/
@@ -321,9 +291,8 @@ std::string to_str(std::vector<T> xs) {
 std::string to_str(Vertex vertex) {
     std::string key_str = to_str(vertex.key);
     std::string coord_str = to_str(vertex.x) + ", " + to_str(vertex.y);
-    std::string in_str = to_str(vertex.incoming);
-    std::string out_str = to_str(vertex.outgoing);
-    return "V(" + key_str + ")(" + coord_str + ")(in=" + in_str + ", out=" + out_str + ")";
+    std::string out_str = to_str(vertex.edges);
+    return "V(" + key_str + ")(" + coord_str + ")(" + out_str + ")";
 }
 
 template <typename T>
