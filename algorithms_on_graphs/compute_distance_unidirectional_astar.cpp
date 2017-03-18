@@ -64,10 +64,14 @@ class AStarTracker {
         std::vector<Length> distances;
         std::priority_queue<WeightKeyPair> queue;
         std::vector<int> visited;
+        std::vector<int> processed;
+        std::vector<bool> processed_flags;
 
     Vertex get_vertex(int key) { return vertices[key - 1]; }
     Length get_distance(int key) { return distances[key - 1]; }
     void set_distance(int key, Length dist) { distances[key - 1] = dist; }
+    bool get_proc_flag(int key) { return processed_flags[key - 1]; }
+    void set_proc_flag(int key, bool flag) { processed_flags[key - 1] = flag; }
 
     int extract_top_of_queue() {
         WeightKeyPair top = queue.top();
@@ -82,6 +86,8 @@ class AStarTracker {
     void clear_state() {
         for (int& key: visited) { set_distance(key, INF); }
         visited.clear();
+        for (int& key: processed) { set_proc_flag(key, false); }
+        processed.clear();
         std::priority_queue<WeightKeyPair> empty_queue;
         queue = empty_queue;
     }
@@ -92,9 +98,14 @@ class AStarTracker {
         visited.push_back(start);
         while (!queue.empty()) {
             int key = extract_top_of_queue();
-            Vertex vertex = get_vertex(key);
-            for (auto& edge: vertex.outgoing) { relax(vertex, edge, end); }
             if (key == end) { return get_real_distance(start, end); }
+            Vertex vertex = get_vertex(key);
+            for (auto& edge: vertex.outgoing) {
+                if (get_proc_flag(edge.key)) continue;
+                relax(vertex, edge, end);
+            }
+            processed.push_back(vertex.key);
+            set_proc_flag(vertex.key, true);
         }
         return -1;
     }
@@ -118,6 +129,7 @@ class AStarTracker {
         Length dest_to_end = euclidean_distance(dest_vertex, end_vertex);
         return edge.weight - origin_to_end + dest_to_end;
     }
+
     Length get_real_distance(int start, int end) {
         Vertex start_vertex = get_vertex(start);
         Vertex end_vertex = get_vertex(end);
@@ -130,7 +142,10 @@ AStarTracker create_tracker(Vertices &vertices) {
     AStarTracker tracker;
     tracker.vertices = vertices;
     int n_vertices = vertices.size();
-    for (int i = 0; i < n_vertices; ++i) { tracker.distances.push_back(INF); }
+    for (int i = 0; i < n_vertices; ++i) {
+        tracker.distances.push_back(INF);
+        tracker.processed_flags.push_back(false);
+    }
     return tracker;
 }
 
@@ -144,8 +159,13 @@ int main() {
         int start, end;
         std::cin >> start >> end;
 
-        tracker.clear_state();
-        Length min_dist = tracker.compute_distance(start, end);
+        Length min_dist;
+        if (start == end) {
+            min_dist = 0;
+        } else {
+            tracker.clear_state();
+            min_dist = tracker.compute_distance(start, end);
+        }
 
         std::cout << min_dist;
         if (i != (n_queries - 1)) { std::cout << '\n'; }
