@@ -1,0 +1,11 @@
+test
+run:ammonite
+ammonite:run
+console
+test
+console
+ammonite:run
+~test
+console
+val word = "helloworld"
+val test = "seothuas"

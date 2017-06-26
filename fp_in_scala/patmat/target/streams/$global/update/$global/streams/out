@@ -1,4 +1,4 @@
-[0m[[0minfo[0m] [0mUpdating {file:/Users/akkhong/Dropbox/mooc/getting_started_scala/patmat/}root...[0m
+[0m[[0minfo[0m] [0mUpdating {file:/Users/akkhong/mooc/fp_in_scala/patmat/}root...[0m
 [0m[[0mdebug[0m] [0m:: resolving dependencies :: progfun1-patmat#progfun1-patmat_2.11;0.1-SNAPSHOT[0m
 [0m[[0mdebug[0m] [0m	confs: [compile, runtime, test, provided, optional, compile-internal, runtime-internal, test-internal, plugin, sources, docs, pom, scala-tool][0m
 [0m[[0mdebug[0m] [0m	validate = true[0m
@@ -7,7 +7,7 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies for progfun1-patmat#progfun1-patmat_2.11;0.1-SNAPSHOT [compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies progfun1-patmat#progfun1-patmat_2.11;0.1-SNAPSHOT->org.scala-lang#scala-library;2.11.7 [compile->default(compile)][0m
 [0m[[0minfo[0m] [0mResolving org.scala-lang#scala-library;2.11.7 ...[0m
-[0m[[0mdebug[0m] [0msbt-chain: Checking cache for: sbt.ivyint.MergedDescriptors@6d518572[0m
+[0m[[0mdebug[0m] [0msbt-chain: Checking cache for: sbt.ivyint.MergedDescriptors@7ad77667[0m
 [0m[[0mdebug[0m] [0msbt-chain: module revision found in cache: org.scala-lang#scala-library;2.11.7[0m
 [0m[[0mdebug[0m] [0m	found org.scala-lang#scala-library;2.11.7 in sbt-chain[0m
 [0m[[0mdebug[0m] [0m	[2.11.7] org.scala-lang#scala-library;2.11.7[0m
@@ -464,19 +464,19 @@
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.scala-lang#scala-reflect;2.11.7!scala-reflect.jar[0m
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.scala-lang.modules#scala-xml_2.11;1.0.4!scala-xml_2.11.jar(bundle)[0m
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] jline#jline;2.12.1!jline.jar[0m
-[0m[[0mdebug[0m] [0m:: resolution report :: resolve 199ms :: artifacts dl 14ms[0m
-[0m[[0mdebug[0m] [0m	report for progfun1-patmat#progfun1-patmat_2.11;0.1-SNAPSHOT compile produced in /Users/akkhong/Dropbox/mooc/getting_started_scala/patmat/target/resolution-cache/reports/progfun1-patmat-progfun1-patmat_2.11-compile.xml[0m
-[0m[[0mdebug[0m] [0m	report for progfun1-patmat#progfun1-patmat_2.11;0.1-SNAPSHOT runtime produced in /Users/akkhong/Dropbox/mooc/getting_started_scala/patmat/target/resolution-cache/reports/progfun1-patmat-progfun1-patmat_2.11-runtime.xml[0m
-[0m[[0mdebug[0m] [0m	report for progfun1-patmat#progfun1-patmat_2.11;0.1-SNAPSHOT test produced in /Users/akkhong/Dropbox/mooc/getting_started_scala/patmat/target/resolution-cache/reports/progfun1-patmat-progfun1-patmat_2.11-test.xml[0m
-[0m[[0mdebug[0m] [0m	report for progfun1-patmat#progfun1-patmat_2.11;0.1-SNAPSHOT provided produced in /Users/akkhong/Dropbox/mooc/getting_started_scala/patmat/target/resolution-cache/reports/progfun1-patmat-progfun1-patmat_2.11-provided.xml[0m
-[0m[[0mdebug[0m] [0m	report for progfun1-patmat#progfun1-patmat_2.11;0.1-SNAPSHOT optional produced in /Users/akkhong/Dropbox/mooc/getting_started_scala/patmat/target/resolution-cache/reports/progfun1-patmat-progfun1-patmat_2.11-optional.xml[0m
-[0m[[0mdebug[0m] [0m	report for progfun1-patmat#progfun1-patmat_2.11;0.1-SNAPSHOT compile-internal produced in /Users/akkhong/Dropbox/mooc/getting_started_scala/patmat/target/resolution-cache/reports/progfun1-patmat-progfun1-patmat_2.11-compile-internal.xml[0m
-[0m[[0mdebug[0m] [0m	report for progfun1-patmat#progfun1-patmat_2.11;0.1-SNAPSHOT runtime-internal produced in /Users/akkhong/Dropbox/mooc/getting_started_scala/patmat/target/resolution-cache/reports/progfun1-patmat-progfun1-patmat_2.11-runtime-internal.xml[0m
-[0m[[0mdebug[0m] [0m	report for progfun1-patmat#progfun1-patmat_2.11;0.1-SNAPSHOT test-internal produced in /Users/akkhong/Dropbox/mooc/getting_started_scala/patmat/target/resolution-cache/reports/progfun1-patmat-progfun1-patmat_2.11-test-internal.xml[0m
-[0m[[0mdebug[0m] [0m	report for progfun1-patmat#progfun1-patmat_2.11;0.1-SNAPSHOT plugin produced in /Users/akkhong/Dropbox/mooc/getting_started_scala/patmat/target/resolution-cache/reports/progfun1-patmat-progfun1-patmat_2.11-plugin.xml[0m
-[0m[[0mdebug[0m] [0m	report for progfun1-patmat#progfun1-patmat_2.11;0.1-SNAPSHOT sources produced in /Users/akkhong/Dropbox/mooc/getting_started_scala/patmat/target/resolution-cache/reports/progfun1-patmat-progfun1-patmat_2.11-sources.xml[0m
-[0m[[0mdebug[0m] [0m	report for progfun1-patmat#progfun1-patmat_2.11;0.1-SNAPSHOT docs produced in /Users/akkhong/Dropbox/mooc/getting_started_scala/patmat/target/resolution-cache/reports/progfun1-patmat-progfun1-patmat_2.11-docs.xml[0m
-[0m[[0mdebug[0m] [0m	report for progfun1-patmat#progfun1-patmat_2.11;0.1-SNAPSHOT pom produced in /Users/akkhong/Dropbox/mooc/getting_started_scala/patmat/target/resolution-cache/reports/progfun1-patmat-progfun1-patmat_2.11-pom.xml[0m
-[0m[[0mdebug[0m] [0m	report for progfun1-patmat#progfun1-patmat_2.11;0.1-SNAPSHOT scala-tool produced in /Users/akkhong/Dropbox/mooc/getting_started_scala/patmat/target/resolution-cache/reports/progfun1-patmat-progfun1-patmat_2.11-scala-tool.xml[0m
-[0m[[0mdebug[0m] [0m	resolve done (199ms resolve - 14ms download)[0m
+[0m[[0mdebug[0m] [0m:: resolution report :: resolve 254ms :: artifacts dl 23ms[0m
+[0m[[0mdebug[0m] [0m	report for progfun1-patmat#progfun1-patmat_2.11;0.1-SNAPSHOT compile produced in /Users/akkhong/mooc/fp_in_scala/patmat/target/resolution-cache/reports/progfun1-patmat-progfun1-patmat_2.11-compile.xml[0m
+[0m[[0mdebug[0m] [0m	report for progfun1-patmat#progfun1-patmat_2.11;0.1-SNAPSHOT runtime produced in /Users/akkhong/mooc/fp_in_scala/patmat/target/resolution-cache/reports/progfun1-patmat-progfun1-patmat_2.11-runtime.xml[0m
+[0m[[0mdebug[0m] [0m	report for progfun1-patmat#progfun1-patmat_2.11;0.1-SNAPSHOT test produced in /Users/akkhong/mooc/fp_in_scala/patmat/target/resolution-cache/reports/progfun1-patmat-progfun1-patmat_2.11-test.xml[0m
+[0m[[0mdebug[0m] [0m	report for progfun1-patmat#progfun1-patmat_2.11;0.1-SNAPSHOT provided produced in /Users/akkhong/mooc/fp_in_scala/patmat/target/resolution-cache/reports/progfun1-patmat-progfun1-patmat_2.11-provided.xml[0m
+[0m[[0mdebug[0m] [0m	report for progfun1-patmat#progfun1-patmat_2.11;0.1-SNAPSHOT optional produced in /Users/akkhong/mooc/fp_in_scala/patmat/target/resolution-cache/reports/progfun1-patmat-progfun1-patmat_2.11-optional.xml[0m
+[0m[[0mdebug[0m] [0m	report for progfun1-patmat#progfun1-patmat_2.11;0.1-SNAPSHOT compile-internal produced in /Users/akkhong/mooc/fp_in_scala/patmat/target/resolution-cache/reports/progfun1-patmat-progfun1-patmat_2.11-compile-internal.xml[0m
+[0m[[0mdebug[0m] [0m	report for progfun1-patmat#progfun1-patmat_2.11;0.1-SNAPSHOT runtime-internal produced in /Users/akkhong/mooc/fp_in_scala/patmat/target/resolution-cache/reports/progfun1-patmat-progfun1-patmat_2.11-runtime-internal.xml[0m
+[0m[[0mdebug[0m] [0m	report for progfun1-patmat#progfun1-patmat_2.11;0.1-SNAPSHOT test-internal produced in /Users/akkhong/mooc/fp_in_scala/patmat/target/resolution-cache/reports/progfun1-patmat-progfun1-patmat_2.11-test-internal.xml[0m
+[0m[[0mdebug[0m] [0m	report for progfun1-patmat#progfun1-patmat_2.11;0.1-SNAPSHOT plugin produced in /Users/akkhong/mooc/fp_in_scala/patmat/target/resolution-cache/reports/progfun1-patmat-progfun1-patmat_2.11-plugin.xml[0m
+[0m[[0mdebug[0m] [0m	report for progfun1-patmat#progfun1-patmat_2.11;0.1-SNAPSHOT sources produced in /Users/akkhong/mooc/fp_in_scala/patmat/target/resolution-cache/reports/progfun1-patmat-progfun1-patmat_2.11-sources.xml[0m
+[0m[[0mdebug[0m] [0m	report for progfun1-patmat#progfun1-patmat_2.11;0.1-SNAPSHOT docs produced in /Users/akkhong/mooc/fp_in_scala/patmat/target/resolution-cache/reports/progfun1-patmat-progfun1-patmat_2.11-docs.xml[0m
+[0m[[0mdebug[0m] [0m	report for progfun1-patmat#progfun1-patmat_2.11;0.1-SNAPSHOT pom produced in /Users/akkhong/mooc/fp_in_scala/patmat/target/resolution-cache/reports/progfun1-patmat-progfun1-patmat_2.11-pom.xml[0m
+[0m[[0mdebug[0m] [0m	report for progfun1-patmat#progfun1-patmat_2.11;0.1-SNAPSHOT scala-tool produced in /Users/akkhong/mooc/fp_in_scala/patmat/target/resolution-cache/reports/progfun1-patmat-progfun1-patmat_2.11-scala-tool.xml[0m
+[0m[[0mdebug[0m] [0m	resolve done (254ms resolve - 23ms download)[0m
 [0m[[0minfo[0m] [0mDone updating.[0m
