@@ -54,7 +54,7 @@ std::string to_str(AStarTracker tracker);
 Length euclidean_distance(const Vertex& target_vertex, const Vertex& current_vertex) {
     Length dx = target_vertex.x - current_vertex.x;
     Length dy = target_vertex.y - current_vertex.y;
-    return std::sqrt(dx*dx + dy*dy);
+    return std::sqrt(pow(dx, 2) + pow(dy, 2));
 }
 
 class AStarTracker {
