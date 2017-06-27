@@ -5,44 +5,8 @@
 [0m[[0minfo[0m] [0m[32m- dictionaryByOccurrences.get: eat[0m[0m
 [0m[[0minfo[0m] [0m[32m- word anagrams: married[0m[0m
 [0m[[0minfo[0m] [0m[32m- word anagrams: player[0m[0m
-[0m[[0minfo[0m] [0m[31m- subtract: lard - r *** FAILED ***[0m[0m
-[0m[[0minfo[0m] [0m[31m  scala.NotImplementedError: an implementation is missing[0m[0m
-[0m[[0minfo[0m] [0m[31m  at scala.Predef$.$qmark$qmark$qmark(Predef.scala:225)[0m[0m
-[0m[[0minfo[0m] [0m[31m  at forcomp.Anagrams$.subtract(Anagrams.scala:56)[0m[0m
-[0m[[0minfo[0m] [0m[31m  at forcomp.AnagramsSuite$$anonfun$7.apply$mcV$sp(AnagramsSuite.scala:46)[0m[0m
-[0m[[0minfo[0m] [0m[31m  at forcomp.AnagramsSuite$$anonfun$7.apply(AnagramsSuite.scala:42)[0m[0m
-[0m[[0minfo[0m] [0m[31m  at forcomp.AnagramsSuite$$anonfun$7.apply(AnagramsSuite.scala:42)[0m[0m
-[0m[[0minfo[0m] [0m[31m  at org.scalatest.Transformer$$anonfun$apply$1.apply$mcV$sp(Transformer.scala:22)[0m[0m
-[0m[[0minfo[0m] [0m[31m  at org.scalatest.OutcomeOf$class.outcomeOf(OutcomeOf.scala:85)[0m[0m
-[0m[[0minfo[0m] [0m[31m  at org.scalatest.OutcomeOf$.outcomeOf(OutcomeOf.scala:104)[0m[0m
-[0m[[0minfo[0m] [0m[31m  at org.scalatest.Transformer.apply(Transformer.scala:22)[0m[0m
-[0m[[0minfo[0m] [0m[31m  at org.scalatest.Transformer.apply(Transformer.scala:20)[0m[0m
-[0m[[0minfo[0m] [0m[31m  ...[0m[0m
+[0m[[0minfo[0m] [0m[32m- subtract: lard - r[0m[0m
 [0m[[0minfo[0m] [0m[32m- combinations: [][0m[0m
 [0m[[0minfo[0m] [0m[32m- combinations: abba[0m[0m
-[0m[[0minfo[0m] [0m[31m- sentence anagrams: [] *** FAILED ***[0m[0m
-[0m[[0minfo[0m] [0m[31m  scala.NotImplementedError: an implementation is missing[0m[0m
-[0m[[0minfo[0m] [0m[31m  at scala.Predef$.$qmark$qmark$qmark(Predef.scala:225)[0m[0m
-[0m[[0minfo[0m] [0m[31m  at forcomp.Anagrams$.sentenceAnagrams(Anagrams.scala:98)[0m[0m
-[0m[[0minfo[0m] [0m[31m  at forcomp.AnagramsSuite$$anonfun$10.apply$mcV$sp(AnagramsSuite.scala:73)[0m[0m
-[0m[[0minfo[0m] [0m[31m  at forcomp.AnagramsSuite$$anonfun$10.apply(AnagramsSuite.scala:71)[0m[0m
-[0m[[0minfo[0m] [0m[31m  at forcomp.AnagramsSuite$$anonfun$10.apply(AnagramsSuite.scala:71)[0m[0m
-[0m[[0minfo[0m] [0m[31m  at org.scalatest.Transformer$$anonfun$apply$1.apply$mcV$sp(Transformer.scala:22)[0m[0m
-[0m[[0minfo[0m] [0m[31m  at org.scalatest.OutcomeOf$class.outcomeOf(OutcomeOf.scala:85)[0m[0m
-[0m[[0minfo[0m] [0m[31m  at org.scalatest.OutcomeOf$.outcomeOf(OutcomeOf.scala:104)[0m[0m
-[0m[[0minfo[0m] [0m[31m  at org.scalatest.Transformer.apply(Transformer.scala:22)[0m[0m
-[0m[[0minfo[0m] [0m[31m  at org.scalatest.Transformer.apply(Transformer.scala:20)[0m[0m
-[0m[[0minfo[0m] [0m[31m  ...[0m[0m
-[0m[[0minfo[0m] [0m[31m- sentence anagrams: Linux rulez *** FAILED ***[0m[0m
-[0m[[0minfo[0m] [0m[31m  scala.NotImplementedError: an implementation is missing[0m[0m
-[0m[[0minfo[0m] [0m[31m  at scala.Predef$.$qmark$qmark$qmark(Predef.scala:225)[0m[0m
-[0m[[0minfo[0m] [0m[31m  at forcomp.Anagrams$.sentenceAnagrams(Anagrams.scala:98)[0m[0m
-[0m[[0minfo[0m] [0m[31m  at forcomp.AnagramsSuite$$anonfun$11.apply$mcV$sp(AnagramsSuite.scala:100)[0m[0m
-[0m[[0minfo[0m] [0m[31m  at forcomp.AnagramsSuite$$anonfun$11.apply(AnagramsSuite.scala:76)[0m[0m
-[0m[[0minfo[0m] [0m[31m  at forcomp.AnagramsSuite$$anonfun$11.apply(AnagramsSuite.scala:76)[0m[0m
-[0m[[0minfo[0m] [0m[31m  at org.scalatest.Transformer$$anonfun$apply$1.apply$mcV$sp(Transformer.scala:22)[0m[0m
-[0m[[0minfo[0m] [0m[31m  at org.scalatest.OutcomeOf$class.outcomeOf(OutcomeOf.scala:85)[0m[0m
-[0m[[0minfo[0m] [0m[31m  at org.scalatest.OutcomeOf$.outcomeOf(OutcomeOf.scala:104)[0m[0m
-[0m[[0minfo[0m] [0m[31m  at org.scalatest.Transformer.apply(Transformer.scala:22)[0m[0m
-[0m[[0minfo[0m] [0m[31m  at org.scalatest.Transformer.apply(Transformer.scala:20)[0m[0m
-[0m[[0minfo[0m] [0m[31m  ...[0m[0m
+[0m[[0minfo[0m] [0m[32m- sentence anagrams: [][0m[0m
+[0m[[0minfo[0m] [0m[32m- sentence anagrams: Linux rulez[0m[0m

@@ -1,9 +1,8 @@
-[0m[[0mdebug[0m] [0mRunning TaskDef(forcomp.AnagramsSuite, org.scalatest.tools.Framework$$anon$1@67f419ea, false, [SuiteSelector])[0m
-[0m[[0minfo[0m] [0m[36mRun completed in 625 milliseconds.[0m[0m
+[0m[[0mdebug[0m] [0mRunning TaskDef(forcomp.AnagramsSuite, org.scalatest.tools.Framework$$anon$1@7242d42b, false, [SuiteSelector])[0m
+[0m[[0minfo[0m] [0m[36mRun completed in 574 milliseconds.[0m[0m
 [0m[[0minfo[0m] [0m[36mTotal number of tests run: 11[0m[0m
 [0m[[0minfo[0m] [0m[36mSuites: completed 1, aborted 0[0m[0m
-[0m[[0minfo[0m] [0m[36mTests: succeeded 8, failed 3, canceled 0, ignored 0, pending 0[0m[0m
-[0m[[0minfo[0m] [0m[31m*** 3 TESTS FAILED ***[0m[0m
-[0m[[31merror[0m] [0mFailed tests:[0m
-[0m[[31merror[0m] [0m	forcomp.AnagramsSuite[0m
-[0m[[31merror[0m] [0m(test:[31mtest[0m) sbt.TestsFailedException: Tests unsuccessful[0m
+[0m[[0minfo[0m] [0m[36mTests: succeeded 11, failed 0, canceled 0, ignored 0, pending 0[0m[0m
+[0m[[0minfo[0m] [0m[32mAll tests passed.[0m[0m
+[0m[[0mdebug[0m] [0mPassed tests:[0m
+[0m[[0mdebug[0m] [0m	forcomp.AnagramsSuite[0m
