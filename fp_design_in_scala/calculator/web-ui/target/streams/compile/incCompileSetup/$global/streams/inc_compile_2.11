@@ -1,0 +1,660 @@
+format version: 5
+output mode:
+1 items
+0 -> single
+output directories:
+1 items
+output dir -> /Users/akkhong/mooc/fp_design_in_scala/calculator/web-ui/target/scala-2.11/classes
+compile options:
+1 items
+0 -> -Xplugin:/Users/akkhong/.coursier/cache/v1/https/repo1.maven.org/maven2/org/scala-js/scalajs-compiler_2.11.6/0.6.11/scalajs-compiler_2.11.6-0.6.11.jar
+javac options:
+0 items
+compiler version:
+1 items
+0 -> 2.11.6
+compile order:
+1 items
+0 -> Mixed
+name hashing:
+1 items
+0 -> true
+products:
+65 items
+/Users/akkhong/mooc/fp_design_in_scala/calculator/src/main/scala/calculator/Calculator.scala -> /Users/akkhong/mooc/fp_design_in_scala/calculator/web-ui/target/scala-2.11/classes/calculator/Calculator$$anonfun$calculator$Calculator$$evalSignal$1$1.class
+/Users/akkhong/mooc/fp_design_in_scala/calculator/src/main/scala/calculator/Calculator.scala -> /Users/akkhong/mooc/fp_design_in_scala/calculator/web-ui/target/scala-2.11/classes/calculator/Calculator$$anonfun$computeValues$1.class
+/Users/akkhong/mooc/fp_design_in_scala/calculator/src/main/scala/calculator/Calculator.scala -> /Users/akkhong/mooc/fp_design_in_scala/calculator/web-ui/target/scala-2.11/classes/calculator/Calculator$$anonfun$getReferenceExpr$1.class
+/Users/akkhong/mooc/fp_design_in_scala/calculator/src/main/scala/calculator/Calculator.scala -> /Users/akkhong/mooc/fp_design_in_scala/calculator/web-ui/target/scala-2.11/classes/calculator/Calculator$$anonfun$getReferenceExpr$2.class
+/Users/akkhong/mooc/fp_design_in_scala/calculator/src/main/scala/calculator/Calculator.scala -> /Users/akkhong/mooc/fp_design_in_scala/calculator/web-ui/target/scala-2.11/classes/calculator/Calculator$.class
+/Users/akkhong/mooc/fp_design_in_scala/calculator/src/main/scala/calculator/Calculator.scala -> /Users/akkhong/mooc/fp_design_in_scala/calculator/web-ui/target/scala-2.11/classes/calculator/Calculator.class
+/Users/akkhong/mooc/fp_design_in_scala/calculator/src/main/scala/calculator/Calculator.scala -> /Users/akkhong/mooc/fp_design_in_scala/calculator/web-ui/target/scala-2.11/classes/calculator/Divide$.class
+/Users/akkhong/mooc/fp_design_in_scala/calculator/src/main/scala/calculator/Calculator.scala -> /Users/akkhong/mooc/fp_design_in_scala/calculator/web-ui/target/scala-2.11/classes/calculator/Divide.class
+/Users/akkhong/mooc/fp_design_in_scala/calculator/src/main/scala/calculator/Calculator.scala -> /Users/akkhong/mooc/fp_design_in_scala/calculator/web-ui/target/scala-2.11/classes/calculator/Expr.class
+/Users/akkhong/mooc/fp_design_in_scala/calculator/src/main/scala/calculator/Calculator.scala -> /Users/akkhong/mooc/fp_design_in_scala/calculator/web-ui/target/scala-2.11/classes/calculator/Literal$.class
+/Users/akkhong/mooc/fp_design_in_scala/calculator/src/main/scala/calculator/Calculator.scala -> /Users/akkhong/mooc/fp_design_in_scala/calculator/web-ui/target/scala-2.11/classes/calculator/Literal.class
+/Users/akkhong/mooc/fp_design_in_scala/calculator/src/main/scala/calculator/Calculator.scala -> /Users/akkhong/mooc/fp_design_in_scala/calculator/web-ui/target/scala-2.11/classes/calculator/Minus$.class
+/Users/akkhong/mooc/fp_design_in_scala/calculator/src/main/scala/calculator/Calculator.scala -> /Users/akkhong/mooc/fp_design_in_scala/calculator/web-ui/target/scala-2.11/classes/calculator/Minus.class
+/Users/akkhong/mooc/fp_design_in_scala/calculator/src/main/scala/calculator/Calculator.scala -> /Users/akkhong/mooc/fp_design_in_scala/calculator/web-ui/target/scala-2.11/classes/calculator/Plus$.class
+/Users/akkhong/mooc/fp_design_in_scala/calculator/src/main/scala/calculator/Calculator.scala -> /Users/akkhong/mooc/fp_design_in_scala/calculator/web-ui/target/scala-2.11/classes/calculator/Plus.class
+/Users/akkhong/mooc/fp_design_in_scala/calculator/src/main/scala/calculator/Calculator.scala -> /Users/akkhong/mooc/fp_design_in_scala/calculator/web-ui/target/scala-2.11/classes/calculator/Ref$.class
+/Users/akkhong/mooc/fp_design_in_scala/calculator/src/main/scala/calculator/Calculator.scala -> /Users/akkhong/mooc/fp_design_in_scala/calculator/web-ui/target/scala-2.11/classes/calculator/Ref.class
+/Users/akkhong/mooc/fp_design_in_scala/calculator/src/main/scala/calculator/Calculator.scala -> /Users/akkhong/mooc/fp_design_in_scala/calculator/web-ui/target/scala-2.11/classes/calculator/Times$.class
+/Users/akkhong/mooc/fp_design_in_scala/calculator/src/main/scala/calculator/Calculator.scala -> /Users/akkhong/mooc/fp_design_in_scala/calculator/web-ui/target/scala-2.11/classes/calculator/Times.class
+/Users/akkhong/mooc/fp_design_in_scala/calculator/src/main/scala/calculator/Polynomial.scala -> /Users/akkhong/mooc/fp_design_in_scala/calculator/web-ui/target/scala-2.11/classes/calculator/Polynomial$$anonfun$computeDelta$1.class
+/Users/akkhong/mooc/fp_design_in_scala/calculator/src/main/scala/calculator/Polynomial.scala -> /Users/akkhong/mooc/fp_design_in_scala/calculator/web-ui/target/scala-2.11/classes/calculator/Polynomial$$anonfun$computeSolutions$1.class
+/Users/akkhong/mooc/fp_design_in_scala/calculator/src/main/scala/calculator/Polynomial.scala -> /Users/akkhong/mooc/fp_design_in_scala/calculator/web-ui/target/scala-2.11/classes/calculator/Polynomial$.class
+/Users/akkhong/mooc/fp_design_in_scala/calculator/src/main/scala/calculator/Polynomial.scala -> /Users/akkhong/mooc/fp_design_in_scala/calculator/web-ui/target/scala-2.11/classes/calculator/Polynomial.class
+/Users/akkhong/mooc/fp_design_in_scala/calculator/src/main/scala/calculator/Signal.scala -> /Users/akkhong/mooc/fp_design_in_scala/calculator/web-ui/target/scala-2.11/classes/calculator/NoSignal$$anonfun$$lessinit$greater$1.class
+/Users/akkhong/mooc/fp_design_in_scala/calculator/src/main/scala/calculator/Signal.scala -> /Users/akkhong/mooc/fp_design_in_scala/calculator/web-ui/target/scala-2.11/classes/calculator/NoSignal$.class
+/Users/akkhong/mooc/fp_design_in_scala/calculator/src/main/scala/calculator/Signal.scala -> /Users/akkhong/mooc/fp_design_in_scala/calculator/web-ui/target/scala-2.11/classes/calculator/NoSignal.class
+/Users/akkhong/mooc/fp_design_in_scala/calculator/src/main/scala/calculator/Signal.scala -> /Users/akkhong/mooc/fp_design_in_scala/calculator/web-ui/target/scala-2.11/classes/calculator/Signal$$anonfun$1.class
+/Users/akkhong/mooc/fp_design_in_scala/calculator/src/main/scala/calculator/Signal.scala -> /Users/akkhong/mooc/fp_design_in_scala/calculator/web-ui/target/scala-2.11/classes/calculator/Signal$$anonfun$apply$1.class
+/Users/akkhong/mooc/fp_design_in_scala/calculator/src/main/scala/calculator/Signal.scala -> /Users/akkhong/mooc/fp_design_in_scala/calculator/web-ui/target/scala-2.11/classes/calculator/Signal$$anonfun$computeValue$1.class
+/Users/akkhong/mooc/fp_design_in_scala/calculator/src/main/scala/calculator/Signal.scala -> /Users/akkhong/mooc/fp_design_in_scala/calculator/web-ui/target/scala-2.11/classes/calculator/Signal$$anonfun$computeValue$2.class
+/Users/akkhong/mooc/fp_design_in_scala/calculator/src/main/scala/calculator/Signal.scala -> /Users/akkhong/mooc/fp_design_in_scala/calculator/web-ui/target/scala-2.11/classes/calculator/Signal$.class
+/Users/akkhong/mooc/fp_design_in_scala/calculator/src/main/scala/calculator/Signal.scala -> /Users/akkhong/mooc/fp_design_in_scala/calculator/web-ui/target/scala-2.11/classes/calculator/Signal.class
+/Users/akkhong/mooc/fp_design_in_scala/calculator/src/main/scala/calculator/Signal.scala -> /Users/akkhong/mooc/fp_design_in_scala/calculator/web-ui/target/scala-2.11/classes/calculator/Var$.class
+/Users/akkhong/mooc/fp_design_in_scala/calculator/src/main/scala/calculator/Signal.scala -> /Users/akkhong/mooc/fp_design_in_scala/calculator/web-ui/target/scala-2.11/classes/calculator/Var.class
+/Users/akkhong/mooc/fp_design_in_scala/calculator/src/main/scala/calculator/TweetLength.scala -> /Users/akkhong/mooc/fp_design_in_scala/calculator/web-ui/target/scala-2.11/classes/calculator/TweetLength$$anonfun$calculator$TweetLength$$tweetLength$1.class
+/Users/akkhong/mooc/fp_design_in_scala/calculator/src/main/scala/calculator/TweetLength.scala -> /Users/akkhong/mooc/fp_design_in_scala/calculator/web-ui/target/scala-2.11/classes/calculator/TweetLength$$anonfun$colorForRemainingCharsCount$1.class
+/Users/akkhong/mooc/fp_design_in_scala/calculator/src/main/scala/calculator/TweetLength.scala -> /Users/akkhong/mooc/fp_design_in_scala/calculator/web-ui/target/scala-2.11/classes/calculator/TweetLength$$anonfun$tweetRemainingCharsCount$1.class
+/Users/akkhong/mooc/fp_design_in_scala/calculator/src/main/scala/calculator/TweetLength.scala -> /Users/akkhong/mooc/fp_design_in_scala/calculator/web-ui/target/scala-2.11/classes/calculator/TweetLength$.class
+/Users/akkhong/mooc/fp_design_in_scala/calculator/src/main/scala/calculator/TweetLength.scala -> /Users/akkhong/mooc/fp_design_in_scala/calculator/web-ui/target/scala-2.11/classes/calculator/TweetLength.class
+/Users/akkhong/mooc/fp_design_in_scala/calculator/web-ui/src/main/scala/calculator/CalculatorUI.scala -> /Users/akkhong/mooc/fp_design_in_scala/calculator/web-ui/target/scala-2.11/classes/calculator/CalculatorUI$$anonfun$1.class
+/Users/akkhong/mooc/fp_design_in_scala/calculator/web-ui/src/main/scala/calculator/CalculatorUI.scala -> /Users/akkhong/mooc/fp_design_in_scala/calculator/web-ui/target/scala-2.11/classes/calculator/CalculatorUI$$anonfun$2$$anonfun$apply$2.class
+/Users/akkhong/mooc/fp_design_in_scala/calculator/web-ui/src/main/scala/calculator/CalculatorUI.scala -> /Users/akkhong/mooc/fp_design_in_scala/calculator/web-ui/target/scala-2.11/classes/calculator/CalculatorUI$$anonfun$2.class
+/Users/akkhong/mooc/fp_design_in_scala/calculator/web-ui/src/main/scala/calculator/CalculatorUI.scala -> /Users/akkhong/mooc/fp_design_in_scala/calculator/web-ui/target/scala-2.11/classes/calculator/CalculatorUI$$anonfun$3.class
+/Users/akkhong/mooc/fp_design_in_scala/calculator/web-ui/src/main/scala/calculator/CalculatorUI.scala -> /Users/akkhong/mooc/fp_design_in_scala/calculator/web-ui/target/scala-2.11/classes/calculator/CalculatorUI$$anonfun$4.class
+/Users/akkhong/mooc/fp_design_in_scala/calculator/web-ui/src/main/scala/calculator/CalculatorUI.scala -> /Users/akkhong/mooc/fp_design_in_scala/calculator/web-ui/target/scala-2.11/classes/calculator/CalculatorUI$$anonfun$5.class
+/Users/akkhong/mooc/fp_design_in_scala/calculator/web-ui/src/main/scala/calculator/CalculatorUI.scala -> /Users/akkhong/mooc/fp_design_in_scala/calculator/web-ui/target/scala-2.11/classes/calculator/CalculatorUI$$anonfun$6.class
+/Users/akkhong/mooc/fp_design_in_scala/calculator/web-ui/src/main/scala/calculator/CalculatorUI.scala -> /Users/akkhong/mooc/fp_design_in_scala/calculator/web-ui/target/scala-2.11/classes/calculator/CalculatorUI$$anonfun$7.class
+/Users/akkhong/mooc/fp_design_in_scala/calculator/web-ui/src/main/scala/calculator/CalculatorUI.scala -> /Users/akkhong/mooc/fp_design_in_scala/calculator/web-ui/target/scala-2.11/classes/calculator/CalculatorUI$$anonfun$8.class
+/Users/akkhong/mooc/fp_design_in_scala/calculator/web-ui/src/main/scala/calculator/CalculatorUI.scala -> /Users/akkhong/mooc/fp_design_in_scala/calculator/web-ui/target/scala-2.11/classes/calculator/CalculatorUI$$anonfun$9.class
+/Users/akkhong/mooc/fp_design_in_scala/calculator/web-ui/src/main/scala/calculator/CalculatorUI.scala -> /Users/akkhong/mooc/fp_design_in_scala/calculator/web-ui/target/scala-2.11/classes/calculator/CalculatorUI$$anonfun$doubleValueOfInput$1.class
+/Users/akkhong/mooc/fp_design_in_scala/calculator/web-ui/src/main/scala/calculator/CalculatorUI.scala -> /Users/akkhong/mooc/fp_design_in_scala/calculator/web-ui/target/scala-2.11/classes/calculator/CalculatorUI$$anonfun$exprOfInput$1.class
+/Users/akkhong/mooc/fp_design_in_scala/calculator/web-ui/src/main/scala/calculator/CalculatorUI.scala -> /Users/akkhong/mooc/fp_design_in_scala/calculator/web-ui/target/scala-2.11/classes/calculator/CalculatorUI$$anonfun$inputValueSignal$1.class
+/Users/akkhong/mooc/fp_design_in_scala/calculator/web-ui/src/main/scala/calculator/CalculatorUI.scala -> /Users/akkhong/mooc/fp_design_in_scala/calculator/web-ui/target/scala-2.11/classes/calculator/CalculatorUI$$anonfun$parseSimple$1$1.class
+/Users/akkhong/mooc/fp_design_in_scala/calculator/web-ui/src/main/scala/calculator/CalculatorUI.scala -> /Users/akkhong/mooc/fp_design_in_scala/calculator/web-ui/target/scala-2.11/classes/calculator/CalculatorUI$$anonfun$setup2ndOrderPolynomial$1.class
+/Users/akkhong/mooc/fp_design_in_scala/calculator/web-ui/src/main/scala/calculator/CalculatorUI.scala -> /Users/akkhong/mooc/fp_design_in_scala/calculator/web-ui/target/scala-2.11/classes/calculator/CalculatorUI$$anonfun$setup2ndOrderPolynomial$2.class
+/Users/akkhong/mooc/fp_design_in_scala/calculator/web-ui/src/main/scala/calculator/CalculatorUI.scala -> /Users/akkhong/mooc/fp_design_in_scala/calculator/web-ui/target/scala-2.11/classes/calculator/CalculatorUI$$anonfun$setupCalculator$1.class
+/Users/akkhong/mooc/fp_design_in_scala/calculator/web-ui/src/main/scala/calculator/CalculatorUI.scala -> /Users/akkhong/mooc/fp_design_in_scala/calculator/web-ui/target/scala-2.11/classes/calculator/CalculatorUI$$anonfun$setupCalculator$2$$anonfun$apply$1$$anonfun$apply$mcV$sp$1.class
+/Users/akkhong/mooc/fp_design_in_scala/calculator/web-ui/src/main/scala/calculator/CalculatorUI.scala -> /Users/akkhong/mooc/fp_design_in_scala/calculator/web-ui/target/scala-2.11/classes/calculator/CalculatorUI$$anonfun$setupCalculator$2$$anonfun$apply$1$$anonfun$apply$mcV$sp$2.class
+/Users/akkhong/mooc/fp_design_in_scala/calculator/web-ui/src/main/scala/calculator/CalculatorUI.scala -> /Users/akkhong/mooc/fp_design_in_scala/calculator/web-ui/target/scala-2.11/classes/calculator/CalculatorUI$$anonfun$setupCalculator$2$$anonfun$apply$1.class
+/Users/akkhong/mooc/fp_design_in_scala/calculator/web-ui/src/main/scala/calculator/CalculatorUI.scala -> /Users/akkhong/mooc/fp_design_in_scala/calculator/web-ui/target/scala-2.11/classes/calculator/CalculatorUI$$anonfun$setupCalculator$2.class
+/Users/akkhong/mooc/fp_design_in_scala/calculator/web-ui/src/main/scala/calculator/CalculatorUI.scala -> /Users/akkhong/mooc/fp_design_in_scala/calculator/web-ui/target/scala-2.11/classes/calculator/CalculatorUI$$anonfun$setupTweetMeasurer$1.class
+/Users/akkhong/mooc/fp_design_in_scala/calculator/web-ui/src/main/scala/calculator/CalculatorUI.scala -> /Users/akkhong/mooc/fp_design_in_scala/calculator/web-ui/target/scala-2.11/classes/calculator/CalculatorUI$$anonfun$setupTweetMeasurer$2.class
+/Users/akkhong/mooc/fp_design_in_scala/calculator/web-ui/src/main/scala/calculator/CalculatorUI.scala -> /Users/akkhong/mooc/fp_design_in_scala/calculator/web-ui/target/scala-2.11/classes/calculator/CalculatorUI$$anonfun$textAreaValueSignal$1.class
+/Users/akkhong/mooc/fp_design_in_scala/calculator/web-ui/src/main/scala/calculator/CalculatorUI.scala -> /Users/akkhong/mooc/fp_design_in_scala/calculator/web-ui/target/scala-2.11/classes/calculator/CalculatorUI$.class
+/Users/akkhong/mooc/fp_design_in_scala/calculator/web-ui/src/main/scala/calculator/CalculatorUI.scala -> /Users/akkhong/mooc/fp_design_in_scala/calculator/web-ui/target/scala-2.11/classes/calculator/CalculatorUI.class
+binary dependencies:
+12 items
+/Users/akkhong/mooc/fp_design_in_scala/calculator/src/main/scala/calculator/Calculator.scala -> /Library/Java/JavaVirtualMachines/jdk1.8.0_131.jdk/Contents/Home/jre/lib/rt.jar
+/Users/akkhong/mooc/fp_design_in_scala/calculator/src/main/scala/calculator/Calculator.scala -> /Users/akkhong/.coursier/cache/v1/https/repo1.maven.org/maven2/org/scala-lang/scala-library/2.11.6/scala-library-2.11.6.jar
+/Users/akkhong/mooc/fp_design_in_scala/calculator/src/main/scala/calculator/Polynomial.scala -> /Library/Java/JavaVirtualMachines/jdk1.8.0_131.jdk/Contents/Home/jre/lib/rt.jar
+/Users/akkhong/mooc/fp_design_in_scala/calculator/src/main/scala/calculator/Polynomial.scala -> /Users/akkhong/.coursier/cache/v1/https/repo1.maven.org/maven2/org/scala-lang/scala-library/2.11.6/scala-library-2.11.6.jar
+/Users/akkhong/mooc/fp_design_in_scala/calculator/src/main/scala/calculator/Signal.scala -> /Library/Java/JavaVirtualMachines/jdk1.8.0_131.jdk/Contents/Home/jre/lib/rt.jar
+/Users/akkhong/mooc/fp_design_in_scala/calculator/src/main/scala/calculator/Signal.scala -> /Users/akkhong/.coursier/cache/v1/https/repo1.maven.org/maven2/org/scala-lang/scala-library/2.11.6/scala-library-2.11.6.jar
+/Users/akkhong/mooc/fp_design_in_scala/calculator/src/main/scala/calculator/TweetLength.scala -> /Library/Java/JavaVirtualMachines/jdk1.8.0_131.jdk/Contents/Home/jre/lib/rt.jar
+/Users/akkhong/mooc/fp_design_in_scala/calculator/src/main/scala/calculator/TweetLength.scala -> /Users/akkhong/.coursier/cache/v1/https/repo1.maven.org/maven2/org/scala-lang/scala-library/2.11.6/scala-library-2.11.6.jar
+/Users/akkhong/mooc/fp_design_in_scala/calculator/web-ui/src/main/scala/calculator/CalculatorUI.scala -> /Library/Java/JavaVirtualMachines/jdk1.8.0_131.jdk/Contents/Home/jre/lib/rt.jar
+/Users/akkhong/mooc/fp_design_in_scala/calculator/web-ui/src/main/scala/calculator/CalculatorUI.scala -> /Users/akkhong/.coursier/cache/v1/https/repo1.maven.org/maven2/org/scala-js/scalajs-dom_sjs0.6_2.11/0.8.0/scalajs-dom_sjs0.6_2.11-0.8.0.jar
+/Users/akkhong/mooc/fp_design_in_scala/calculator/web-ui/src/main/scala/calculator/CalculatorUI.scala -> /Users/akkhong/.coursier/cache/v1/https/repo1.maven.org/maven2/org/scala-js/scalajs-library_2.11/0.6.11/scalajs-library_2.11-0.6.11.jar
+/Users/akkhong/mooc/fp_design_in_scala/calculator/web-ui/src/main/scala/calculator/CalculatorUI.scala -> /Users/akkhong/.coursier/cache/v1/https/repo1.maven.org/maven2/org/scala-lang/scala-library/2.11.6/scala-library-2.11.6.jar
+direct source dependencies:
+0 items
+direct external dependencies:
+0 items
+public inherited source dependencies:
+0 items
+public inherited external dependencies:
+0 items
+member reference internal dependencies:
+7 items
+/Users/akkhong/mooc/fp_design_in_scala/calculator/src/main/scala/calculator/Calculator.scala -> /Users/akkhong/mooc/fp_design_in_scala/calculator/src/main/scala/calculator/Signal.scala
+/Users/akkhong/mooc/fp_design_in_scala/calculator/src/main/scala/calculator/Polynomial.scala -> /Users/akkhong/mooc/fp_design_in_scala/calculator/src/main/scala/calculator/Signal.scala
+/Users/akkhong/mooc/fp_design_in_scala/calculator/src/main/scala/calculator/TweetLength.scala -> /Users/akkhong/mooc/fp_design_in_scala/calculator/src/main/scala/calculator/Signal.scala
+/Users/akkhong/mooc/fp_design_in_scala/calculator/web-ui/src/main/scala/calculator/CalculatorUI.scala -> /Users/akkhong/mooc/fp_design_in_scala/calculator/src/main/scala/calculator/Calculator.scala
+/Users/akkhong/mooc/fp_design_in_scala/calculator/web-ui/src/main/scala/calculator/CalculatorUI.scala -> /Users/akkhong/mooc/fp_design_in_scala/calculator/src/main/scala/calculator/Polynomial.scala
+/Users/akkhong/mooc/fp_design_in_scala/calculator/web-ui/src/main/scala/calculator/CalculatorUI.scala -> /Users/akkhong/mooc/fp_design_in_scala/calculator/src/main/scala/calculator/Signal.scala
+/Users/akkhong/mooc/fp_design_in_scala/calculator/web-ui/src/main/scala/calculator/CalculatorUI.scala -> /Users/akkhong/mooc/fp_design_in_scala/calculator/src/main/scala/calculator/TweetLength.scala
+member reference external dependencies:
+0 items
+inheritance internal dependencies:
+0 items
+inheritance external dependencies:
+0 items
+class names:
+65 items
+/Users/akkhong/mooc/fp_design_in_scala/calculator/src/main/scala/calculator/Calculator.scala -> calculator.Calculator
+/Users/akkhong/mooc/fp_design_in_scala/calculator/src/main/scala/calculator/Calculator.scala -> calculator.Calculator$
+/Users/akkhong/mooc/fp_design_in_scala/calculator/src/main/scala/calculator/Calculator.scala -> calculator.Calculator$$anonfun$calculator$Calculator$$evalSignal$1$1
+/Users/akkhong/mooc/fp_design_in_scala/calculator/src/main/scala/calculator/Calculator.scala -> calculator.Calculator$$anonfun$computeValues$1
+/Users/akkhong/mooc/fp_design_in_scala/calculator/src/main/scala/calculator/Calculator.scala -> calculator.Calculator$$anonfun$getReferenceExpr$1
+/Users/akkhong/mooc/fp_design_in_scala/calculator/src/main/scala/calculator/Calculator.scala -> calculator.Calculator$$anonfun$getReferenceExpr$2
+/Users/akkhong/mooc/fp_design_in_scala/calculator/src/main/scala/calculator/Calculator.scala -> calculator.Divide
+/Users/akkhong/mooc/fp_design_in_scala/calculator/src/main/scala/calculator/Calculator.scala -> calculator.Divide$
+/Users/akkhong/mooc/fp_design_in_scala/calculator/src/main/scala/calculator/Calculator.scala -> calculator.Expr
+/Users/akkhong/mooc/fp_design_in_scala/calculator/src/main/scala/calculator/Calculator.scala -> calculator.Literal
+/Users/akkhong/mooc/fp_design_in_scala/calculator/src/main/scala/calculator/Calculator.scala -> calculator.Literal$
+/Users/akkhong/mooc/fp_design_in_scala/calculator/src/main/scala/calculator/Calculator.scala -> calculator.Minus
+/Users/akkhong/mooc/fp_design_in_scala/calculator/src/main/scala/calculator/Calculator.scala -> calculator.Minus$
+/Users/akkhong/mooc/fp_design_in_scala/calculator/src/main/scala/calculator/Calculator.scala -> calculator.Plus
+/Users/akkhong/mooc/fp_design_in_scala/calculator/src/main/scala/calculator/Calculator.scala -> calculator.Plus$
+/Users/akkhong/mooc/fp_design_in_scala/calculator/src/main/scala/calculator/Calculator.scala -> calculator.Ref
+/Users/akkhong/mooc/fp_design_in_scala/calculator/src/main/scala/calculator/Calculator.scala -> calculator.Ref$
+/Users/akkhong/mooc/fp_design_in_scala/calculator/src/main/scala/calculator/Calculator.scala -> calculator.Times
+/Users/akkhong/mooc/fp_design_in_scala/calculator/src/main/scala/calculator/Calculator.scala -> calculator.Times$
+/Users/akkhong/mooc/fp_design_in_scala/calculator/src/main/scala/calculator/Polynomial.scala -> calculator.Polynomial
+/Users/akkhong/mooc/fp_design_in_scala/calculator/src/main/scala/calculator/Polynomial.scala -> calculator.Polynomial$
+/Users/akkhong/mooc/fp_design_in_scala/calculator/src/main/scala/calculator/Polynomial.scala -> calculator.Polynomial$$anonfun$computeDelta$1
+/Users/akkhong/mooc/fp_design_in_scala/calculator/src/main/scala/calculator/Polynomial.scala -> calculator.Polynomial$$anonfun$computeSolutions$1
+/Users/akkhong/mooc/fp_design_in_scala/calculator/src/main/scala/calculator/Signal.scala -> calculator.NoSignal
+/Users/akkhong/mooc/fp_design_in_scala/calculator/src/main/scala/calculator/Signal.scala -> calculator.NoSignal$
+/Users/akkhong/mooc/fp_design_in_scala/calculator/src/main/scala/calculator/Signal.scala -> calculator.NoSignal$$anonfun$$lessinit$greater$1
+/Users/akkhong/mooc/fp_design_in_scala/calculator/src/main/scala/calculator/Signal.scala -> calculator.Signal
+/Users/akkhong/mooc/fp_design_in_scala/calculator/src/main/scala/calculator/Signal.scala -> calculator.Signal$
+/Users/akkhong/mooc/fp_design_in_scala/calculator/src/main/scala/calculator/Signal.scala -> calculator.Signal$$anonfun$1
+/Users/akkhong/mooc/fp_design_in_scala/calculator/src/main/scala/calculator/Signal.scala -> calculator.Signal$$anonfun$apply$1
+/Users/akkhong/mooc/fp_design_in_scala/calculator/src/main/scala/calculator/Signal.scala -> calculator.Signal$$anonfun$computeValue$1
+/Users/akkhong/mooc/fp_design_in_scala/calculator/src/main/scala/calculator/Signal.scala -> calculator.Signal$$anonfun$computeValue$2
+/Users/akkhong/mooc/fp_design_in_scala/calculator/src/main/scala/calculator/Signal.scala -> calculator.Var
+/Users/akkhong/mooc/fp_design_in_scala/calculator/src/main/scala/calculator/Signal.scala -> calculator.Var$
+/Users/akkhong/mooc/fp_design_in_scala/calculator/src/main/scala/calculator/TweetLength.scala -> calculator.TweetLength
+/Users/akkhong/mooc/fp_design_in_scala/calculator/src/main/scala/calculator/TweetLength.scala -> calculator.TweetLength$
+/Users/akkhong/mooc/fp_design_in_scala/calculator/src/main/scala/calculator/TweetLength.scala -> calculator.TweetLength$$anonfun$calculator$TweetLength$$tweetLength$1
+/Users/akkhong/mooc/fp_design_in_scala/calculator/src/main/scala/calculator/TweetLength.scala -> calculator.TweetLength$$anonfun$colorForRemainingCharsCount$1
+/Users/akkhong/mooc/fp_design_in_scala/calculator/src/main/scala/calculator/TweetLength.scala -> calculator.TweetLength$$anonfun$tweetRemainingCharsCount$1
+/Users/akkhong/mooc/fp_design_in_scala/calculator/web-ui/src/main/scala/calculator/CalculatorUI.scala -> calculator.CalculatorUI
+/Users/akkhong/mooc/fp_design_in_scala/calculator/web-ui/src/main/scala/calculator/CalculatorUI.scala -> calculator.CalculatorUI$
+/Users/akkhong/mooc/fp_design_in_scala/calculator/web-ui/src/main/scala/calculator/CalculatorUI.scala -> calculator.CalculatorUI$$anonfun$1
+/Users/akkhong/mooc/fp_design_in_scala/calculator/web-ui/src/main/scala/calculator/CalculatorUI.scala -> calculator.CalculatorUI$$anonfun$2
+/Users/akkhong/mooc/fp_design_in_scala/calculator/web-ui/src/main/scala/calculator/CalculatorUI.scala -> calculator.CalculatorUI$$anonfun$2$$anonfun$apply$2
+/Users/akkhong/mooc/fp_design_in_scala/calculator/web-ui/src/main/scala/calculator/CalculatorUI.scala -> calculator.CalculatorUI$$anonfun$3
+/Users/akkhong/mooc/fp_design_in_scala/calculator/web-ui/src/main/scala/calculator/CalculatorUI.scala -> calculator.CalculatorUI$$anonfun$4
+/Users/akkhong/mooc/fp_design_in_scala/calculator/web-ui/src/main/scala/calculator/CalculatorUI.scala -> calculator.CalculatorUI$$anonfun$5
+/Users/akkhong/mooc/fp_design_in_scala/calculator/web-ui/src/main/scala/calculator/CalculatorUI.scala -> calculator.CalculatorUI$$anonfun$6
+/Users/akkhong/mooc/fp_design_in_scala/calculator/web-ui/src/main/scala/calculator/CalculatorUI.scala -> calculator.CalculatorUI$$anonfun$7
+/Users/akkhong/mooc/fp_design_in_scala/calculator/web-ui/src/main/scala/calculator/CalculatorUI.scala -> calculator.CalculatorUI$$anonfun$8
+/Users/akkhong/mooc/fp_design_in_scala/calculator/web-ui/src/main/scala/calculator/CalculatorUI.scala -> calculator.CalculatorUI$$anonfun$9
+/Users/akkhong/mooc/fp_design_in_scala/calculator/web-ui/src/main/scala/calculator/CalculatorUI.scala -> calculator.CalculatorUI$$anonfun$doubleValueOfInput$1
+/Users/akkhong/mooc/fp_design_in_scala/calculator/web-ui/src/main/scala/calculator/CalculatorUI.scala -> calculator.CalculatorUI$$anonfun$exprOfInput$1
+/Users/akkhong/mooc/fp_design_in_scala/calculator/web-ui/src/main/scala/calculator/CalculatorUI.scala -> calculator.CalculatorUI$$anonfun$inputValueSignal$1
+/Users/akkhong/mooc/fp_design_in_scala/calculator/web-ui/src/main/scala/calculator/CalculatorUI.scala -> calculator.CalculatorUI$$anonfun$parseSimple$1$1
+/Users/akkhong/mooc/fp_design_in_scala/calculator/web-ui/src/main/scala/calculator/CalculatorUI.scala -> calculator.CalculatorUI$$anonfun$setup2ndOrderPolynomial$1
+/Users/akkhong/mooc/fp_design_in_scala/calculator/web-ui/src/main/scala/calculator/CalculatorUI.scala -> calculator.CalculatorUI$$anonfun$setup2ndOrderPolynomial$2
+/Users/akkhong/mooc/fp_design_in_scala/calculator/web-ui/src/main/scala/calculator/CalculatorUI.scala -> calculator.CalculatorUI$$anonfun$setupCalculator$1
+/Users/akkhong/mooc/fp_design_in_scala/calculator/web-ui/src/main/scala/calculator/CalculatorUI.scala -> calculator.CalculatorUI$$anonfun$setupCalculator$2
+/Users/akkhong/mooc/fp_design_in_scala/calculator/web-ui/src/main/scala/calculator/CalculatorUI.scala -> calculator.CalculatorUI$$anonfun$setupCalculator$2$$anonfun$apply$1
+/Users/akkhong/mooc/fp_design_in_scala/calculator/web-ui/src/main/scala/calculator/CalculatorUI.scala -> calculator.CalculatorUI$$anonfun$setupCalculator$2$$anonfun$apply$1$$anonfun$apply$mcV$sp$1
+/Users/akkhong/mooc/fp_design_in_scala/calculator/web-ui/src/main/scala/calculator/CalculatorUI.scala -> calculator.CalculatorUI$$anonfun$setupCalculator$2$$anonfun$apply$1$$anonfun$apply$mcV$sp$2
+/Users/akkhong/mooc/fp_design_in_scala/calculator/web-ui/src/main/scala/calculator/CalculatorUI.scala -> calculator.CalculatorUI$$anonfun$setupTweetMeasurer$1
+/Users/akkhong/mooc/fp_design_in_scala/calculator/web-ui/src/main/scala/calculator/CalculatorUI.scala -> calculator.CalculatorUI$$anonfun$setupTweetMeasurer$2
+/Users/akkhong/mooc/fp_design_in_scala/calculator/web-ui/src/main/scala/calculator/CalculatorUI.scala -> calculator.CalculatorUI$$anonfun$textAreaValueSignal$1
+used names:
+339 items
+/Users/akkhong/mooc/fp_design_in_scala/calculator/src/main/scala/calculator/Calculator.scala -> &&
+/Users/akkhong/mooc/fp_design_in_scala/calculator/src/main/scala/calculator/Calculator.scala -> *
+/Users/akkhong/mooc/fp_design_in_scala/calculator/src/main/scala/calculator/Calculator.scala -> +
+/Users/akkhong/mooc/fp_design_in_scala/calculator/src/main/scala/calculator/Calculator.scala -> -
+/Users/akkhong/mooc/fp_design_in_scala/calculator/src/main/scala/calculator/Calculator.scala -> /
+/Users/akkhong/mooc/fp_design_in_scala/calculator/src/main/scala/calculator/Calculator.scala -> ::
+/Users/akkhong/mooc/fp_design_in_scala/calculator/src/main/scala/calculator/Calculator.scala -> <init>
+/Users/akkhong/mooc/fp_design_in_scala/calculator/src/main/scala/calculator/Calculator.scala -> ==
+/Users/akkhong/mooc/fp_design_in_scala/calculator/src/main/scala/calculator/Calculator.scala -> AbstractFunction1
+/Users/akkhong/mooc/fp_design_in_scala/calculator/src/main/scala/calculator/Calculator.scala -> AbstractFunction2
+/Users/akkhong/mooc/fp_design_in_scala/calculator/src/main/scala/calculator/Calculator.scala -> AnyRef
+/Users/akkhong/mooc/fp_design_in_scala/calculator/src/main/scala/calculator/Calculator.scala -> Boolean
+/Users/akkhong/mooc/fp_design_in_scala/calculator/src/main/scala/calculator/Calculator.scala -> Calculator
+/Users/akkhong/mooc/fp_design_in_scala/calculator/src/main/scala/calculator/Calculator.scala -> Divide
+/Users/akkhong/mooc/fp_design_in_scala/calculator/src/main/scala/calculator/Calculator.scala -> Double
+/Users/akkhong/mooc/fp_design_in_scala/calculator/src/main/scala/calculator/Calculator.scala -> Expr
+/Users/akkhong/mooc/fp_design_in_scala/calculator/src/main/scala/calculator/Calculator.scala -> List
+/Users/akkhong/mooc/fp_design_in_scala/calculator/src/main/scala/calculator/Calculator.scala -> Literal
+/Users/akkhong/mooc/fp_design_in_scala/calculator/src/main/scala/calculator/Calculator.scala -> Map
+/Users/akkhong/mooc/fp_design_in_scala/calculator/src/main/scala/calculator/Calculator.scala -> Minus
+/Users/akkhong/mooc/fp_design_in_scala/calculator/src/main/scala/calculator/Calculator.scala -> Nil
+/Users/akkhong/mooc/fp_design_in_scala/calculator/src/main/scala/calculator/Calculator.scala -> None
+/Users/akkhong/mooc/fp_design_in_scala/calculator/src/main/scala/calculator/Calculator.scala -> Plus
+/Users/akkhong/mooc/fp_design_in_scala/calculator/src/main/scala/calculator/Calculator.scala -> Predef
+/Users/akkhong/mooc/fp_design_in_scala/calculator/src/main/scala/calculator/Calculator.scala -> Product
+/Users/akkhong/mooc/fp_design_in_scala/calculator/src/main/scala/calculator/Calculator.scala -> Ref
+/Users/akkhong/mooc/fp_design_in_scala/calculator/src/main/scala/calculator/Calculator.scala -> ScalaRunTime
+/Users/akkhong/mooc/fp_design_in_scala/calculator/src/main/scala/calculator/Calculator.scala -> Serializable
+/Users/akkhong/mooc/fp_design_in_scala/calculator/src/main/scala/calculator/Calculator.scala -> Signal
+/Users/akkhong/mooc/fp_design_in_scala/calculator/src/main/scala/calculator/Calculator.scala -> Statics
+/Users/akkhong/mooc/fp_design_in_scala/calculator/src/main/scala/calculator/Calculator.scala -> String
+/Users/akkhong/mooc/fp_design_in_scala/calculator/src/main/scala/calculator/Calculator.scala -> Times
+/Users/akkhong/mooc/fp_design_in_scala/calculator/src/main/scala/calculator/Calculator.scala -> _1
+/Users/akkhong/mooc/fp_design_in_scala/calculator/src/main/scala/calculator/Calculator.scala -> _2
+/Users/akkhong/mooc/fp_design_in_scala/calculator/src/main/scala/calculator/Calculator.scala -> _hashCode
+/Users/akkhong/mooc/fp_design_in_scala/calculator/src/main/scala/calculator/Calculator.scala -> _toString
+/Users/akkhong/mooc/fp_design_in_scala/calculator/src/main/scala/calculator/Calculator.scala -> a
+/Users/akkhong/mooc/fp_design_in_scala/calculator/src/main/scala/calculator/Calculator.scala -> apply
+/Users/akkhong/mooc/fp_design_in_scala/calculator/src/main/scala/calculator/Calculator.scala -> asInstanceOf
+/Users/akkhong/mooc/fp_design_in_scala/calculator/src/main/scala/calculator/Calculator.scala -> b
+/Users/akkhong/mooc/fp_design_in_scala/calculator/src/main/scala/calculator/Calculator.scala -> calculator
+/Users/akkhong/mooc/fp_design_in_scala/calculator/src/main/scala/calculator/Calculator.scala -> canBuildFrom
+/Users/akkhong/mooc/fp_design_in_scala/calculator/src/main/scala/calculator/Calculator.scala -> checkWithTrace
+/Users/akkhong/mooc/fp_design_in_scala/calculator/src/main/scala/calculator/Calculator.scala -> contains
+/Users/akkhong/mooc/fp_design_in_scala/calculator/src/main/scala/calculator/Calculator.scala -> doubleHash
+/Users/akkhong/mooc/fp_design_in_scala/calculator/src/main/scala/calculator/Calculator.scala -> eq
+/Users/akkhong/mooc/fp_design_in_scala/calculator/src/main/scala/calculator/Calculator.scala -> eval
+/Users/akkhong/mooc/fp_design_in_scala/calculator/src/main/scala/calculator/Calculator.scala -> evalSignal
+/Users/akkhong/mooc/fp_design_in_scala/calculator/src/main/scala/calculator/Calculator.scala -> expr
+/Users/akkhong/mooc/fp_design_in_scala/calculator/src/main/scala/calculator/Calculator.scala -> exprSig
+/Users/akkhong/mooc/fp_design_in_scala/calculator/src/main/scala/calculator/Calculator.scala -> exprSignal
+/Users/akkhong/mooc/fp_design_in_scala/calculator/src/main/scala/calculator/Calculator.scala -> finalizeHash
+/Users/akkhong/mooc/fp_design_in_scala/calculator/src/main/scala/calculator/Calculator.scala -> fold
+/Users/akkhong/mooc/fp_design_in_scala/calculator/src/main/scala/calculator/Calculator.scala -> get
+/Users/akkhong/mooc/fp_design_in_scala/calculator/src/main/scala/calculator/Calculator.scala -> getReferenceExpr
+/Users/akkhong/mooc/fp_design_in_scala/calculator/src/main/scala/calculator/Calculator.scala -> immutable
+/Users/akkhong/mooc/fp_design_in_scala/calculator/src/main/scala/calculator/Calculator.scala -> isCircularlyDependent
+/Users/akkhong/mooc/fp_design_in_scala/calculator/src/main/scala/calculator/Calculator.scala -> isInstanceOf
+/Users/akkhong/mooc/fp_design_in_scala/calculator/src/main/scala/calculator/Calculator.scala -> lExpr
+/Users/akkhong/mooc/fp_design_in_scala/calculator/src/main/scala/calculator/Calculator.scala -> map
+/Users/akkhong/mooc/fp_design_in_scala/calculator/src/main/scala/calculator/Calculator.scala -> mix
+/Users/akkhong/mooc/fp_design_in_scala/calculator/src/main/scala/calculator/Calculator.scala -> name
+/Users/akkhong/mooc/fp_design_in_scala/calculator/src/main/scala/calculator/Calculator.scala -> namedExpressions
+/Users/akkhong/mooc/fp_design_in_scala/calculator/src/main/scala/calculator/Calculator.scala -> ne
+/Users/akkhong/mooc/fp_design_in_scala/calculator/src/main/scala/calculator/Calculator.scala -> package
+/Users/akkhong/mooc/fp_design_in_scala/calculator/src/main/scala/calculator/Calculator.scala -> path
+/Users/akkhong/mooc/fp_design_in_scala/calculator/src/main/scala/calculator/Calculator.scala -> rExpr
+/Users/akkhong/mooc/fp_design_in_scala/calculator/src/main/scala/calculator/Calculator.scala -> refExpr
+/Users/akkhong/mooc/fp_design_in_scala/calculator/src/main/scala/calculator/Calculator.scala -> refName
+/Users/akkhong/mooc/fp_design_in_scala/calculator/src/main/scala/calculator/Calculator.scala -> refs
+/Users/akkhong/mooc/fp_design_in_scala/calculator/src/main/scala/calculator/Calculator.scala -> runtime
+/Users/akkhong/mooc/fp_design_in_scala/calculator/src/main/scala/calculator/Calculator.scala -> scala
+/Users/akkhong/mooc/fp_design_in_scala/calculator/src/main/scala/calculator/Calculator.scala -> toString
+/Users/akkhong/mooc/fp_design_in_scala/calculator/src/main/scala/calculator/Calculator.scala -> typedProductIterator
+/Users/akkhong/mooc/fp_design_in_scala/calculator/src/main/scala/calculator/Calculator.scala -> v
+/Users/akkhong/mooc/fp_design_in_scala/calculator/src/main/scala/calculator/Calculator.scala -> ||
+/Users/akkhong/mooc/fp_design_in_scala/calculator/src/main/scala/calculator/Polynomial.scala -> *
+/Users/akkhong/mooc/fp_design_in_scala/calculator/src/main/scala/calculator/Polynomial.scala -> +
+/Users/akkhong/mooc/fp_design_in_scala/calculator/src/main/scala/calculator/Polynomial.scala -> -
+/Users/akkhong/mooc/fp_design_in_scala/calculator/src/main/scala/calculator/Polynomial.scala -> /
+/Users/akkhong/mooc/fp_design_in_scala/calculator/src/main/scala/calculator/Polynomial.scala -> <
+/Users/akkhong/mooc/fp_design_in_scala/calculator/src/main/scala/calculator/Polynomial.scala -> <init>
+/Users/akkhong/mooc/fp_design_in_scala/calculator/src/main/scala/calculator/Polynomial.scala -> ==
+/Users/akkhong/mooc/fp_design_in_scala/calculator/src/main/scala/calculator/Polynomial.scala -> AnyRef
+/Users/akkhong/mooc/fp_design_in_scala/calculator/src/main/scala/calculator/Polynomial.scala -> Double
+/Users/akkhong/mooc/fp_design_in_scala/calculator/src/main/scala/calculator/Polynomial.scala -> Math
+/Users/akkhong/mooc/fp_design_in_scala/calculator/src/main/scala/calculator/Polynomial.scala -> Polynomial
+/Users/akkhong/mooc/fp_design_in_scala/calculator/src/main/scala/calculator/Polynomial.scala -> Predef
+/Users/akkhong/mooc/fp_design_in_scala/calculator/src/main/scala/calculator/Polynomial.scala -> Set
+/Users/akkhong/mooc/fp_design_in_scala/calculator/src/main/scala/calculator/Polynomial.scala -> Signal
+/Users/akkhong/mooc/fp_design_in_scala/calculator/src/main/scala/calculator/Polynomial.scala -> a
+/Users/akkhong/mooc/fp_design_in_scala/calculator/src/main/scala/calculator/Polynomial.scala -> apply
+/Users/akkhong/mooc/fp_design_in_scala/calculator/src/main/scala/calculator/Polynomial.scala -> b
+/Users/akkhong/mooc/fp_design_in_scala/calculator/src/main/scala/calculator/Polynomial.scala -> c
+/Users/akkhong/mooc/fp_design_in_scala/calculator/src/main/scala/calculator/Polynomial.scala -> calculator
+/Users/akkhong/mooc/fp_design_in_scala/calculator/src/main/scala/calculator/Polynomial.scala -> delta
+/Users/akkhong/mooc/fp_design_in_scala/calculator/src/main/scala/calculator/Polynomial.scala -> java
+/Users/akkhong/mooc/fp_design_in_scala/calculator/src/main/scala/calculator/Polynomial.scala -> lang
+/Users/akkhong/mooc/fp_design_in_scala/calculator/src/main/scala/calculator/Polynomial.scala -> scala
+/Users/akkhong/mooc/fp_design_in_scala/calculator/src/main/scala/calculator/Polynomial.scala -> sqrt
+/Users/akkhong/mooc/fp_design_in_scala/calculator/src/main/scala/calculator/Polynomial.scala -> unary_-
+/Users/akkhong/mooc/fp_design_in_scala/calculator/src/main/scala/calculator/Signal.scala -> +
+/Users/akkhong/mooc/fp_design_in_scala/calculator/src/main/scala/calculator/Signal.scala -> -
+/Users/akkhong/mooc/fp_design_in_scala/calculator/src/main/scala/calculator/Signal.scala -> ::
+/Users/akkhong/mooc/fp_design_in_scala/calculator/src/main/scala/calculator/Signal.scala -> <byname>
+/Users/akkhong/mooc/fp_design_in_scala/calculator/src/main/scala/calculator/Signal.scala -> <init>
+/Users/akkhong/mooc/fp_design_in_scala/calculator/src/main/scala/calculator/Signal.scala -> ???
+/Users/akkhong/mooc/fp_design_in_scala/calculator/src/main/scala/calculator/Signal.scala -> AnyRef
+/Users/akkhong/mooc/fp_design_in_scala/calculator/src/main/scala/calculator/Signal.scala -> DynamicVariable
+/Users/akkhong/mooc/fp_design_in_scala/calculator/src/main/scala/calculator/Signal.scala -> Function0
+/Users/akkhong/mooc/fp_design_in_scala/calculator/src/main/scala/calculator/Signal.scala -> List
+/Users/akkhong/mooc/fp_design_in_scala/calculator/src/main/scala/calculator/Signal.scala -> Nil
+/Users/akkhong/mooc/fp_design_in_scala/calculator/src/main/scala/calculator/Signal.scala -> NoSignal
+/Users/akkhong/mooc/fp_design_in_scala/calculator/src/main/scala/calculator/Signal.scala -> Nothing
+/Users/akkhong/mooc/fp_design_in_scala/calculator/src/main/scala/calculator/Signal.scala -> Predef
+/Users/akkhong/mooc/fp_design_in_scala/calculator/src/main/scala/calculator/Signal.scala -> Set
+/Users/akkhong/mooc/fp_design_in_scala/calculator/src/main/scala/calculator/Signal.scala -> Signal
+/Users/akkhong/mooc/fp_design_in_scala/calculator/src/main/scala/calculator/Signal.scala -> T
+/Users/akkhong/mooc/fp_design_in_scala/calculator/src/main/scala/calculator/Signal.scala -> Unit
+/Users/akkhong/mooc/fp_design_in_scala/calculator/src/main/scala/calculator/Signal.scala -> Var
+/Users/akkhong/mooc/fp_design_in_scala/calculator/src/main/scala/calculator/Signal.scala -> _root_
+/Users/akkhong/mooc/fp_design_in_scala/calculator/src/main/scala/calculator/Signal.scala -> apply
+/Users/akkhong/mooc/fp_design_in_scala/calculator/src/main/scala/calculator/Signal.scala -> assert
+/Users/akkhong/mooc/fp_design_in_scala/calculator/src/main/scala/calculator/Signal.scala -> calculator
+/Users/akkhong/mooc/fp_design_in_scala/calculator/src/main/scala/calculator/Signal.scala -> caller
+/Users/akkhong/mooc/fp_design_in_scala/calculator/src/main/scala/calculator/Signal.scala -> computeValue
+/Users/akkhong/mooc/fp_design_in_scala/calculator/src/main/scala/calculator/Signal.scala -> contains
+/Users/akkhong/mooc/fp_design_in_scala/calculator/src/main/scala/calculator/Signal.scala -> expr
+/Users/akkhong/mooc/fp_design_in_scala/calculator/src/main/scala/calculator/Signal.scala -> foreach
+/Users/akkhong/mooc/fp_design_in_scala/calculator/src/main/scala/calculator/Signal.scala -> immutable
+/Users/akkhong/mooc/fp_design_in_scala/calculator/src/main/scala/calculator/Signal.scala -> myExpr
+/Users/akkhong/mooc/fp_design_in_scala/calculator/src/main/scala/calculator/Signal.scala -> myExpr_=
+/Users/akkhong/mooc/fp_design_in_scala/calculator/src/main/scala/calculator/Signal.scala -> myValue
+/Users/akkhong/mooc/fp_design_in_scala/calculator/src/main/scala/calculator/Signal.scala -> myValue_=
+/Users/akkhong/mooc/fp_design_in_scala/calculator/src/main/scala/calculator/Signal.scala -> newValue
+/Users/akkhong/mooc/fp_design_in_scala/calculator/src/main/scala/calculator/Signal.scala -> obs
+/Users/akkhong/mooc/fp_design_in_scala/calculator/src/main/scala/calculator/Signal.scala -> observed
+/Users/akkhong/mooc/fp_design_in_scala/calculator/src/main/scala/calculator/Signal.scala -> observed_=
+/Users/akkhong/mooc/fp_design_in_scala/calculator/src/main/scala/calculator/Signal.scala -> observers
+/Users/akkhong/mooc/fp_design_in_scala/calculator/src/main/scala/calculator/Signal.scala -> observers_=
+/Users/akkhong/mooc/fp_design_in_scala/calculator/src/main/scala/calculator/Signal.scala -> package
+/Users/akkhong/mooc/fp_design_in_scala/calculator/src/main/scala/calculator/Signal.scala -> scala
+/Users/akkhong/mooc/fp_design_in_scala/calculator/src/main/scala/calculator/Signal.scala -> sig
+/Users/akkhong/mooc/fp_design_in_scala/calculator/src/main/scala/calculator/Signal.scala -> unary_!
+/Users/akkhong/mooc/fp_design_in_scala/calculator/src/main/scala/calculator/Signal.scala -> update
+/Users/akkhong/mooc/fp_design_in_scala/calculator/src/main/scala/calculator/Signal.scala -> util
+/Users/akkhong/mooc/fp_design_in_scala/calculator/src/main/scala/calculator/Signal.scala -> value
+/Users/akkhong/mooc/fp_design_in_scala/calculator/src/main/scala/calculator/Signal.scala -> withValue
+/Users/akkhong/mooc/fp_design_in_scala/calculator/src/main/scala/calculator/TweetLength.scala -> -
+/Users/akkhong/mooc/fp_design_in_scala/calculator/src/main/scala/calculator/TweetLength.scala -> <init>
+/Users/akkhong/mooc/fp_design_in_scala/calculator/src/main/scala/calculator/TweetLength.scala -> >=
+/Users/akkhong/mooc/fp_design_in_scala/calculator/src/main/scala/calculator/TweetLength.scala -> AnyRef
+/Users/akkhong/mooc/fp_design_in_scala/calculator/src/main/scala/calculator/TweetLength.scala -> Character
+/Users/akkhong/mooc/fp_design_in_scala/calculator/src/main/scala/calculator/TweetLength.scala -> Int
+/Users/akkhong/mooc/fp_design_in_scala/calculator/src/main/scala/calculator/TweetLength.scala -> Predef
+/Users/akkhong/mooc/fp_design_in_scala/calculator/src/main/scala/calculator/TweetLength.scala -> Signal
+/Users/akkhong/mooc/fp_design_in_scala/calculator/src/main/scala/calculator/TweetLength.scala -> String
+/Users/akkhong/mooc/fp_design_in_scala/calculator/src/main/scala/calculator/TweetLength.scala -> TweetLength
+/Users/akkhong/mooc/fp_design_in_scala/calculator/src/main/scala/calculator/TweetLength.scala -> apply
+/Users/akkhong/mooc/fp_design_in_scala/calculator/src/main/scala/calculator/TweetLength.scala -> augmentString
+/Users/akkhong/mooc/fp_design_in_scala/calculator/src/main/scala/calculator/TweetLength.scala -> calculator
+/Users/akkhong/mooc/fp_design_in_scala/calculator/src/main/scala/calculator/TweetLength.scala -> count
+/Users/akkhong/mooc/fp_design_in_scala/calculator/src/main/scala/calculator/TweetLength.scala -> fallbackStringCanBuildFrom
+/Users/akkhong/mooc/fp_design_in_scala/calculator/src/main/scala/calculator/TweetLength.scala -> init
+/Users/akkhong/mooc/fp_design_in_scala/calculator/src/main/scala/calculator/TweetLength.scala -> isEmpty
+/Users/akkhong/mooc/fp_design_in_scala/calculator/src/main/scala/calculator/TweetLength.scala -> isSurrogatePair
+/Users/akkhong/mooc/fp_design_in_scala/calculator/src/main/scala/calculator/TweetLength.scala -> java
+/Users/akkhong/mooc/fp_design_in_scala/calculator/src/main/scala/calculator/TweetLength.scala -> lang
+/Users/akkhong/mooc/fp_design_in_scala/calculator/src/main/scala/calculator/TweetLength.scala -> length
+/Users/akkhong/mooc/fp_design_in_scala/calculator/src/main/scala/calculator/TweetLength.scala -> remainingCharsCount
+/Users/akkhong/mooc/fp_design_in_scala/calculator/src/main/scala/calculator/TweetLength.scala -> scala
+/Users/akkhong/mooc/fp_design_in_scala/calculator/src/main/scala/calculator/TweetLength.scala -> tail
+/Users/akkhong/mooc/fp_design_in_scala/calculator/src/main/scala/calculator/TweetLength.scala -> text
+/Users/akkhong/mooc/fp_design_in_scala/calculator/src/main/scala/calculator/TweetLength.scala -> tupled
+/Users/akkhong/mooc/fp_design_in_scala/calculator/src/main/scala/calculator/TweetLength.scala -> tweetLength
+/Users/akkhong/mooc/fp_design_in_scala/calculator/src/main/scala/calculator/TweetLength.scala -> tweetText
+/Users/akkhong/mooc/fp_design_in_scala/calculator/src/main/scala/calculator/TweetLength.scala -> wrapString
+/Users/akkhong/mooc/fp_design_in_scala/calculator/src/main/scala/calculator/TweetLength.scala -> zip
+/Users/akkhong/mooc/fp_design_in_scala/calculator/web-ui/src/main/scala/calculator/CalculatorUI.scala -> !=
+/Users/akkhong/mooc/fp_design_in_scala/calculator/web-ui/src/main/scala/calculator/CalculatorUI.scala -> $conforms
+/Users/akkhong/mooc/fp_design_in_scala/calculator/web-ui/src/main/scala/calculator/CalculatorUI.scala -> &&
+/Users/akkhong/mooc/fp_design_in_scala/calculator/web-ui/src/main/scala/calculator/CalculatorUI.scala -> +
+/Users/akkhong/mooc/fp_design_in_scala/calculator/web-ui/src/main/scala/calculator/CalculatorUI.scala -> <=
+/Users/akkhong/mooc/fp_design_in_scala/calculator/web-ui/src/main/scala/calculator/CalculatorUI.scala -> <init>
+/Users/akkhong/mooc/fp_design_in_scala/calculator/web-ui/src/main/scala/calculator/CalculatorUI.scala -> ==
+/Users/akkhong/mooc/fp_design_in_scala/calculator/web-ui/src/main/scala/calculator/CalculatorUI.scala -> >=
+/Users/akkhong/mooc/fp_design_in_scala/calculator/web-ui/src/main/scala/calculator/CalculatorUI.scala -> A
+/Users/akkhong/mooc/fp_design_in_scala/calculator/web-ui/src/main/scala/calculator/CalculatorUI.scala -> Any
+/Users/akkhong/mooc/fp_design_in_scala/calculator/web-ui/src/main/scala/calculator/CalculatorUI.scala -> Array
+/Users/akkhong/mooc/fp_design_in_scala/calculator/web-ui/src/main/scala/calculator/CalculatorUI.scala -> Calculator
+/Users/akkhong/mooc/fp_design_in_scala/calculator/web-ui/src/main/scala/calculator/CalculatorUI.scala -> CalculatorUI
+/Users/akkhong/mooc/fp_design_in_scala/calculator/web-ui/src/main/scala/calculator/CalculatorUI.scala -> ClassTag
+/Users/akkhong/mooc/fp_design_in_scala/calculator/web-ui/src/main/scala/calculator/CalculatorUI.scala -> ClearCssClassRegExp
+/Users/akkhong/mooc/fp_design_in_scala/calculator/web-ui/src/main/scala/calculator/CalculatorUI.scala -> Double
+/Users/akkhong/mooc/fp_design_in_scala/calculator/web-ui/src/main/scala/calculator/CalculatorUI.scala -> Element
+/Users/akkhong/mooc/fp_design_in_scala/calculator/web-ui/src/main/scala/calculator/CalculatorUI.scala -> Event
+/Users/akkhong/mooc/fp_design_in_scala/calculator/web-ui/src/main/scala/calculator/CalculatorUI.scala -> Expr
+/Users/akkhong/mooc/fp_design_in_scala/calculator/web-ui/src/main/scala/calculator/CalculatorUI.scala -> Function0
+/Users/akkhong/mooc/fp_design_in_scala/calculator/web-ui/src/main/scala/calculator/CalculatorUI.scala -> IllegalArgumentException
+/Users/akkhong/mooc/fp_design_in_scala/calculator/web-ui/src/main/scala/calculator/CalculatorUI.scala -> IndexedSeq
+/Users/akkhong/mooc/fp_design_in_scala/calculator/web-ui/src/main/scala/calculator/CalculatorUI.scala -> Input
+/Users/akkhong/mooc/fp_design_in_scala/calculator/web-ui/src/main/scala/calculator/CalculatorUI.scala -> JSApp
+/Users/akkhong/mooc/fp_design_in_scala/calculator/web-ui/src/main/scala/calculator/CalculatorUI.scala -> JSStringOps
+/Users/akkhong/mooc/fp_design_in_scala/calculator/web-ui/src/main/scala/calculator/CalculatorUI.scala -> List
+/Users/akkhong/mooc/fp_design_in_scala/calculator/web-ui/src/main/scala/calculator/CalculatorUI.scala -> None
+/Users/akkhong/mooc/fp_design_in_scala/calculator/web-ui/src/main/scala/calculator/CalculatorUI.scala -> NumberFormatException
+/Users/akkhong/mooc/fp_design_in_scala/calculator/web-ui/src/main/scala/calculator/CalculatorUI.scala -> Option
+/Users/akkhong/mooc/fp_design_in_scala/calculator/web-ui/src/main/scala/calculator/CalculatorUI.scala -> Polynomial
+/Users/akkhong/mooc/fp_design_in_scala/calculator/web-ui/src/main/scala/calculator/CalculatorUI.scala -> Predef
+/Users/akkhong/mooc/fp_design_in_scala/calculator/web-ui/src/main/scala/calculator/CalculatorUI.scala -> RegExp
+/Users/akkhong/mooc/fp_design_in_scala/calculator/web-ui/src/main/scala/calculator/CalculatorUI.scala -> SetTimeoutHandle
+/Users/akkhong/mooc/fp_design_in_scala/calculator/web-ui/src/main/scala/calculator/CalculatorUI.scala -> Signal
+/Users/akkhong/mooc/fp_design_in_scala/calculator/web-ui/src/main/scala/calculator/CalculatorUI.scala -> Span
+/Users/akkhong/mooc/fp_design_in_scala/calculator/web-ui/src/main/scala/calculator/CalculatorUI.scala -> String
+/Users/akkhong/mooc/fp_design_in_scala/calculator/web-ui/src/main/scala/calculator/CalculatorUI.scala -> StringContext
+/Users/akkhong/mooc/fp_design_in_scala/calculator/web-ui/src/main/scala/calculator/CalculatorUI.scala -> TextArea
+/Users/akkhong/mooc/fp_design_in_scala/calculator/web-ui/src/main/scala/calculator/CalculatorUI.scala -> Throwable
+/Users/akkhong/mooc/fp_design_in_scala/calculator/web-ui/src/main/scala/calculator/CalculatorUI.scala -> TweetLength
+/Users/akkhong/mooc/fp_design_in_scala/calculator/web-ui/src/main/scala/calculator/CalculatorUI.scala -> Unit
+/Users/akkhong/mooc/fp_design_in_scala/calculator/web-ui/src/main/scala/calculator/CalculatorUI.scala -> Var
+/Users/akkhong/mooc/fp_design_in_scala/calculator/web-ui/src/main/scala/calculator/CalculatorUI.scala -> _1
+/Users/akkhong/mooc/fp_design_in_scala/calculator/web-ui/src/main/scala/calculator/CalculatorUI.scala -> _2
+/Users/akkhong/mooc/fp_design_in_scala/calculator/web-ui/src/main/scala/calculator/CalculatorUI.scala -> _3
+/Users/akkhong/mooc/fp_design_in_scala/calculator/web-ui/src/main/scala/calculator/CalculatorUI.scala -> _root_
+/Users/akkhong/mooc/fp_design_in_scala/calculator/web-ui/src/main/scala/calculator/CalculatorUI.scala -> a
+/Users/akkhong/mooc/fp_design_in_scala/calculator/web-ui/src/main/scala/calculator/CalculatorUI.scala -> aText
+/Users/akkhong/mooc/fp_design_in_scala/calculator/web-ui/src/main/scala/calculator/CalculatorUI.scala -> addEventListener
+/Users/akkhong/mooc/fp_design_in_scala/calculator/web-ui/src/main/scala/calculator/CalculatorUI.scala -> apply
+/Users/akkhong/mooc/fp_design_in_scala/calculator/web-ui/src/main/scala/calculator/CalculatorUI.scala -> asInstanceOf
+/Users/akkhong/mooc/fp_design_in_scala/calculator/web-ui/src/main/scala/calculator/CalculatorUI.scala -> assert
+/Users/akkhong/mooc/fp_design_in_scala/calculator/web-ui/src/main/scala/calculator/CalculatorUI.scala -> augmentString
+/Users/akkhong/mooc/fp_design_in_scala/calculator/web-ui/src/main/scala/calculator/CalculatorUI.scala -> b
+/Users/akkhong/mooc/fp_design_in_scala/calculator/web-ui/src/main/scala/calculator/CalculatorUI.scala -> bText
+/Users/akkhong/mooc/fp_design_in_scala/calculator/web-ui/src/main/scala/calculator/CalculatorUI.scala -> backgroundColor_=
+/Users/akkhong/mooc/fp_design_in_scala/calculator/web-ui/src/main/scala/calculator/CalculatorUI.scala -> c
+/Users/akkhong/mooc/fp_design_in_scala/calculator/web-ui/src/main/scala/calculator/CalculatorUI.scala -> calculator
+/Users/akkhong/mooc/fp_design_in_scala/calculator/web-ui/src/main/scala/calculator/CalculatorUI.scala -> canBuildFrom
+/Users/akkhong/mooc/fp_design_in_scala/calculator/web-ui/src/main/scala/calculator/CalculatorUI.scala -> className
+/Users/akkhong/mooc/fp_design_in_scala/calculator/web-ui/src/main/scala/calculator/CalculatorUI.scala -> className_=
+/Users/akkhong/mooc/fp_design_in_scala/calculator/web-ui/src/main/scala/calculator/CalculatorUI.scala -> clearTimeout
+/Users/akkhong/mooc/fp_design_in_scala/calculator/web-ui/src/main/scala/calculator/CalculatorUI.scala -> color
+/Users/akkhong/mooc/fp_design_in_scala/calculator/web-ui/src/main/scala/calculator/CalculatorUI.scala -> colorForRemainingCharsCount
+/Users/akkhong/mooc/fp_design_in_scala/calculator/web-ui/src/main/scala/calculator/CalculatorUI.scala -> color_=
+/Users/akkhong/mooc/fp_design_in_scala/calculator/web-ui/src/main/scala/calculator/CalculatorUI.scala -> computeDelta
+/Users/akkhong/mooc/fp_design_in_scala/calculator/web-ui/src/main/scala/calculator/CalculatorUI.scala -> computeSolutions
+/Users/akkhong/mooc/fp_design_in_scala/calculator/web-ui/src/main/scala/calculator/CalculatorUI.scala -> computeValues
+/Users/akkhong/mooc/fp_design_in_scala/calculator/web-ui/src/main/scala/calculator/CalculatorUI.scala -> dehighlightTimeout
+/Users/akkhong/mooc/fp_design_in_scala/calculator/web-ui/src/main/scala/calculator/CalculatorUI.scala -> delta
+/Users/akkhong/mooc/fp_design_in_scala/calculator/web-ui/src/main/scala/calculator/CalculatorUI.scala -> deltaArea
+/Users/akkhong/mooc/fp_design_in_scala/calculator/web-ui/src/main/scala/calculator/CalculatorUI.scala -> document
+/Users/akkhong/mooc/fp_design_in_scala/calculator/web-ui/src/main/scala/calculator/CalculatorUI.scala -> dom
+/Users/akkhong/mooc/fp_design_in_scala/calculator/web-ui/src/main/scala/calculator/CalculatorUI.scala -> doubleValueOfInput
+/Users/akkhong/mooc/fp_design_in_scala/calculator/web-ui/src/main/scala/calculator/CalculatorUI.scala -> doubleValues
+/Users/akkhong/mooc/fp_design_in_scala/calculator/web-ui/src/main/scala/calculator/CalculatorUI.scala -> element
+/Users/akkhong/mooc/fp_design_in_scala/calculator/web-ui/src/main/scala/calculator/CalculatorUI.scala -> elementById
+/Users/akkhong/mooc/fp_design_in_scala/calculator/web-ui/src/main/scala/calculator/CalculatorUI.scala -> elementValueSignal
+/Users/akkhong/mooc/fp_design_in_scala/calculator/web-ui/src/main/scala/calculator/CalculatorUI.scala -> enableJSStringOps
+/Users/akkhong/mooc/fp_design_in_scala/calculator/web-ui/src/main/scala/calculator/CalculatorUI.scala -> exprOfInput
+/Users/akkhong/mooc/fp_design_in_scala/calculator/web-ui/src/main/scala/calculator/CalculatorUI.scala -> exprs
+/Users/akkhong/mooc/fp_design_in_scala/calculator/web-ui/src/main/scala/calculator/CalculatorUI.scala -> filter
+/Users/akkhong/mooc/fp_design_in_scala/calculator/web-ui/src/main/scala/calculator/CalculatorUI.scala -> forall
+/Users/akkhong/mooc/fp_design_in_scala/calculator/web-ui/src/main/scala/calculator/CalculatorUI.scala -> foreach
+/Users/akkhong/mooc/fp_design_in_scala/calculator/web-ui/src/main/scala/calculator/CalculatorUI.scala -> fromFunction1
+/Users/akkhong/mooc/fp_design_in_scala/calculator/web-ui/src/main/scala/calculator/CalculatorUI.scala -> get
+/Users/akkhong/mooc/fp_design_in_scala/calculator/web-ui/src/main/scala/calculator/CalculatorUI.scala -> getElementById
+/Users/akkhong/mooc/fp_design_in_scala/calculator/web-ui/src/main/scala/calculator/CalculatorUI.scala -> getValue
+/Users/akkhong/mooc/fp_design_in_scala/calculator/web-ui/src/main/scala/calculator/CalculatorUI.scala -> html
+/Users/akkhong/mooc/fp_design_in_scala/calculator/web-ui/src/main/scala/calculator/CalculatorUI.scala -> i
+/Users/akkhong/mooc/fp_design_in_scala/calculator/web-ui/src/main/scala/calculator/CalculatorUI.scala -> id
+/Users/akkhong/mooc/fp_design_in_scala/calculator/web-ui/src/main/scala/calculator/CalculatorUI.scala -> ids
+/Users/akkhong/mooc/fp_design_in_scala/calculator/web-ui/src/main/scala/calculator/CalculatorUI.scala -> immutable
+/Users/akkhong/mooc/fp_design_in_scala/calculator/web-ui/src/main/scala/calculator/CalculatorUI.scala -> input
+/Users/akkhong/mooc/fp_design_in_scala/calculator/web-ui/src/main/scala/calculator/CalculatorUI.scala -> inputValueSignal
+/Users/akkhong/mooc/fp_design_in_scala/calculator/web-ui/src/main/scala/calculator/CalculatorUI.scala -> inputs
+/Users/akkhong/mooc/fp_design_in_scala/calculator/web-ui/src/main/scala/calculator/CalculatorUI.scala -> intWrapper
+/Users/akkhong/mooc/fp_design_in_scala/calculator/web-ui/src/main/scala/calculator/CalculatorUI.scala -> isEmpty
+/Users/akkhong/mooc/fp_design_in_scala/calculator/web-ui/src/main/scala/calculator/CalculatorUI.scala -> js
+/Users/akkhong/mooc/fp_design_in_scala/calculator/web-ui/src/main/scala/calculator/CalculatorUI.scala -> jsReplace
+/Users/akkhong/mooc/fp_design_in_scala/calculator/web-ui/src/main/scala/calculator/CalculatorUI.scala -> keySet
+/Users/akkhong/mooc/fp_design_in_scala/calculator/web-ui/src/main/scala/calculator/CalculatorUI.scala -> l
+/Users/akkhong/mooc/fp_design_in_scala/calculator/web-ui/src/main/scala/calculator/CalculatorUI.scala -> lengthCompare
+/Users/akkhong/mooc/fp_design_in_scala/calculator/web-ui/src/main/scala/calculator/CalculatorUI.scala -> map
+/Users/akkhong/mooc/fp_design_in_scala/calculator/web-ui/src/main/scala/calculator/CalculatorUI.scala -> materializeClassTag
+/Users/akkhong/mooc/fp_design_in_scala/calculator/web-ui/src/main/scala/calculator/CalculatorUI.scala -> name
+/Users/akkhong/mooc/fp_design_in_scala/calculator/web-ui/src/main/scala/calculator/CalculatorUI.scala -> namedExpressions
+/Users/akkhong/mooc/fp_design_in_scala/calculator/web-ui/src/main/scala/calculator/CalculatorUI.scala -> namedValues
+/Users/akkhong/mooc/fp_design_in_scala/calculator/web-ui/src/main/scala/calculator/CalculatorUI.scala -> names
+/Users/akkhong/mooc/fp_design_in_scala/calculator/web-ui/src/main/scala/calculator/CalculatorUI.scala -> ne
+/Users/akkhong/mooc/fp_design_in_scala/calculator/web-ui/src/main/scala/calculator/CalculatorUI.scala -> newVal
+/Users/akkhong/mooc/fp_design_in_scala/calculator/web-ui/src/main/scala/calculator/CalculatorUI.scala -> onChange
+/Users/akkhong/mooc/fp_design_in_scala/calculator/web-ui/src/main/scala/calculator/CalculatorUI.scala -> op
+/Users/akkhong/mooc/fp_design_in_scala/calculator/web-ui/src/main/scala/calculator/CalculatorUI.scala -> org
+/Users/akkhong/mooc/fp_design_in_scala/calculator/web-ui/src/main/scala/calculator/CalculatorUI.scala -> package
+/Users/akkhong/mooc/fp_design_in_scala/calculator/web-ui/src/main/scala/calculator/CalculatorUI.scala -> parent
+/Users/akkhong/mooc/fp_design_in_scala/calculator/web-ui/src/main/scala/calculator/CalculatorUI.scala -> parentElement
+/Users/akkhong/mooc/fp_design_in_scala/calculator/web-ui/src/main/scala/calculator/CalculatorUI.scala -> parseExpr
+/Users/akkhong/mooc/fp_design_in_scala/calculator/web-ui/src/main/scala/calculator/CalculatorUI.scala -> parseSimple
+/Users/akkhong/mooc/fp_design_in_scala/calculator/web-ui/src/main/scala/calculator/CalculatorUI.scala -> prevVal
+/Users/akkhong/mooc/fp_design_in_scala/calculator/web-ui/src/main/scala/calculator/CalculatorUI.scala -> printStackTrace
+/Users/akkhong/mooc/fp_design_in_scala/calculator/web-ui/src/main/scala/calculator/CalculatorUI.scala -> raw
+/Users/akkhong/mooc/fp_design_in_scala/calculator/web-ui/src/main/scala/calculator/CalculatorUI.scala -> refArrayOps
+/Users/akkhong/mooc/fp_design_in_scala/calculator/web-ui/src/main/scala/calculator/CalculatorUI.scala -> remainingCharsArea
+/Users/akkhong/mooc/fp_design_in_scala/calculator/web-ui/src/main/scala/calculator/CalculatorUI.scala -> remainingCount
+/Users/akkhong/mooc/fp_design_in_scala/calculator/web-ui/src/main/scala/calculator/CalculatorUI.scala -> s
+/Users/akkhong/mooc/fp_design_in_scala/calculator/web-ui/src/main/scala/calculator/CalculatorUI.scala -> scala
+/Users/akkhong/mooc/fp_design_in_scala/calculator/web-ui/src/main/scala/calculator/CalculatorUI.scala -> scalajs
+/Users/akkhong/mooc/fp_design_in_scala/calculator/web-ui/src/main/scala/calculator/CalculatorUI.scala -> setTimeout
+/Users/akkhong/mooc/fp_design_in_scala/calculator/web-ui/src/main/scala/calculator/CalculatorUI.scala -> setup2ndOrderPolynomial
+/Users/akkhong/mooc/fp_design_in_scala/calculator/web-ui/src/main/scala/calculator/CalculatorUI.scala -> setupCalculator
+/Users/akkhong/mooc/fp_design_in_scala/calculator/web-ui/src/main/scala/calculator/CalculatorUI.scala -> setupTweetMeasurer
+/Users/akkhong/mooc/fp_design_in_scala/calculator/web-ui/src/main/scala/calculator/CalculatorUI.scala -> solutions
+/Users/akkhong/mooc/fp_design_in_scala/calculator/web-ui/src/main/scala/calculator/CalculatorUI.scala -> solutionsArea
+/Users/akkhong/mooc/fp_design_in_scala/calculator/web-ui/src/main/scala/calculator/CalculatorUI.scala -> span
+/Users/akkhong/mooc/fp_design_in_scala/calculator/web-ui/src/main/scala/calculator/CalculatorUI.scala -> split
+/Users/akkhong/mooc/fp_design_in_scala/calculator/web-ui/src/main/scala/calculator/CalculatorUI.scala -> style
+/Users/akkhong/mooc/fp_design_in_scala/calculator/web-ui/src/main/scala/calculator/CalculatorUI.scala -> text
+/Users/akkhong/mooc/fp_design_in_scala/calculator/web-ui/src/main/scala/calculator/CalculatorUI.scala -> textArea
+/Users/akkhong/mooc/fp_design_in_scala/calculator/web-ui/src/main/scala/calculator/CalculatorUI.scala -> textAreaID
+/Users/akkhong/mooc/fp_design_in_scala/calculator/web-ui/src/main/scala/calculator/CalculatorUI.scala -> textAreaValueSignal
+/Users/akkhong/mooc/fp_design_in_scala/calculator/web-ui/src/main/scala/calculator/CalculatorUI.scala -> textContent_=
+/Users/akkhong/mooc/fp_design_in_scala/calculator/web-ui/src/main/scala/calculator/CalculatorUI.scala -> th
+/Users/akkhong/mooc/fp_design_in_scala/calculator/web-ui/src/main/scala/calculator/CalculatorUI.scala -> timers
+/Users/akkhong/mooc/fp_design_in_scala/calculator/web-ui/src/main/scala/calculator/CalculatorUI.scala -> toChar
+/Users/akkhong/mooc/fp_design_in_scala/calculator/web-ui/src/main/scala/calculator/CalculatorUI.scala -> toDouble
+/Users/akkhong/mooc/fp_design_in_scala/calculator/web-ui/src/main/scala/calculator/CalculatorUI.scala -> toMap
+/Users/akkhong/mooc/fp_design_in_scala/calculator/web-ui/src/main/scala/calculator/CalculatorUI.scala -> toString
+/Users/akkhong/mooc/fp_design_in_scala/calculator/web-ui/src/main/scala/calculator/CalculatorUI.scala -> trim
+/Users/akkhong/mooc/fp_design_in_scala/calculator/web-ui/src/main/scala/calculator/CalculatorUI.scala -> tweetRemainingCharsCount
+/Users/akkhong/mooc/fp_design_in_scala/calculator/web-ui/src/main/scala/calculator/CalculatorUI.scala -> tweetText
+/Users/akkhong/mooc/fp_design_in_scala/calculator/web-ui/src/main/scala/calculator/CalculatorUI.scala -> unapplySeq
+/Users/akkhong/mooc/fp_design_in_scala/calculator/web-ui/src/main/scala/calculator/CalculatorUI.scala -> unary_!
+/Users/akkhong/mooc/fp_design_in_scala/calculator/web-ui/src/main/scala/calculator/CalculatorUI.scala -> unchecked
+/Users/akkhong/mooc/fp_design_in_scala/calculator/web-ui/src/main/scala/calculator/CalculatorUI.scala -> until
+/Users/akkhong/mooc/fp_design_in_scala/calculator/web-ui/src/main/scala/calculator/CalculatorUI.scala -> update
+/Users/akkhong/mooc/fp_design_in_scala/calculator/web-ui/src/main/scala/calculator/CalculatorUI.scala -> value
+/Users/akkhong/mooc/fp_design_in_scala/calculator/web-ui/src/main/scala/calculator/CalculatorUI.scala -> valueSignal
+/Users/akkhong/mooc/fp_design_in_scala/calculator/web-ui/src/main/scala/calculator/CalculatorUI.scala -> withFilter
+/Users/akkhong/mooc/fp_design_in_scala/calculator/web-ui/src/main/scala/calculator/CalculatorUI.scala -> x
+/Users/akkhong/mooc/fp_design_in_scala/calculator/web-ui/src/main/scala/calculator/CalculatorUI.scala -> zip
+product stamps:
+65 items
+/Users/akkhong/mooc/fp_design_in_scala/calculator/web-ui/target/scala-2.11/classes/calculator/Calculator$$anonfun$calculator$Calculator$$evalSignal$1$1.class -> lastModified(1500617965000)
+/Users/akkhong/mooc/fp_design_in_scala/calculator/web-ui/target/scala-2.11/classes/calculator/Calculator$$anonfun$computeValues$1.class -> lastModified(1500617965000)
+/Users/akkhong/mooc/fp_design_in_scala/calculator/web-ui/target/scala-2.11/classes/calculator/Calculator$$anonfun$getReferenceExpr$1.class -> lastModified(1500617965000)
+/Users/akkhong/mooc/fp_design_in_scala/calculator/web-ui/target/scala-2.11/classes/calculator/Calculator$$anonfun$getReferenceExpr$2.class -> lastModified(1500617965000)
+/Users/akkhong/mooc/fp_design_in_scala/calculator/web-ui/target/scala-2.11/classes/calculator/Calculator$.class -> lastModified(1500617965000)
+/Users/akkhong/mooc/fp_design_in_scala/calculator/web-ui/target/scala-2.11/classes/calculator/Calculator.class -> lastModified(1500617965000)
+/Users/akkhong/mooc/fp_design_in_scala/calculator/web-ui/target/scala-2.11/classes/calculator/CalculatorUI$$anonfun$1.class -> lastModified(1500199610000)
+/Users/akkhong/mooc/fp_design_in_scala/calculator/web-ui/target/scala-2.11/classes/calculator/CalculatorUI$$anonfun$2$$anonfun$apply$2.class -> lastModified(1500199610000)
+/Users/akkhong/mooc/fp_design_in_scala/calculator/web-ui/target/scala-2.11/classes/calculator/CalculatorUI$$anonfun$2.class -> lastModified(1500199610000)
+/Users/akkhong/mooc/fp_design_in_scala/calculator/web-ui/target/scala-2.11/classes/calculator/CalculatorUI$$anonfun$3.class -> lastModified(1500199610000)
+/Users/akkhong/mooc/fp_design_in_scala/calculator/web-ui/target/scala-2.11/classes/calculator/CalculatorUI$$anonfun$4.class -> lastModified(1500199610000)
+/Users/akkhong/mooc/fp_design_in_scala/calculator/web-ui/target/scala-2.11/classes/calculator/CalculatorUI$$anonfun$5.class -> lastModified(1500199610000)
+/Users/akkhong/mooc/fp_design_in_scala/calculator/web-ui/target/scala-2.11/classes/calculator/CalculatorUI$$anonfun$6.class -> lastModified(1500199610000)
+/Users/akkhong/mooc/fp_design_in_scala/calculator/web-ui/target/scala-2.11/classes/calculator/CalculatorUI$$anonfun$7.class -> lastModified(1500199610000)
+/Users/akkhong/mooc/fp_design_in_scala/calculator/web-ui/target/scala-2.11/classes/calculator/CalculatorUI$$anonfun$8.class -> lastModified(1500199610000)
+/Users/akkhong/mooc/fp_design_in_scala/calculator/web-ui/target/scala-2.11/classes/calculator/CalculatorUI$$anonfun$9.class -> lastModified(1500199610000)
+/Users/akkhong/mooc/fp_design_in_scala/calculator/web-ui/target/scala-2.11/classes/calculator/CalculatorUI$$anonfun$doubleValueOfInput$1.class -> lastModified(1500199610000)
+/Users/akkhong/mooc/fp_design_in_scala/calculator/web-ui/target/scala-2.11/classes/calculator/CalculatorUI$$anonfun$exprOfInput$1.class -> lastModified(1500199610000)
+/Users/akkhong/mooc/fp_design_in_scala/calculator/web-ui/target/scala-2.11/classes/calculator/CalculatorUI$$anonfun$inputValueSignal$1.class -> lastModified(1500199610000)
+/Users/akkhong/mooc/fp_design_in_scala/calculator/web-ui/target/scala-2.11/classes/calculator/CalculatorUI$$anonfun$parseSimple$1$1.class -> lastModified(1500199610000)
+/Users/akkhong/mooc/fp_design_in_scala/calculator/web-ui/target/scala-2.11/classes/calculator/CalculatorUI$$anonfun$setup2ndOrderPolynomial$1.class -> lastModified(1500199610000)
+/Users/akkhong/mooc/fp_design_in_scala/calculator/web-ui/target/scala-2.11/classes/calculator/CalculatorUI$$anonfun$setup2ndOrderPolynomial$2.class -> lastModified(1500199610000)
+/Users/akkhong/mooc/fp_design_in_scala/calculator/web-ui/target/scala-2.11/classes/calculator/CalculatorUI$$anonfun$setupCalculator$1.class -> lastModified(1500199610000)
+/Users/akkhong/mooc/fp_design_in_scala/calculator/web-ui/target/scala-2.11/classes/calculator/CalculatorUI$$anonfun$setupCalculator$2$$anonfun$apply$1$$anonfun$apply$mcV$sp$1.class -> lastModified(1500199610000)
+/Users/akkhong/mooc/fp_design_in_scala/calculator/web-ui/target/scala-2.11/classes/calculator/CalculatorUI$$anonfun$setupCalculator$2$$anonfun$apply$1$$anonfun$apply$mcV$sp$2.class -> lastModified(1500199610000)
+/Users/akkhong/mooc/fp_design_in_scala/calculator/web-ui/target/scala-2.11/classes/calculator/CalculatorUI$$anonfun$setupCalculator$2$$anonfun$apply$1.class -> lastModified(1500199610000)
+/Users/akkhong/mooc/fp_design_in_scala/calculator/web-ui/target/scala-2.11/classes/calculator/CalculatorUI$$anonfun$setupCalculator$2.class -> lastModified(1500199610000)
+/Users/akkhong/mooc/fp_design_in_scala/calculator/web-ui/target/scala-2.11/classes/calculator/CalculatorUI$$anonfun$setupTweetMeasurer$1.class -> lastModified(1500199610000)
+/Users/akkhong/mooc/fp_design_in_scala/calculator/web-ui/target/scala-2.11/classes/calculator/CalculatorUI$$anonfun$setupTweetMeasurer$2.class -> lastModified(1500199610000)
+/Users/akkhong/mooc/fp_design_in_scala/calculator/web-ui/target/scala-2.11/classes/calculator/CalculatorUI$$anonfun$textAreaValueSignal$1.class -> lastModified(1500199610000)
+/Users/akkhong/mooc/fp_design_in_scala/calculator/web-ui/target/scala-2.11/classes/calculator/CalculatorUI$.class -> lastModified(1500199610000)
+/Users/akkhong/mooc/fp_design_in_scala/calculator/web-ui/target/scala-2.11/classes/calculator/CalculatorUI.class -> lastModified(1500199610000)
+/Users/akkhong/mooc/fp_design_in_scala/calculator/web-ui/target/scala-2.11/classes/calculator/Divide$.class -> lastModified(1500617965000)
+/Users/akkhong/mooc/fp_design_in_scala/calculator/web-ui/target/scala-2.11/classes/calculator/Divide.class -> lastModified(1500617965000)
+/Users/akkhong/mooc/fp_design_in_scala/calculator/web-ui/target/scala-2.11/classes/calculator/Expr.class -> lastModified(1500617965000)
+/Users/akkhong/mooc/fp_design_in_scala/calculator/web-ui/target/scala-2.11/classes/calculator/Literal$.class -> lastModified(1500617965000)
+/Users/akkhong/mooc/fp_design_in_scala/calculator/web-ui/target/scala-2.11/classes/calculator/Literal.class -> lastModified(1500617965000)
+/Users/akkhong/mooc/fp_design_in_scala/calculator/web-ui/target/scala-2.11/classes/calculator/Minus$.class -> lastModified(1500617965000)
+/Users/akkhong/mooc/fp_design_in_scala/calculator/web-ui/target/scala-2.11/classes/calculator/Minus.class -> lastModified(1500617965000)
+/Users/akkhong/mooc/fp_design_in_scala/calculator/web-ui/target/scala-2.11/classes/calculator/NoSignal$$anonfun$$lessinit$greater$1.class -> lastModified(1500199610000)
+/Users/akkhong/mooc/fp_design_in_scala/calculator/web-ui/target/scala-2.11/classes/calculator/NoSignal$.class -> lastModified(1500199610000)
+/Users/akkhong/mooc/fp_design_in_scala/calculator/web-ui/target/scala-2.11/classes/calculator/NoSignal.class -> lastModified(1500199610000)
+/Users/akkhong/mooc/fp_design_in_scala/calculator/web-ui/target/scala-2.11/classes/calculator/Plus$.class -> lastModified(1500617965000)
+/Users/akkhong/mooc/fp_design_in_scala/calculator/web-ui/target/scala-2.11/classes/calculator/Plus.class -> lastModified(1500617965000)
+/Users/akkhong/mooc/fp_design_in_scala/calculator/web-ui/target/scala-2.11/classes/calculator/Polynomial$$anonfun$computeDelta$1.class -> lastModified(1500210765000)
+/Users/akkhong/mooc/fp_design_in_scala/calculator/web-ui/target/scala-2.11/classes/calculator/Polynomial$$anonfun$computeSolutions$1.class -> lastModified(1500210765000)
+/Users/akkhong/mooc/fp_design_in_scala/calculator/web-ui/target/scala-2.11/classes/calculator/Polynomial$.class -> lastModified(1500210765000)
+/Users/akkhong/mooc/fp_design_in_scala/calculator/web-ui/target/scala-2.11/classes/calculator/Polynomial.class -> lastModified(1500210765000)
+/Users/akkhong/mooc/fp_design_in_scala/calculator/web-ui/target/scala-2.11/classes/calculator/Ref$.class -> lastModified(1500617965000)
+/Users/akkhong/mooc/fp_design_in_scala/calculator/web-ui/target/scala-2.11/classes/calculator/Ref.class -> lastModified(1500617965000)
+/Users/akkhong/mooc/fp_design_in_scala/calculator/web-ui/target/scala-2.11/classes/calculator/Signal$$anonfun$1.class -> lastModified(1500199610000)
+/Users/akkhong/mooc/fp_design_in_scala/calculator/web-ui/target/scala-2.11/classes/calculator/Signal$$anonfun$apply$1.class -> lastModified(1500199610000)
+/Users/akkhong/mooc/fp_design_in_scala/calculator/web-ui/target/scala-2.11/classes/calculator/Signal$$anonfun$computeValue$1.class -> lastModified(1500199610000)
+/Users/akkhong/mooc/fp_design_in_scala/calculator/web-ui/target/scala-2.11/classes/calculator/Signal$$anonfun$computeValue$2.class -> lastModified(1500199610000)
+/Users/akkhong/mooc/fp_design_in_scala/calculator/web-ui/target/scala-2.11/classes/calculator/Signal$.class -> lastModified(1500199610000)
+/Users/akkhong/mooc/fp_design_in_scala/calculator/web-ui/target/scala-2.11/classes/calculator/Signal.class -> lastModified(1500199610000)
+/Users/akkhong/mooc/fp_design_in_scala/calculator/web-ui/target/scala-2.11/classes/calculator/Times$.class -> lastModified(1500617965000)
+/Users/akkhong/mooc/fp_design_in_scala/calculator/web-ui/target/scala-2.11/classes/calculator/Times.class -> lastModified(1500617965000)
+/Users/akkhong/mooc/fp_design_in_scala/calculator/web-ui/target/scala-2.11/classes/calculator/TweetLength$$anonfun$calculator$TweetLength$$tweetLength$1.class -> lastModified(1500200570000)
+/Users/akkhong/mooc/fp_design_in_scala/calculator/web-ui/target/scala-2.11/classes/calculator/TweetLength$$anonfun$colorForRemainingCharsCount$1.class -> lastModified(1500200570000)
+/Users/akkhong/mooc/fp_design_in_scala/calculator/web-ui/target/scala-2.11/classes/calculator/TweetLength$$anonfun$tweetRemainingCharsCount$1.class -> lastModified(1500200570000)
+/Users/akkhong/mooc/fp_design_in_scala/calculator/web-ui/target/scala-2.11/classes/calculator/TweetLength$.class -> lastModified(1500200570000)
+/Users/akkhong/mooc/fp_design_in_scala/calculator/web-ui/target/scala-2.11/classes/calculator/TweetLength.class -> lastModified(1500200570000)
+/Users/akkhong/mooc/fp_design_in_scala/calculator/web-ui/target/scala-2.11/classes/calculator/Var$.class -> lastModified(1500199610000)
+/Users/akkhong/mooc/fp_design_in_scala/calculator/web-ui/target/scala-2.11/classes/calculator/Var.class -> lastModified(1500199610000)
+source stamps:
+5 items
+/Users/akkhong/mooc/fp_design_in_scala/calculator/src/main/scala/calculator/Calculator.scala -> hash(a997333bf865312181df2c8ef8eada06bc826cc8)
+/Users/akkhong/mooc/fp_design_in_scala/calculator/src/main/scala/calculator/Polynomial.scala -> hash(83e91aecff713ad123e004dcb534d4acdaedf3f7)
+/Users/akkhong/mooc/fp_design_in_scala/calculator/src/main/scala/calculator/Signal.scala -> hash(f5a6296731e63462e7bc526b412634843c732002)
+/Users/akkhong/mooc/fp_design_in_scala/calculator/src/main/scala/calculator/TweetLength.scala -> hash(1d83c4f2c0bc51a03fb34de961c9cadff326d15e)
+/Users/akkhong/mooc/fp_design_in_scala/calculator/web-ui/src/main/scala/calculator/CalculatorUI.scala -> hash(5283065eab3ad32c108798e2226fd8103e0a21c6)
+binary stamps:
+4 items
+/Library/Java/JavaVirtualMachines/jdk1.8.0_131.jdk/Contents/Home/jre/lib/rt.jar -> lastModified(1489567893000)
+/Users/akkhong/.coursier/cache/v1/https/repo1.maven.org/maven2/org/scala-js/scalajs-dom_sjs0.6_2.11/0.8.0/scalajs-dom_sjs0.6_2.11-0.8.0.jar -> lastModified(1422870978000)
+/Users/akkhong/.coursier/cache/v1/https/repo1.maven.org/maven2/org/scala-js/scalajs-library_2.11/0.6.11/scalajs-library_2.11-0.6.11.jar -> lastModified(1469547816000)
+/Users/akkhong/.coursier/cache/v1/https/repo1.maven.org/maven2/org/scala-lang/scala-library/2.11.6/scala-library-2.11.6.jar -> lastModified(1424912463000)
+class names:
+4 items
+/Library/Java/JavaVirtualMachines/jdk1.8.0_131.jdk/Contents/Home/jre/lib/rt.jar -> java.lang.Object
+/Users/akkhong/.coursier/cache/v1/https/repo1.maven.org/maven2/org/scala-js/scalajs-dom_sjs0.6_2.11/0.8.0/scalajs-dom_sjs0.6_2.11-0.8.0.jar -> org.scalajs.dom.html
+/Users/akkhong/.coursier/cache/v1/https/repo1.maven.org/maven2/org/scala-js/scalajs-library_2.11/0.6.11/scalajs-library_2.11-0.6.11.jar -> scala.scalajs.js.JSApp
+/Users/akkhong/.coursier/cache/v1/https/repo1.maven.org/maven2/org/scala-lang/scala-library/2.11.6/scala-library-2.11.6.jar -> scala.Serializable
+internal apis:
+5 items
+/Users/akkhong/mooc/fp_design_in_scala/calculator/src/main/scala/calculator/Calculator.scala -> 
+rO0ABXNyABB4c2J0aS5hcGkuU291cmNlFlpwRASfbtoCAAZJAAdhcGlIYXNoWgAIaGFzTWFjcm9MABhfaW50ZXJuYWxPbmx5X25hbWVIYXNoZXN0ACRMeHNidGkvYXBpL19pbnRlcm5hbE9ubHlfTmFtZUhhc2hlcztMAANhcGl0ABVMeHNidGkvYXBpL1NvdXJjZUFQSTtMAAtjb21waWxhdGlvbnQAF0x4c2J0aS9hcGkvQ29tcGlsYXRpb247WwAEaGFzaHQAAltCeHBfhipIAHNyACJ4c2J0aS5hcGkuX2ludGVybmFsT25seV9OYW1lSGFzaGVzVNq+mfrU7EwCAAJbAA9pbXBsaWNpdE1lbWJlcnN0ACNbTHhzYnRpL2FwaS9faW50ZXJuYWxPbmx5X05hbWVIYXNoO1sADnJlZ3VsYXJNZW1iZXJzcQB+AAd4cHVyACNbTHhzYnRpLmFwaS5faW50ZXJuYWxPbmx5X05hbWVIYXNoO0lagLbdlov0AgAAeHAAAAAAdXEAfgAJAAAALHNyACB4c2J0aS5hcGkuX2ludGVybmFsT25seV9OYW1lSGFzaFsO9SJ2OFfPAgACSQAEaGFzaEwABG5hbWV0ABJMamF2YS9sYW5nL1N0cmluZzt4cLZ2ElR0AA1jb21wdXRlVmFsdWVzc3EAfgAMOU4zbHQABm5vdGlmeXNxAH4ADBtJ0QJ0AARuYW1lc3EAfgAMtgS3dnQABHdhaXRzcQB+AAyknsqEdAAOY29weSRkZWZhdWx0JDJzcQB+AAyo0Gq8dAANJGFzSW5zdGFuY2VPZnNxAH4ADHA4H8N0AAxwcm9kdWN0QXJpdHlzcQB+AAzas7drdAAGZXF1YWxzc3EAfgAMBJeVsHQAFWlzQ2lyY3VsYXJseURlcGVuZGVudHNxAH4ADL1Mn590AAxhc0luc3RhbmNlT2ZzcQB+AAwX7jgXdAAERXhwcnNxAH4ADO1D3Xp0AAZEaXZpZGVzcQB+AAxFbPQTdAAMc3luY2hyb25pemVkc3EAfgAM0/9Ac3QAAWFzcQB+AAyZyAFadAANJGlzSW5zdGFuY2VPZnNxAH4ADCbye9l0AAdMaXRlcmFsc3EAfgAMxz20O3QACGNhbkVxdWFsc3EAfgAM2brCBnQADXByb2R1Y3RQcmVmaXhzcQB+AAyFriuwdAAJbm90aWZ5QWxsc3EAfgAMTn6XnXQABFBsdXNzcQB+AAznjQ8qdAAMaXNJbnN0YW5jZU9mc3EAfgAMoInytHQABGV2YWxzcQB+AAx5CH7DdAAFTWludXNzcQB+AAwlgnCQdAABdnNxAH4ADPlReMp0AAY8aW5pdD5zcQB+AAz5AofGdAABYnNxAH4ADBEXWCt0AAI9PXNxAH4ADEIC3tt0AAVjbG9uZXNxAH4ADEeDxD90ABBnZXRSZWZlcmVuY2VFeHByc3EAfgAMSDUqpXQABGNvcHlzcQB+AAx+43Y5dAAIdG9TdHJpbmdzcQB+AAxh/vFFdAACIT1zcQB+AAzyOC0rdAAFVGltZXNzcQB+AAwkpn5XdAAIZ2V0Q2xhc3NzcQB+AAzZvAvUdAAOY29weSRkZWZhdWx0JDFzcQB+AAwhUEvjdAACbmVzcQB+AAykaGERdAACZXFzcQB+AAwO/xCddAAKQ2FsY3VsYXRvcnNxAH4ADHr/emR0AA9wcm9kdWN0SXRlcmF0b3JzcQB+AAzefUqSdAACIyNzcQB+AAx9969ZdAAIZmluYWxpemVzcQB+AAzlH8izdAADUmVmc3EAfgAMc1dlDnQADnByb2R1Y3RFbGVtZW50c3EAfgAMcKwg3XQACGhhc2hDb2Rlc3IAE3hzYnRpLmFwaS5Tb3VyY2VBUEm5Xqf5KSM4pAIAAlsAC2RlZmluaXRpb25zdAAXW0x4c2J0aS9hcGkvRGVmaW5pdGlvbjtbAAhwYWNrYWdlc3QAFFtMeHNidGkvYXBpL1BhY2thZ2U7eHB1cgAXW0x4c2J0aS5hcGkuRGVmaW5pdGlvbjuIyVzntONeDgIAAHhwAAAACHNyABN4c2J0aS5hcGkuQ2xhc3NMaWtlgzQcod+wl2wCAARMAA5kZWZpbml0aW9uVHlwZXQAGkx4c2J0aS9hcGkvRGVmaW5pdGlvblR5cGU7WwAQc2F2ZWRBbm5vdGF0aW9uc3QAE1tMamF2YS9sYW5nL1N0cmluZztMAAhzZWxmVHlwZXQAEEx4c2J0aS9hcGkvTGF6eTtMAAlzdHJ1Y3R1cmVxAH4Ab3hyACF4c2J0aS5hcGkuUGFyYW1ldGVyaXplZERlZmluaXRpb275EW6x1VA84gIAAVsADnR5cGVQYXJhbWV0ZXJzdAAaW0x4c2J0aS9hcGkvVHlwZVBhcmFtZXRlcjt4cgAUeHNidGkuYXBpLkRlZmluaXRpb26HKhvocULjRgIABEwABmFjY2Vzc3QAEkx4c2J0aS9hcGkvQWNjZXNzO1sAC2Fubm90YXRpb25zdAAXW0x4c2J0aS9hcGkvQW5ub3RhdGlvbjtMAAltb2RpZmllcnN0ABVMeHNidGkvYXBpL01vZGlmaWVycztMAARuYW1lcQB+AA14cHNyABB4c2J0aS5hcGkuUHVibGljulg9rmwtYEICAAB4cgAQeHNidGkuYXBpLkFjY2Vzc91imvgdYzFIAgAAeHB1cgAXW0x4c2J0aS5hcGkuQW5ub3RhdGlvbjvrl+sZEPaNSAIAAHhwAAAAAHNyABN4c2J0aS5hcGkuTW9kaWZpZXJzxxETIWmc3CQCAAFCAAVmbGFnc3hwCXQAD2NhbGN1bGF0b3IuRXhwcnVyABpbTHhzYnRpLmFwaS5UeXBlUGFyYW1ldGVyO9ltJg8onfK2AgAAeHAAAAAAfnIAGHhzYnRpLmFwaS5EZWZpbml0aW9uVHlwZQAAAAAAAAAAEgAAeHIADmphdmEubGFuZy5FbnVtAAAAAAAAAAASAAB4cHQACENsYXNzRGVmdXIAE1tMamF2YS5sYW5nLlN0cmluZzut0lbn6R17RwIAAHhwAAAAAHNyABN4c2J0aS5TYWZlTGF6eSRJbXBsUAIuk5eXQD8CAANaAAhiaXRtYXAkMEwAAl90dAASTGphdmEvbGFuZy9PYmplY3Q7TAAEZXZhbHQAEUxzY2FsYS9GdW5jdGlvbjA7eHIAFnhzYnRpLmFwaS5BYnN0cmFjdExhennTd7UBX7vnoAIAAHhwAHBzcgAgeHNidGkuU2FmZUxhenkkJGFub25mdW4kc3RyaWN0JDEAAAAAAAAAAAIAAUwAB3ZhbHVlJDFxAH4AiHhwc3IAE3hzYnRpLmFwaS5FbXB0eVR5cGW8/Z5GSTuJJAIAAHhyABR4c2J0aS5hcGkuU2ltcGxlVHlwZXJ4YoghI79AAgAAeHIADnhzYnRpLmFwaS5UeXBlP2rZIRZJqsoCAAB4cHNxAH4AhwBwc3EAfgCMc3IAE3hzYnRpLmFwaS5TdHJ1Y3R1cmWpqvmAk2/YAAIAA0wACGRlY2xhcmVkcQB+AG9MAAlpbmhlcml0ZWRxAH4Ab0wAB3BhcmVudHN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vc3EAfgCscQB+ALFxAH4As3NxAH4AoHEAfgC1c3EAfgCkc3EAfgCndXEAfgCqAAAAAnNxAH4ArHEAfgC6cQB+ALN1cgAUW0x4c2J0aS5hcGkuUGFja2FnZTtbExk3cKcnoQIAAHhwAAAAAXNyABF4c2J0aS5hcGkuUGFja2FnZX5Zj/auzjlYAgABTAAEbmFtZXEAfgANeHB0AApjYWxjdWxhdG9yc3IAFXhzYnRpLmFwaS5Db21waWxhdGlvbu364MNq6KBCAgACSgAJc3RhcnRUaW1lWwAHb3V0cHV0c3QAGltMeHNidGkvYXBpL091dHB1dFNldHRpbmc7eHAAAAFdY8zzvnVyABpbTHhzYnRpLmFwaS5PdXRwdXRTZXR0aW5nO39qwvOnh6VCAgAAeHAAAAABc3IAF3hzYnRpLmFwaS5PdXRwdXRTZXR0aW5netmaR3T7HXsCAAJMAA9vdXRwdXREaXJlY3RvcnlxAH4ADUwAD3NvdXJjZURpcmVjdG9yeXEAfgANeHB0AFIvVXNlcnMvYWtraG9uZy9tb29jL2ZwX2Rlc2lnbl9pbl9zY2FsYS9jYWxjdWxhdG9yL3dlYi11aS90YXJnZXQvc2NhbGEtMi4xMS9jbGFzc2VzdAABL3VyAAJbQqzzF/gGCFTgAgAAeHAAAAAUqZczO/hlMSGB3yyO+OraBryCbMg=
+/Users/akkhong/mooc/fp_design_in_scala/calculator/src/main/scala/calculator/Polynomial.scala -> 
+rO0ABXNyABB4c2J0aS5hcGkuU291cmNlFlpwRASfbtoCAAZJAAdhcGlIYXNoWgAIaGFzTWFjcm9MABhfaW50ZXJuYWxPbmx5X25hbWVIYXNoZXN0ACRMeHNidGkvYXBpL19pbnRlcm5hbE9ubHlfTmFtZUhhc2hlcztMAANhcGl0ABVMeHNidGkvYXBpL1NvdXJjZUFQSTtMAAtjb21waWxhdGlvbnQAF0x4c2J0aS9hcGkvQ29tcGlsYXRpb247WwAEaGFzaHQAAltCeHBmvcoLAHNyACJ4c2J0aS5hcGkuX2ludGVybmFsT25seV9OYW1lSGFzaGVzVNq+mfrU7EwCAAJbAA9pbXBsaWNpdE1lbWJlcnN0ACNbTHhzYnRpL2FwaS9faW50ZXJuYWxPbmx5X05hbWVIYXNoO1sADnJlZ3VsYXJNZW1iZXJzcQB+AAd4cHVyACNbTHhzYnRpLmFwaS5faW50ZXJuYWxPbmx5X05hbWVIYXNoO0lagLbdlov0AgAAeHAAAAAAdXEAfgAJAAAAFnNyACB4c2J0aS5hcGkuX2ludGVybmFsT25seV9OYW1lSGFzaFsO9SJ2OFfPAgACSQAEaGFzaEwABG5hbWV0ABJMamF2YS9sYW5nL1N0cmluZzt4cPHdxwp0AAZub3RpZnlzcQB+AAyPiLIadAAEd2FpdHNxAH4ADCGybFd0AA0kYXNJbnN0YW5jZU9mc3EAfgAMaa+zrHQABmVxdWFsc3NxAH4ADDF0Wz10AAxhc0luc3RhbmNlT2ZzcQB+AAz77txydAAMc3luY2hyb25pemVkc3EAfgAMom9zHHQADSRpc0luc3RhbmNlT2ZzcQB+AAzUbSSrdAAMY29tcHV0ZURlbHRhc3EAfgAMYHA20nQACW5vdGlmeUFsbHNxAH4ADGb+T9R0ABBjb21wdXRlU29sdXRpb25zc3EAfgAMNe0kdHQADGlzSW5zdGFuY2VPZnNxAH4ADMkr9lF0AAI9PXNxAH4ADHUkybt0AAVjbG9uZXNxAH4ADMEU3Al0AApQb2x5bm9taWFsc3EAfgAMf6/yF3QACHRvU3RyaW5nc3EAfgAMpFYPsHQAAiE9c3EAfgAM8uOjJnQACGdldENsYXNzc3EAfgAMwUqwf3QAAm5lc3EAfgAMyFsmJXQAAmVxc3EAfgAM7unh2nQAAiMjc3EAfgAMClux1XQACGZpbmFsaXplc3EAfgAMQk02KXQACGhhc2hDb2Rlc3IAE3hzYnRpLmFwaS5Tb3VyY2VBUEm5Xqf5KSM4pAIAAlsAC2RlZmluaXRpb25zdAAXW0x4c2J0aS9hcGkvRGVmaW5pdGlvbjtbAAhwYWNrYWdlc3QAFFtMeHNidGkvYXBpL1BhY2thZ2U7eHB1cgAXW0x4c2J0aS5hcGkuRGVmaW5pdGlvbjuIyVzntONeDgIAAHhwAAAAAXNyABN4c2J0aS5hcGkuQ2xhc3NMaWtlgzQcod+wl2wCAARMAA5kZWZpbml0aW9uVHlwZXQAGkx4c2J0aS9hcGkvRGVmaW5pdGlvblR5cGU7WwAQc2F2ZWRBbm5vdGF0aW9uc3QAE1tMamF2YS9sYW5nL1N0cmluZztMAAhzZWxmVHlwZXQAEEx4c2J0aS9hcGkvTGF6eTtMAAlzdHJ1Y3R1cmVxAH4AQ3hyACF4c2J0aS5hcGkuUGFyYW1ldGVyaXplZERlZmluaXRpb275EW6x1VA84gIAAVsADnR5cGVQYXJhbWV0ZXJzdAAaW0x4c2J0aS9hcGkvVHlwZVBhcmFtZXRlcjt4cgAUeHNidGkuYXBpLkRlZmluaXRpb26HKhvocULjRgIABEwABmFjY2Vzc3QAEkx4c2J0aS9hcGkvQWNjZXNzO1sAC2Fubm90YXRpb25zdAAXW0x4c2J0aS9hcGkvQW5ub3RhdGlvbjtMAAltb2RpZmllcnN0ABVMeHNidGkvYXBpL01vZGlmaWVycztMAARuYW1lcQB+AA14cHNyABB4c2J0aS5hcGkuUHVibGljulg9rmwtYEICAAB4cgAQeHNidGkuYXBpLkFjY2Vzc91imvgdYzFIAgAAeHB1cgAXW0x4c2J0aS5hcGkuQW5ub3RhdGlvbjvrl+sZEPaNSAIAAHhwAAAAAHNyABN4c2J0aS5hcGkuTW9kaWZpZXJzxxETIWmc3CQCAAFCAAVmbGFnc3hwAHQAFWNhbGN1bGF0b3IuUG9seW5vbWlhbHVyABpbTHhzYnRpLmFwaS5UeXBlUGFyYW1ldGVyO9ltJg8onfK2AgAAeHAAAAAAfnIAGHhzYnRpLmFwaS5EZWZpbml0aW9uVHlwZQAAAAAAAAAAEgAAeHIADmphdmEubGFuZy5FbnVtAAAAAAAAAAASAAB4cHQABk1vZHVsZXVyABNbTGphdmEubGFuZy5TdHJpbmc7rdJW5+kde0cCAAB4cAAAAABzcgATeHNidGkuU2FmZUxhenkkSW1wbFACLpOXl0A/AgADWgAIYml0bWFwJDBMAAJfdHQAEkxqYXZhL2xhbmcvT2JqZWN0O0wABGV2YWx0ABFMc2NhbGEvRnVuY3Rpb24wO3hyABZ4c2J0aS5hcGkuQWJzdHJhY3RMYXp503e1AV+756ACAAB4cAFzcgATeHNidGkuYXBpLkVtcHR5VHlwZbz9nkZJO4kkAgAAeHIAFHhzYnRpLmFwaS5TaW1wbGVUeXBlcnhiiCEjv0ACAAB4cgAOeHNidGkuYXBpLlR5cGU/atkhFkmqygIAAHhwcHNxAH4AWwFzcgATeHNidGkuYXBpLlN0cnVjdHVyZamq+YCTb9gAAgADTAAIZGVjbGFyZWRxAH4AQ0wACWluaGVyaXRlZHEAfgBDTAAHcGFyZW50c3EAfgBDeHEAfgBic3EAfgBbAXVxAH4APgAAAABwc3EAfgBbAXVxAH4APgAAAABwc3EAfgBbAXVyABFbTHhzYnRpLmFwaS5UeXBlO3T/pVp7+elBAgAAeHAAAAACc3IAFHhzYnRpLmFwaS5Qcm9qZWN0aW9u89KNVOlFpC0CAAJMAAJpZHEAfgANTAAGcHJlZml4dAAWTHhzYnRpL2FwaS9TaW1wbGVUeXBlO3hxAH4AYXQABk9iamVjdHNyABN4c2J0aS5hcGkuU2luZ2xldG9u/Kdf+M9W5EYCAAFMAARwYXRodAAQTHhzYnRpL2FwaS9QYXRoO3hxAH4AYXNyAA54c2J0aS5hcGkuUGF0aJs9XAjOpSeEAgABWwAKY29tcG9uZW50c3QAGltMeHNidGkvYXBpL1BhdGhDb21wb25lbnQ7eHB1cgAaW0x4c2J0aS5hcGkuUGF0aENvbXBvbmVudDtD2gl0LWcWdAIAAHhwAAAAA3NyAAx4c2J0aS5hcGkuSWSYMmyLN1PEQAIAAUwAAmlkcQB+AA14cgAXeHNidGkuYXBpLlBhdGhDb21wb25lbnRfmiJbLoafvAIAAHhwdAAEamF2YXNxAH4AenQABGxhbmdzcgAOeHNidGkuYXBpLlRoaXPbCe2mzFpAXAIAAHhxAH4Ae3NxAH4AbnQAA0FueXNxAH4AcnNxAH4AdXVxAH4AeAAAAAJzcQB+AHp0AAVzY2FsYXEAfgCBcHB1cgAUW0x4c2J0aS5hcGkuUGFja2FnZTtbExk3cKcnoQIAAHhwAAAAAXNyABF4c2J0aS5hcGkuUGFja2FnZX5Zj/auzjlYAgABTAAEbmFtZXEAfgANeHB0AApjYWxjdWxhdG9yc3IAFXhzYnRpLmFwaS5Db21waWxhdGlvbu364MNq6KBCAgACSgAJc3RhcnRUaW1lWwAHb3V0cHV0c3QAGltMeHNidGkvYXBpL091dHB1dFNldHRpbmc7eHAAAAFdS4eXPHVyABpbTHhzYnRpLmFwaS5PdXRwdXRTZXR0aW5nO39qwvOnh6VCAgAAeHAAAAABc3IAF3hzYnRpLmFwaS5PdXRwdXRTZXR0aW5netmaR3T7HXsCAAJMAA9vdXRwdXREaXJlY3RvcnlxAH4ADUwAD3NvdXJjZURpcmVjdG9yeXEAfgANeHB0AFIvVXNlcnMvYWtraG9uZy9tb29jL2ZwX2Rlc2lnbl9pbl9zY2FsYS9jYWxjdWxhdG9yL3dlYi11aS90YXJnZXQvc2NhbGEtMi4xMS9jbGFzc2VzdAABL3VyAAJbQqzzF/gGCFTgAgAAeHAAAAAUg+ka7P9xOtEj4ATctTTUrNrt8/c=
+/Users/akkhong/mooc/fp_design_in_scala/calculator/src/main/scala/calculator/Signal.scala -> 
+rO0ABXNyABB4c2J0aS5hcGkuU291cmNlFlpwRASfbtoCAAZJAAdhcGlIYXNoWgAIaGFzTWFjcm9MABhfaW50ZXJuYWxPbmx5X25hbWVIYXNoZXN0ACRMeHNidGkvYXBpL19pbnRlcm5hbE9ubHlfTmFtZUhhc2hlcztMAANhcGl0ABVMeHNidGkvYXBpL1NvdXJjZUFQSTtMAAtjb21waWxhdGlvbnQAF0x4c2J0aS9hcGkvQ29tcGlsYXRpb247WwAEaGFzaHQAAltCeHCcrnOcAHNyACJ4c2J0aS5hcGkuX2ludGVybmFsT25seV9OYW1lSGFzaGVzVNq+mfrU7EwCAAJbAA9pbXBsaWNpdE1lbWJlcnN0ACNbTHhzYnRpL2FwaS9faW50ZXJuYWxPbmx5X05hbWVIYXNoO1sADnJlZ3VsYXJNZW1iZXJzcQB+AAd4cHVyACNbTHhzYnRpLmFwaS5faW50ZXJuYWxPbmx5X05hbWVIYXNoO0lagLbdlov0AgAAeHAAAAAAdXEAfgAJAAAAH3NyACB4c2J0aS5hcGkuX2ludGVybmFsT25seV9OYW1lSGFzaFsO9SJ2OFfPAgACSQAEaGFzaEwABG5hbWV0ABJMamF2YS9sYW5nL1N0cmluZzt4cMgm1u10AAlvYnNlcnZlcnNzcQB+AAwNwvZRdAAGbm90aWZ5c3EAfgAMJ20wkXQABHdhaXRzcQB+AAzXche6dAANJGFzSW5zdGFuY2VPZnNxAH4ADEkSKEl0AANWYXJzcQB+AAzYZGUgdAAGU2lnbmFsc3EAfgAMPZGWgHQABmVxdWFsc3NxAH4ADH9wuWp0AAxhc0luc3RhbmNlT2ZzcQB+AAySrf1cdAAMc3luY2hyb25pemVkc3EAfgAMfl2vW3QADSRpc0luc3RhbmNlT2ZzcQB+AAzXskNIdAAJbm90aWZ5QWxsc3EAfgAMiJsE43QADGlzSW5zdGFuY2VPZnNxAH4ADOPjrVR0AAhOb1NpZ25hbHNxAH4ADL0t7AN0AAY8aW5pdD5zcQB+AAx0QuKGdAAFYXBwbHlzcQB+AAwq2znudAACPT1zcQB+AAzcW5MndAAFY2xvbmVzcQB+AAyuIZRFdAAIdG9TdHJpbmdzcQB+AAygwr9edAACIT1zcQB+AAzCJgP9dAAMY29tcHV0ZVZhbHVlc3EAfgAMJxW6pXQACGdldENsYXNzc3EAfgAMolWCoHQABnVwZGF0ZXNxAH4ADMH9GTF0AAJuZXNxAH4ADKU5W790AAZteUV4cHJzcQB+AAyp3IITdAAHbXlWYWx1ZXNxAH4ADO355410AAJlcXNxAH4ADHj8BPZ0AAIjI3NxAH4ADLuXmDB0AAhmaW5hbGl6ZXNxAH4ADJp7oCh0AAZjYWxsZXJzcQB+AAwBJX6TdAAIaGFzaENvZGVzcQB+AAwWZUQkdAAIb2JzZXJ2ZWRzcgATeHNidGkuYXBpLlNvdXJjZUFQSblep/kpIzikAgACWwALZGVmaW5pdGlvbnN0ABdbTHhzYnRpL2FwaS9EZWZpbml0aW9uO1sACHBhY2thZ2VzdAAUW0x4c2J0aS9hcGkvUGFja2FnZTt4cHVyABdbTHhzYnRpLmFwaS5EZWZpbml0aW9uO4jJXOe0414OAgAAeHAAAAAFc3IAE3hzYnRpLmFwaS5DbGFzc0xpa2WDNByh37CXbAIABEwADmRlZmluaXRpb25UeXBldAAaTHhzYnRpL2FwaS9EZWZpbml0aW9uVHlwZTtbABBzYXZlZEFubm90YXRpb25zdAATW0xqYXZhL2xhbmcvU3RyaW5nO0wACHNlbGZUeXBldAAQTHhzYnRpL2FwaS9MYXp5O0wACXN0cnVjdHVyZXEAfgBVeHIAIXhzYnRpLmFwaS5QYXJhbWV0ZXJpemVkRGVmaW5pdGlvbvkRbrHVUDziAgABWwAOdHlwZVBhcmFtZXRlcnN0ABpbTHhzYnRpL2FwaS9UeXBlUGFyYW1ldGVyO3hyABR4c2J0aS5hcGkuRGVmaW5pdGlvbocqG+hxQuNGAgAETAAGYWNjZXNzdAASTHhzYnRpL2FwaS9BY2Nlc3M7WwALYW5ub3RhdGlvbnN0ABdbTHhzYnRpL2FwaS9Bbm5vdGF0aW9uO0wACW1vZGlmaWVyc3QAFUx4c2J0aS9hcGkvTW9kaWZpZXJzO0wABG5hbWVxAH4ADXhwc3IAEHhzYnRpLmFwaS5QdWJsaWO6WD2ubC1gQgIAAHhyABB4c2J0aS5hcGkuQWNjZXNz3WKa+B1jMUgCAAB4cHVyABdbTHhzYnRpLmFwaS5Bbm5vdGF0aW9uO+uX6xkQ9o1IAgAAeHAAAAAAc3IAE3hzYnRpLmFwaS5Nb2RpZmllcnPHERMhaZzcJAIAAUIABWZsYWdzeHAAdAARY2FsY3VsYXRvci5TaWduYWx1cgAaW0x4c2J0aS5hcGkuVHlwZVBhcmFtZXRlcjvZbSYPKJ3ytgIAAHhwAAAAAXNyABd4c2J0aS5hcGkuVHlwZVBhcmFtZXRlcmdpVdvjcpBrAgAGWwALYW5ub3RhdGlvbnNxAH4AWkwAAmlkcQB+AA1MAApsb3dlckJvdW5kdAAQTHhzYnRpL2FwaS9UeXBlO1sADnR5cGVQYXJhbWV0ZXJzcQB+AFdMAAp1cHBlckJvdW5kcQB+AGhMAAh2YXJpYW5jZXQAFEx4c2J0aS9hcGkvVmFyaWFuY2U7eHB1cQB+AGAAAAAAdAATY2FsY3VsYXRvci5TaWduYWwuVHNyABR4c2J0aS5hcGkuUHJvamVjdGlvbvPSjVTpRaQtAgACTAACaWRxAH4ADUwABnByZWZpeHQAFkx4c2J0aS9hcGkvU2ltcGxlVHlwZTt4cgAUeHNidGkuYXBpLlNpbXBsZVR5cGVyeGKIISO/QAIAAHhyAA54c2J0aS5hcGkuVHlwZT9q2SEWSarKAgAAeHB0AAdOb3RoaW5nc3IAE3hzYnRpLmFwaS5TaW5nbGV0b278p1/4z1bkRgIAAUwABHBhdGh0ABBMeHNidGkvYXBpL1BhdGg7eHEAfgBvc3IADnhzYnRpLmFwaS5QYXRomz1cCM6lJ4QCAAFbAApjb21wb25lbnRzdAAaW0x4c2J0aS9hcGkvUGF0aENvbXBvbmVudDt4cHVyABpbTHhzYnRpLmFwaS5QYXRoQ29tcG9uZW50O0PaCXQtZxZ0AgAAeHAAAAACc3IADHhzYnRpLmFwaS5JZJgybIs3U8RAAgABTAACaWRxAH4ADXhyABd4c2J0aS5hcGkuUGF0aENvbXBvbmVudF+aIlsuhp+8AgAAeHB0AAVzY2FsYXNyAA54c2J0aS5hcGkuVGhpc9sJ7abMWkBcAgAAeHEAfgB8dXEAfgBlAAAAAHNxAH4AbXQAA0FueXEAfgB1fnIAEnhzYnRpLmFwaS5WYXJpYW5jZQAAAAAAAAAAEgAAeHIADmphdmEubGFuZy5FbnVtAAAAAAAAAAASAAB4cHQACUludmFyaWFudH5yABh4c2J0aS5hcGkuRGVmaW5pdGlvblR5cGUAAAAAAAAAABIAAHhxAH4AhXQACENsYXNzRGVmdXIAE1tMamF2YS5sYW5nLlN0cmluZzut0lbn6R17RwIAAHhwAAAAAHNyABN4c2J0aS5TYWZlTGF6eSRJbXBsUAIuk5eXQD8CAANaAAhiaXRtYXAkMEwAAl90dAASTGphdmEvbGFuZy9PYmplY3Q7TAAEZXZhbHQAEUxzY2FsYS9GdW5jdGlvbjA7eHIAFnhzYnRpLmFwaS5BYnN0cmFjdExhennTd7UBX7vnoAIAAHhwAHBzcgAgeHNidGkuU2FmZUxhenkkJGFub25mdW4kc3RyaWN0JDEAAAAAAAAAAAIAAUwAB3ZhbHVlJDFxAH4Ajnhwc3IAE3hzYnRpLmFwaS5FbXB0eVR5cGW8/Z5GSTuJJAIAAHhxAH4Ab3NxAH4AjQFzcgATeHNidGkuYXBpLlN0cnVjdHVyZamq+YCTb9gAAgADTAAIZGVjbGFyZWRxAH4AVUwACWluaGVyaXRlZHEAfgBVTAAHcGFyZW50c3EAfgBVeHEAfgBwc3EAfgCNAXVxAH4AUAAAAABwc3EAfgCNAXVxAH4AUAAAAABwc3EAfgCNAXVyABFbTHhzYnRpLmFwaS5UeXBlO3T/pVp7+elBAgAAeHAAAAACc3EAfgBtdAAGT2JqZWN0c3EAfgBzc3EAfgB2dXEAfgB5AAAAA3NxAH4Ae3QABGphdmFzcQB+AHt0AARsYW5ncQB+AIBzcQB+AG1xAH4Ag3NxAH4Ac3NxAH4AdnVxAH4AeQAAAAJzcQB+AHtxAH4AfnEAfgCAcHBzcQB+AFJxAH4AX3VxAH4AYAAAAABzcQB+AGIAdAAOY2FsY3VsYXRvci5WYXJ1cQB+AGUAAAABc3EAfgBndXEAfgBgAAAAAHQAEGNhbGN1bGF0b3IuVmFyLlRxAH4AcXVxAH4AZQAAAABxAH4AgnEAfgCGcQB+AIl1cQB+AIsAAAAAc3EAfgCNAHBzcQB+AJJxAH4AlXNxAH4AjQFzcQB+AJdzcQB+AI0BdXEAfgBQAAAAAHBzcQB+AI0BdXEAfgBQAAAAAHBzcQB+AI0BdXEAfgCeAAAAA3NyABd4c2J0aS5hcGkuUGFyYW1ldGVyaXplZBZs7mkDybt/AgACTAAIYmFzZVR5cGVxAH4AblsADXR5cGVBcmd1bWVudHN0ABFbTHhzYnRpL2FwaS9UeXBlO3hxAH4Ab3NxAH4AbXQABlNpZ25hbHNxAH4Ac3NxAH4AdnVxAH4AeQAAAAJzcQB+AHt0AApjYWxjdWxhdG9ycQB+AIB1cQB+AJ4AAAABc3IAFnhzYnRpLmFwaS5QYXJhbWV0ZXJSZWY/2OM5ACxzsAIAAUwAAmlkcQB+AA14cQB+AG90ABBjYWxjdWxhdG9yLlZhci5Uc3EAfgBtcQB+AKFzcQB+AHNzcQB+AHZ1cQB+AHkAAAADc3EAfgB7cQB+AKZzcQB+AHtxAH4AqHEAfgCAc3EAfgBtcQB+AINzcQB+AHNzcQB+AHZ1cQB+AHkAAAACc3EAfgB7cQB+AH5xAH4AgHBwc3EAfgBScQB+AF91cQB+AGAAAAAAc3EAfgBiAHQADmNhbGN1bGF0b3IuVmFydXEAfgBlAAAAAH5xAH4AiHQABk1vZHVsZXVxAH4AiwAAAABzcQB+AI0AcHNxAH4AknEAfgCVc3EAfgCNAXNxAH4Al3NxAH4AjQF1cQB+AFAAAAAAcHNxAH4AjQF1cQB+AFAAAAAAcHNxAH4AjQF1cQB+AJ4AAAACc3EAfgBtcQB+AKFzcQB+AHNzcQB+AHZ1cQB+AHkAAAADc3EAfgB7cQB+AKZzcQB+AHtxAH4AqHEAfgCAc3EAfgBtcQB+AINzcQB+AHNzcQB+AHZ1cQB+AHkAAAACc3EAfgB7cQB+AH5xAH4AgHBwc3EAfgBScQB+AF91cQB+AGAAAAAAc3EAfgBiAHQAE2NhbGN1bGF0b3IuTm9TaWduYWx1cQB+AGUAAAAAcQB+AOB1cQB+AIsAAAAAc3EAfgCNAHBzcQB+AJJxAH4AlXNxAH4AjQFzcQB+AJdzcQB+AI0BdXEAfgBQAAAAAHBzcQB+AI0BdXEAfgBQAAAAAHBzcQB+AI0BdXEAfgCeAAAAA3NxAH4AwnNxAH4AbXQABlNpZ25hbHNxAH4Ac3NxAH4AdnVxAH4AeQAAAAJzcQB+AHt0AApjYWxjdWxhdG9ycQB+AIB1cQB+AJ4AAAABc3EAfgBtcQB+AHJzcQB+AHNzcQB+AHZ1cQB+AHkAAAACc3EAfgB7cQB+AH5xAH4AgHNxAH4AbXEAfgChc3EAfgBzc3EAfgB2dXEAfgB5AAAAA3NxAH4Ae3EAfgCmc3EAfgB7cQB+AKhxAH4AgHNxAH4AbXEAfgCDcQB+ARJwcHNxAH4AUnEAfgBfdXEAfgBgAAAAAHNxAH4AYgB0ABFjYWxjdWxhdG9yLlNpZ25hbHVxAH4AZQAAAABxAH4A4HVxAH4AiwAAAABzcQB+AI0AcHNxAH4AknEAfgCVc3EAfgCNAXNxAH4Al3NxAH4AjQF1cQB+AFAAAAAAcHNxAH4AjQF1cQB+AFAAAAAAcHNxAH4AjQF1cQB+AJ4AAAACc3EAfgBtcQB+AKFzcQB+AHNzcQB+AHZ1cQB+AHkAAAADc3EAfgB7cQB+AKZzcQB+AHtxAH4AqHEAfgCAc3EAfgBtcQB+AINzcQB+AHNzcQB+AHZ1cQB+AHkAAAACc3EAfgB7cQB+AH5xAH4AgHBwdXIAFFtMeHNidGkuYXBpLlBhY2thZ2U7WxMZN3CnJ6ECAAB4cAAAAAFzcgAReHNidGkuYXBpLlBhY2thZ2V+WY/2rs45WAIAAUwABG5hbWVxAH4ADXhwdAAKY2FsY3VsYXRvcnNyABV4c2J0aS5hcGkuQ29tcGlsYXRpb27t+uDDauigQgIAAkoACXN0YXJ0VGltZVsAB291dHB1dHN0ABpbTHhzYnRpL2FwaS9PdXRwdXRTZXR0aW5nO3hwAAABXUrdIAN1cgAaW0x4c2J0aS5hcGkuT3V0cHV0U2V0dGluZzt/asLzp4elQgIAAHhwAAAAAXNyABd4c2J0aS5hcGkuT3V0cHV0U2V0dGluZ3rZmkd0+x17AgACTAAPb3V0cHV0RGlyZWN0b3J5cQB+AA1MAA9zb3VyY2VEaXJlY3RvcnlxAH4ADXhwdABSL1VzZXJzL2Fra2hvbmcvbW9vYy9mcF9kZXNpZ25faW5fc2NhbGEvY2FsY3VsYXRvci93ZWItdWkvdGFyZ2V0L3NjYWxhLTIuMTEvY2xhc3Nlc3QAAS91cgACW0Ks8xf4BghU4AIAAHhwAAAAFPWmKWcx5jRi57xSa0EmNIQ8cyAC
+/Users/akkhong/mooc/fp_design_in_scala/calculator/src/main/scala/calculator/TweetLength.scala -> 
+rO0ABXNyABB4c2J0aS5hcGkuU291cmNlFlpwRASfbtoCAAZJAAdhcGlIYXNoWgAIaGFzTWFjcm9MABhfaW50ZXJuYWxPbmx5X25hbWVIYXNoZXN0ACRMeHNidGkvYXBpL19pbnRlcm5hbE9ubHlfTmFtZUhhc2hlcztMAANhcGl0ABVMeHNidGkvYXBpL1NvdXJjZUFQSTtMAAtjb21waWxhdGlvbnQAF0x4c2J0aS9hcGkvQ29tcGlsYXRpb247WwAEaGFzaHQAAltCeHBSyflxAHNyACJ4c2J0aS5hcGkuX2ludGVybmFsT25seV9OYW1lSGFzaGVzVNq+mfrU7EwCAAJbAA9pbXBsaWNpdE1lbWJlcnN0ACNbTHhzYnRpL2FwaS9faW50ZXJuYWxPbmx5X05hbWVIYXNoO1sADnJlZ3VsYXJNZW1iZXJzcQB+AAd4cHVyACNbTHhzYnRpLmFwaS5faW50ZXJuYWxPbmx5X05hbWVIYXNoO0lagLbdlov0AgAAeHAAAAAAdXEAfgAJAAAAGHNyACB4c2J0aS5hcGkuX2ludGVybmFsT25seV9OYW1lSGFzaFsO9SJ2OFfPAgACSQAEaGFzaEwABG5hbWV0ABJMamF2YS9sYW5nL1N0cmluZzt4cA8DT5F0AAZub3RpZnlzcQB+AAw36CLWdAAYdHdlZXRSZW1haW5pbmdDaGFyc0NvdW50c3EAfgAM1a3kwXQABHdhaXRzcQB+AAxdgwScdAANJGFzSW5zdGFuY2VPZnNxAH4ADFkburh0AAZlcXVhbHNzcQB+AAytaFxZdAAMYXNJbnN0YW5jZU9mc3EAfgAM3f93o3QAG2NvbG9yRm9yUmVtYWluaW5nQ2hhcnNDb3VudHNxAH4ADL4frMB0AAxzeW5jaHJvbml6ZWRzcQB+AAzJlZiHdAANJGlzSW5zdGFuY2VPZnNxAH4ADLHPOyp0AA5NYXhUd2VldExlbmd0aHNxAH4ADK6d1K50AAlub3RpZnlBbGxzcQB+AAweJIi7dAAMaXNJbnN0YW5jZU9mc3EAfgAMS2PSM3QAAj09c3EAfgAMUvHWCXQABWNsb25lc3EAfgAMUPlgdXQACHRvU3RyaW5nc3EAfgAMhoLzeHQAAiE9c3EAfgAME9cqH3QAC3R3ZWV0TGVuZ3Roc3EAfgAM/6oAanQACGdldENsYXNzc3EAfgAMc3grUXQAAm5lc3EAfgAMUmNoF3QAC1R3ZWV0TGVuZ3Roc3EAfgAM+ob0c3QAAmVxc3EAfgAMojAZlHQAAiMjc3EAfgAMvYw0D3QACGZpbmFsaXplc3EAfgAMX8mu+3QACGhhc2hDb2Rlc3IAE3hzYnRpLmFwaS5Tb3VyY2VBUEm5Xqf5KSM4pAIAAlsAC2RlZmluaXRpb25zdAAXW0x4c2J0aS9hcGkvRGVmaW5pdGlvbjtbAAhwYWNrYWdlc3QAFFtMeHNidGkvYXBpL1BhY2thZ2U7eHB1cgAXW0x4c2J0aS5hcGkuRGVmaW5pdGlvbjuIyVzntONeDgIAAHhwAAAAAXNyABN4c2J0aS5hcGkuQ2xhc3NMaWtlgzQcod+wl2wCAARMAA5kZWZpbml0aW9uVHlwZXQAGkx4c2J0aS9hcGkvRGVmaW5pdGlvblR5cGU7WwAQc2F2ZWRBbm5vdGF0aW9uc3QAE1tMamF2YS9sYW5nL1N0cmluZztMAAhzZWxmVHlwZXQAEEx4c2J0aS9hcGkvTGF6eTtMAAlzdHJ1Y3R1cmVxAH4AR3hyACF4c2J0aS5hcGkuUGFyYW1ldGVyaXplZERlZmluaXRpb275EW6x1VA84gIAAVsADnR5cGVQYXJhbWV0ZXJzdAAaW0x4c2J0aS9hcGkvVHlwZVBhcmFtZXRlcjt4cgAUeHNidGkuYXBpLkRlZmluaXRpb26HKhvocULjRgIABEwABmFjY2Vzc3QAEkx4c2J0aS9hcGkvQWNjZXNzO1sAC2Fubm90YXRpb25zdAAXW0x4c2J0aS9hcGkvQW5ub3RhdGlvbjtMAAltb2RpZmllcnN0ABVMeHNidGkvYXBpL01vZGlmaWVycztMAARuYW1lcQB+AA14cHNyABB4c2J0aS5hcGkuUHVibGljulg9rmwtYEICAAB4cgAQeHNidGkuYXBpLkFjY2Vzc91imvgdYzFIAgAAeHB1cgAXW0x4c2J0aS5hcGkuQW5ub3RhdGlvbjvrl+sZEPaNSAIAAHhwAAAAAHNyABN4c2J0aS5hcGkuTW9kaWZpZXJzxxETIWmc3CQCAAFCAAVmbGFnc3hwAHQAFmNhbGN1bGF0b3IuVHdlZXRMZW5ndGh1cgAaW0x4c2J0aS5hcGkuVHlwZVBhcmFtZXRlcjvZbSYPKJ3ytgIAAHhwAAAAAH5yABh4c2J0aS5hcGkuRGVmaW5pdGlvblR5cGUAAAAAAAAAABIAAHhyAA5qYXZhLmxhbmcuRW51bQAAAAAAAAAAEgAAeHB0AAZNb2R1bGV1cgATW0xqYXZhLmxhbmcuU3RyaW5nO63SVufpHXtHAgAAeHAAAAAAc3IAE3hzYnRpLlNhZmVMYXp5JEltcGxQAi6Tl5dAPwIAA1oACGJpdG1hcCQwTAACX3R0ABJMamF2YS9sYW5nL09iamVjdDtMAARldmFsdAARTHNjYWxhL0Z1bmN0aW9uMDt4cgAWeHNidGkuYXBpLkFic3RyYWN0TGF6edN3tQFfu+egAgAAeHABc3IAE3hzYnRpLmFwaS5FbXB0eVR5cGW8/Z5GSTuJJAIAAHhyABR4c2J0aS5hcGkuU2ltcGxlVHlwZXJ4YoghI79AAgAAeHIADnhzYnRpLmFwaS5UeXBlP2rZIRZJqsoCAAB4cHBzcQB+AF8Bc3IAE3hzYnRpLmFwaS5TdHJ1Y3R1cmWpqvmAk2/YAAIAA0wACGRlY2xhcmVkcQB+AEdMAAlpbmhlcml0ZWRxAH4AR0wAB3BhcmVudHNxAH4AR3hxAH4AZnNxAH4AXwF1cQB+AEIAAAAAcHNxAH4AXwF1cQB+AEIAAAAAcHNxAH4AXwF1cgARW0x4c2J0aS5hcGkuVHlwZTt0/6Vae/npQQIAAHhwAAAAAnNyABR4c2J0aS5hcGkuUHJvamVjdGlvbvPSjVTpRaQtAgACTAACaWRxAH4ADUwABnByZWZpeHQAFkx4c2J0aS9hcGkvU2ltcGxlVHlwZTt4cQB+AGV0AAZPYmplY3RzcgATeHNidGkuYXBpLlNpbmdsZXRvbvynX/jPVuRGAgABTAAEcGF0aHQAEEx4c2J0aS9hcGkvUGF0aDt4cQB+AGVzcgAOeHNidGkuYXBpLlBhdGibPVwIzqUnhAIAAVsACmNvbXBvbmVudHN0ABpbTHhzYnRpL2FwaS9QYXRoQ29tcG9uZW50O3hwdXIAGltMeHNidGkuYXBpLlBhdGhDb21wb25lbnQ7Q9oJdC1nFnQCAAB4cAAAAANzcgAMeHNidGkuYXBpLklkmDJsizdTxEACAAFMAAJpZHEAfgANeHIAF3hzYnRpLmFwaS5QYXRoQ29tcG9uZW50X5oiWy6Gn7wCAAB4cHQABGphdmFzcQB+AH50AARsYW5nc3IADnhzYnRpLmFwaS5UaGlz2wntpsxaQFwCAAB4cQB+AH9zcQB+AHJ0AANBbnlzcQB+AHZzcQB+AHl1cQB+AHwAAAACc3EAfgB+dAAFc2NhbGFxAH4AhXBwdXIAFFtMeHNidGkuYXBpLlBhY2thZ2U7WxMZN3CnJ6ECAAB4cAAAAAFzcgAReHNidGkuYXBpLlBhY2thZ2V+WY/2rs45WAIAAUwABG5hbWVxAH4ADXhwdAAKY2FsY3VsYXRvcnNyABV4c2J0aS5hcGkuQ29tcGlsYXRpb27t+uDDauigQgIAAkoACXN0YXJ0VGltZVsAB291dHB1dHN0ABpbTHhzYnRpL2FwaS9PdXRwdXRTZXR0aW5nO3hwAAABXUrsCpx1cgAaW0x4c2J0aS5hcGkuT3V0cHV0U2V0dGluZzt/asLzp4elQgIAAHhwAAAAAXNyABd4c2J0aS5hcGkuT3V0cHV0U2V0dGluZ3rZmkd0+x17AgACTAAPb3V0cHV0RGlyZWN0b3J5cQB+AA1MAA9zb3VyY2VEaXJlY3RvcnlxAH4ADXhwdABSL1VzZXJzL2Fra2hvbmcvbW9vYy9mcF9kZXNpZ25faW5fc2NhbGEvY2FsY3VsYXRvci93ZWItdWkvdGFyZ2V0L3NjYWxhLTIuMTEvY2xhc3Nlc3QAAS91cgACW0Ks8xf4BghU4AIAAHhwAAAAFB2DxPLAvFGgP7NN6WHJyt/zJtFe
+/Users/akkhong/mooc/fp_design_in_scala/calculator/web-ui/src/main/scala/calculator/CalculatorUI.scala -> 
+rO0ABXNyABB4c2J0aS5hcGkuU291cmNlFlpwRASfbtoCAAZJAAdhcGlIYXNoWgAIaGFzTWFjcm9MABhfaW50ZXJuYWxPbmx5X25hbWVIYXNoZXN0ACRMeHNidGkvYXBpL19pbnRlcm5hbE9ubHlfTmFtZUhhc2hlcztMAANhcGl0ABVMeHNidGkvYXBpL1NvdXJjZUFQSTtMAAtjb21waWxhdGlvbnQAF0x4c2J0aS9hcGkvQ29tcGlsYXRpb247WwAEaGFzaHQAAltCeHBf74T9AHNyACJ4c2J0aS5hcGkuX2ludGVybmFsT25seV9OYW1lSGFzaGVzVNq+mfrU7EwCAAJbAA9pbXBsaWNpdE1lbWJlcnN0ACNbTHhzYnRpL2FwaS9faW50ZXJuYWxPbmx5X05hbWVIYXNoO1sADnJlZ3VsYXJNZW1iZXJzcQB+AAd4cHVyACNbTHhzYnRpLmFwaS5faW50ZXJuYWxPbmx5X05hbWVIYXNoO0lagLbdlov0AgAAeHAAAAAAdXEAfgAJAAAAIXNyACB4c2J0aS5hcGkuX2ludGVybmFsT25seV9OYW1lSGFzaFsO9SJ2OFfPAgACSQAEaGFzaEwABG5hbWV0ABJMamF2YS9sYW5nL1N0cmluZzt4cJSW6lZ0AAZub3RpZnlzcQB+AAychWa8dAASZWxlbWVudFZhbHVlU2lnbmFsc3EAfgAMYTr6+3QACXBhcnNlRXhwcnNxAH4ADMJVWLR0ABdzZXR1cDJuZE9yZGVyUG9seW5vbWlhbHNxAH4ADELWSap0AAR3YWl0c3EAfgAMWHI9jXQADSRhc0luc3RhbmNlT2ZzcQB+AAy4U5qjdAAGZXF1YWxzc3EAfgAMvkEXPHQADGFzSW5zdGFuY2VPZnNxAH4ADBCS2J10AAxzeW5jaHJvbml6ZWRzcQB+AAzHQ/r5dAANJGlzSW5zdGFuY2VPZnNxAH4ADIHV9Ft0ABJkb3VibGVWYWx1ZU9mSW5wdXRzcQB+AAzXvsB+dAAEbWFpbnNxAH4ADDMh20p0AAlub3RpZnlBbGxzcQB+AAzcJIpLdAAMaXNJbnN0YW5jZU9mc3EAfgAMCY/3fnQAEnNldHVwVHdlZXRNZWFzdXJlcnNxAH4ADOYXZ5J0ABN0ZXh0QXJlYVZhbHVlU2lnbmFsc3EAfgAMgxl1PXQADENhbGN1bGF0b3JVSXNxAH4ADHrOkEZ0AAI9PXNxAH4ADJHPxjx0AAVjbG9uZXNxAH4ADN8nd2J0AA9zZXR1cENhbGN1bGF0b3JzcQB+AAyG/ri9dAALZXhwck9mSW5wdXRzcQB+AAzkgc6wdAAIdG9TdHJpbmdzcQB+AAwOBXURdAACIT1zcQB+AAyaZGAZdAAQaW5wdXRWYWx1ZVNpZ25hbHNxAH4ADK31QRt0AAhnZXRDbGFzc3NxAH4ADB2ENkN0AAtlbGVtZW50QnlJZHNxAH4ADDdtlt10ABNDbGVhckNzc0NsYXNzUmVnRXhwc3EAfgAMUA6LCnQAAm5lc3EAfgAMsqyKXXQAAmVxc3EAfgAM2bHIpHQAFiRqcyRleHBvcnRlZCRtZXRoJG1haW5zcQB+AAyFisyXdAACIyNzcQB+AAxyiSI4dAAIZmluYWxpemVzcQB+AAwhWNWDdAAIaGFzaENvZGVzcgATeHNidGkuYXBpLlNvdXJjZUFQSblep/kpIzikAgACWwALZGVmaW5pdGlvbnN0ABdbTHhzYnRpL2FwaS9EZWZpbml0aW9uO1sACHBhY2thZ2VzdAAUW0x4c2J0aS9hcGkvUGFja2FnZTt4cHVyABdbTHhzYnRpLmFwaS5EZWZpbml0aW9uO4jJXOe0414OAgAAeHAAAAABc3IAE3hzYnRpLmFwaS5DbGFzc0xpa2WDNByh37CXbAIABEwADmRlZmluaXRpb25UeXBldAAaTHhzYnRpL2FwaS9EZWZpbml0aW9uVHlwZTtbABBzYXZlZEFubm90YXRpb25zdAATW0xqYXZhL2xhbmcvU3RyaW5nO0wACHNlbGZUeXBldAAQTHhzYnRpL2FwaS9MYXp5O0wACXN0cnVjdHVyZXEAfgBZeHIAIXhzYnRpLmFwaS5QYXJhbWV0ZXJpemVkRGVmaW5pdGlvbvkRbrHVUDziAgABWwAOdHlwZVBhcmFtZXRlcnN0ABpbTHhzYnRpL2FwaS9UeXBlUGFyYW1ldGVyO3hyABR4c2J0aS5hcGkuRGVmaW5pdGlvbocqG+hxQuNGAgAETAAGYWNjZXNzdAASTHhzYnRpL2FwaS9BY2Nlc3M7WwALYW5ub3RhdGlvbnN0ABdbTHhzYnRpL2FwaS9Bbm5vdGF0aW9uO0wACW1vZGlmaWVyc3QAFUx4c2J0aS9hcGkvTW9kaWZpZXJzO0wABG5hbWVxAH4ADXhwc3IAEHhzYnRpLmFwaS5QdWJsaWO6WD2ubC1gQgIAAHhyABB4c2J0aS5hcGkuQWNjZXNz3WKa+B1jMUgCAAB4cHVyABdbTHhzYnRpLmFwaS5Bbm5vdGF0aW9uO+uX6xkQ9o1IAgAAeHAAAAAAc3IAE3hzYnRpLmFwaS5Nb2RpZmllcnPHERMhaZzcJAIAAUIABWZsYWdzeHAAdAAXY2FsY3VsYXRvci5DYWxjdWxhdG9yVUl1cgAaW0x4c2J0aS5hcGkuVHlwZVBhcmFtZXRlcjvZbSYPKJ3ytgIAAHhwAAAAAH5yABh4c2J0aS5hcGkuRGVmaW5pdGlvblR5cGUAAAAAAAAAABIAAHhyAA5qYXZhLmxhbmcuRW51bQAAAAAAAAAAEgAAeHB0AAZNb2R1bGV1cgATW0xqYXZhLmxhbmcuU3RyaW5nO63SVufpHXtHAgAAeHAAAAAAc3IAE3hzYnRpLlNhZmVMYXp5JEltcGxQAi6Tl5dAPwIAA1oACGJpdG1hcCQwTAACX3R0ABJMamF2YS9sYW5nL09iamVjdDtMAARldmFsdAARTHNjYWxhL0Z1bmN0aW9uMDt4cgAWeHNidGkuYXBpLkFic3RyYWN0TGF6edN3tQFfu+egAgAAeHAAcHNyACB4c2J0aS5TYWZlTGF6eSQkYW5vbmZ1biRzdHJpY3QkMQAAAAAAAAAAAgABTAAHdmFsdWUkMXEAfgByeHBzcgATeHNidGkuYXBpLkVtcHR5VHlwZbz9nkZJO4kkAgAAeHIAFHhzYnRpLmFwaS5TaW1wbGVUeXBlcnhiiCEjv0ACAAB4cgAOeHNidGkuYXBpLlR5cGU/atkhFkmqygIAAHhwc3EAfgBxAXNyABN4c2J0aS5hcGkuU3RydWN0dXJlqar5gJNv2AACAANMAAhkZWNsYXJlZHEAfgBZTAAJaW5oZXJpdGVkcQB+AFlMAAdwYXJlbnRzcQB+AFl4cQB+AHpzcQB+AHEBdXEAfgBUAAAAAHBzcQB+AHEBdXEAfgBUAAAAAHBzcQB+AHEBdXIAEVtMeHNidGkuYXBpLlR5cGU7dP+lWnv56UECAAB4cAAAAANzcgAUeHNidGkuYXBpLlByb2plY3Rpb27z0o1U6UWkLQIAAkwAAmlkcQB+AA1MAAZwcmVmaXh0ABZMeHNidGkvYXBpL1NpbXBsZVR5cGU7eHEAfgB5dAAFSlNBcHBzcgATeHNidGkuYXBpLlNpbmdsZXRvbvynX/jPVuRGAgABTAAEcGF0aHQAEEx4c2J0aS9hcGkvUGF0aDt4cQB+AHlzcgAOeHNidGkuYXBpLlBhdGibPVwIzqUnhAIAAVsACmNvbXBvbmVudHN0ABpbTHhzYnRpL2FwaS9QYXRoQ29tcG9uZW50O3hwdXIAGltMeHNidGkuYXBpLlBhdGhDb21wb25lbnQ7Q9oJdC1nFnQCAAB4cAAAAARzcgAMeHNidGkuYXBpLklkmDJsizdTxEACAAFMAAJpZHEAfgANeHIAF3hzYnRpLmFwaS5QYXRoQ29tcG9uZW50X5oiWy6Gn7wCAAB4cHQABXNjYWxhc3EAfgCSdAAHc2NhbGFqc3NxAH4AknQAAmpzc3IADnhzYnRpLmFwaS5UaGlz2wntpsxaQFwCAAB4cQB+AJNzcQB+AIZ0AAZPYmplY3RzcQB+AIpzcQB+AI11cQB+AJAAAAADc3EAfgCSdAAEamF2YXNxAH4AknQABGxhbmdxAH4Am3NxAH4AhnQAA0FueXNxAH4AinNxAH4AjXVxAH4AkAAAAAJzcQB+AJJxAH4AlXEAfgCbcHB1cgAUW0x4c2J0aS5hcGkuUGFja2FnZTtbExk3cKcnoQIAAHhwAAAAAXNyABF4c2J0aS5hcGkuUGFja2FnZX5Zj/auzjlYAgABTAAEbmFtZXEAfgANeHB0AApjYWxjdWxhdG9yc3IAFXhzYnRpLmFwaS5Db21waWxhdGlvbu364MNq6KBCAgACSgAJc3RhcnRUaW1lWwAHb3V0cHV0c3QAGltMeHNidGkvYXBpL091dHB1dFNldHRpbmc7eHAAAAFdSt0gA3VyABpbTHhzYnRpLmFwaS5PdXRwdXRTZXR0aW5nO39qwvOnh6VCAgAAeHAAAAABc3IAF3hzYnRpLmFwaS5PdXRwdXRTZXR0aW5netmaR3T7HXsCAAJMAA9vdXRwdXREaXJlY3RvcnlxAH4ADUwAD3NvdXJjZURpcmVjdG9yeXEAfgANeHB0AFIvVXNlcnMvYWtraG9uZy9tb29jL2ZwX2Rlc2lnbl9pbl9zY2FsYS9jYWxjdWxhdG9yL3dlYi11aS90YXJnZXQvc2NhbGEtMi4xMS9jbGFzc2VzdAABL3VyAAJbQqzzF/gGCFTgAgAAeHAAAAAUUoMGXqs60ywQh5jiIm/YED4KIcY=
+external apis:
+0 items
+source infos:
+5 items
+/Users/akkhong/mooc/fp_design_in_scala/calculator/src/main/scala/calculator/Calculator.scala -> 
+AAAAAAAAAAA=
+/Users/akkhong/mooc/fp_design_in_scala/calculator/src/main/scala/calculator/Polynomial.scala -> 
+AAAAAAAAAAA=
+/Users/akkhong/mooc/fp_design_in_scala/calculator/src/main/scala/calculator/Signal.scala -> 
+AAAAAAAAAAA=
+/Users/akkhong/mooc/fp_design_in_scala/calculator/src/main/scala/calculator/TweetLength.scala -> 
+AAAAAAAAAAA=
+/Users/akkhong/mooc/fp_design_in_scala/calculator/web-ui/src/main/scala/calculator/CalculatorUI.scala -> 
+AAAAAAAAAAA=
+compilations:
+13 items
+00 -> rO0ABXNyABV4c2J0aS5hcGkuQ29tcGlsYXRpb27t+uDDauigQgIAAkoACXN0YXJ0VGltZVsAB291dHB1dHN0ABpbTHhzYnRpL2FwaS9PdXRwdXRTZXR0aW5nO3hwAAABXUrdIAN1cgAaW0x4c2J0aS5hcGkuT3V0cHV0U2V0dGluZzt/asLzp4elQgIAAHhwAAAAAXNyABd4c2J0aS5hcGkuT3V0cHV0U2V0dGluZ3rZmkd0+x17AgACTAAPb3V0cHV0RGlyZWN0b3J5dAASTGphdmEvbGFuZy9TdHJpbmc7TAAPc291cmNlRGlyZWN0b3J5cQB+AAZ4cHQAUi9Vc2Vycy9ha2tob25nL21vb2MvZnBfZGVzaWduX2luX3NjYWxhL2NhbGN1bGF0b3Ivd2ViLXVpL3RhcmdldC9zY2FsYS0yLjExL2NsYXNzZXN0AAEv
+01 -> rO0ABXNyABV4c2J0aS5hcGkuQ29tcGlsYXRpb27t+uDDauigQgIAAkoACXN0YXJ0VGltZVsAB291dHB1dHN0ABpbTHhzYnRpL2FwaS9PdXRwdXRTZXR0aW5nO3hwAAABXUrmFOR1cgAaW0x4c2J0aS5hcGkuT3V0cHV0U2V0dGluZzt/asLzp4elQgIAAHhwAAAAAXNyABd4c2J0aS5hcGkuT3V0cHV0U2V0dGluZ3rZmkd0+x17AgACTAAPb3V0cHV0RGlyZWN0b3J5dAASTGphdmEvbGFuZy9TdHJpbmc7TAAPc291cmNlRGlyZWN0b3J5cQB+AAZ4cHQAUi9Vc2Vycy9ha2tob25nL21vb2MvZnBfZGVzaWduX2luX3NjYWxhL2NhbGN1bGF0b3Ivd2ViLXVpL3RhcmdldC9zY2FsYS0yLjExL2NsYXNzZXN0AAEv
+02 -> rO0ABXNyABV4c2J0aS5hcGkuQ29tcGlsYXRpb27t+uDDauigQgIAAkoACXN0YXJ0VGltZVsAB291dHB1dHN0ABpbTHhzYnRpL2FwaS9PdXRwdXRTZXR0aW5nO3hwAAABXUrqS451cgAaW0x4c2J0aS5hcGkuT3V0cHV0U2V0dGluZzt/asLzp4elQgIAAHhwAAAAAXNyABd4c2J0aS5hcGkuT3V0cHV0U2V0dGluZ3rZmkd0+x17AgACTAAPb3V0cHV0RGlyZWN0b3J5dAASTGphdmEvbGFuZy9TdHJpbmc7TAAPc291cmNlRGlyZWN0b3J5cQB+AAZ4cHQAUi9Vc2Vycy9ha2tob25nL21vb2MvZnBfZGVzaWduX2luX3NjYWxhL2NhbGN1bGF0b3Ivd2ViLXVpL3RhcmdldC9zY2FsYS0yLjExL2NsYXNzZXN0AAEv
+03 -> rO0ABXNyABV4c2J0aS5hcGkuQ29tcGlsYXRpb27t+uDDauigQgIAAkoACXN0YXJ0VGltZVsAB291dHB1dHN0ABpbTHhzYnRpL2FwaS9PdXRwdXRTZXR0aW5nO3hwAAABXUrsCpx1cgAaW0x4c2J0aS5hcGkuT3V0cHV0U2V0dGluZzt/asLzp4elQgIAAHhwAAAAAXNyABd4c2J0aS5hcGkuT3V0cHV0U2V0dGluZ3rZmkd0+x17AgACTAAPb3V0cHV0RGlyZWN0b3J5dAASTGphdmEvbGFuZy9TdHJpbmc7TAAPc291cmNlRGlyZWN0b3J5cQB+AAZ4cHQAUi9Vc2Vycy9ha2tob25nL21vb2MvZnBfZGVzaWduX2luX3NjYWxhL2NhbGN1bGF0b3Ivd2ViLXVpL3RhcmdldC9zY2FsYS0yLjExL2NsYXNzZXN0AAEv
+04 -> rO0ABXNyABV4c2J0aS5hcGkuQ29tcGlsYXRpb27t+uDDauigQgIAAkoACXN0YXJ0VGltZVsAB291dHB1dHN0ABpbTHhzYnRpL2FwaS9PdXRwdXRTZXR0aW5nO3hwAAABXUuHlzx1cgAaW0x4c2J0aS5hcGkuT3V0cHV0U2V0dGluZzt/asLzp4elQgIAAHhwAAAAAXNyABd4c2J0aS5hcGkuT3V0cHV0U2V0dGluZ3rZmkd0+x17AgACTAAPb3V0cHV0RGlyZWN0b3J5dAASTGphdmEvbGFuZy9TdHJpbmc7TAAPc291cmNlRGlyZWN0b3J5cQB+AAZ4cHQAUi9Vc2Vycy9ha2tob25nL21vb2MvZnBfZGVzaWduX2luX3NjYWxhL2NhbGN1bGF0b3Ivd2ViLXVpL3RhcmdldC9zY2FsYS0yLjExL2NsYXNzZXN0AAEv
+05 -> rO0ABXNyABV4c2J0aS5hcGkuQ29tcGlsYXRpb27t+uDDauigQgIAAkoACXN0YXJ0VGltZVsAB291dHB1dHN0ABpbTHhzYnRpL2FwaS9PdXRwdXRTZXR0aW5nO3hwAAABXWO1WYZ1cgAaW0x4c2J0aS5hcGkuT3V0cHV0U2V0dGluZzt/asLzp4elQgIAAHhwAAAAAXNyABd4c2J0aS5hcGkuT3V0cHV0U2V0dGluZ3rZmkd0+x17AgACTAAPb3V0cHV0RGlyZWN0b3J5dAASTGphdmEvbGFuZy9TdHJpbmc7TAAPc291cmNlRGlyZWN0b3J5cQB+AAZ4cHQAUi9Vc2Vycy9ha2tob25nL21vb2MvZnBfZGVzaWduX2luX3NjYWxhL2NhbGN1bGF0b3Ivd2ViLXVpL3RhcmdldC9zY2FsYS0yLjExL2NsYXNzZXN0AAEv
+06 -> rO0ABXNyABV4c2J0aS5hcGkuQ29tcGlsYXRpb27t+uDDauigQgIAAkoACXN0YXJ0VGltZVsAB291dHB1dHN0ABpbTHhzYnRpL2FwaS9PdXRwdXRTZXR0aW5nO3hwAAABXWO9gXt1cgAaW0x4c2J0aS5hcGkuT3V0cHV0U2V0dGluZzt/asLzp4elQgIAAHhwAAAAAXNyABd4c2J0aS5hcGkuT3V0cHV0U2V0dGluZ3rZmkd0+x17AgACTAAPb3V0cHV0RGlyZWN0b3J5dAASTGphdmEvbGFuZy9TdHJpbmc7TAAPc291cmNlRGlyZWN0b3J5cQB+AAZ4cHQAUi9Vc2Vycy9ha2tob25nL21vb2MvZnBfZGVzaWduX2luX3NjYWxhL2NhbGN1bGF0b3Ivd2ViLXVpL3RhcmdldC9zY2FsYS0yLjExL2NsYXNzZXN0AAEv
+07 -> rO0ABXNyABV4c2J0aS5hcGkuQ29tcGlsYXRpb27t+uDDauigQgIAAkoACXN0YXJ0VGltZVsAB291dHB1dHN0ABpbTHhzYnRpL2FwaS9PdXRwdXRTZXR0aW5nO3hwAAABXWO9rQJ1cgAaW0x4c2J0aS5hcGkuT3V0cHV0U2V0dGluZzt/asLzp4elQgIAAHhwAAAAAXNyABd4c2J0aS5hcGkuT3V0cHV0U2V0dGluZ3rZmkd0+x17AgACTAAPb3V0cHV0RGlyZWN0b3J5dAASTGphdmEvbGFuZy9TdHJpbmc7TAAPc291cmNlRGlyZWN0b3J5cQB+AAZ4cHQAUi9Vc2Vycy9ha2tob25nL21vb2MvZnBfZGVzaWduX2luX3NjYWxhL2NhbGN1bGF0b3Ivd2ViLXVpL3RhcmdldC9zY2FsYS0yLjExL2NsYXNzZXN0AAEv
+08 -> rO0ABXNyABV4c2J0aS5hcGkuQ29tcGlsYXRpb27t+uDDauigQgIAAkoACXN0YXJ0VGltZVsAB291dHB1dHN0ABpbTHhzYnRpL2FwaS9PdXRwdXRTZXR0aW5nO3hwAAABXWO/ab11cgAaW0x4c2J0aS5hcGkuT3V0cHV0U2V0dGluZzt/asLzp4elQgIAAHhwAAAAAXNyABd4c2J0aS5hcGkuT3V0cHV0U2V0dGluZ3rZmkd0+x17AgACTAAPb3V0cHV0RGlyZWN0b3J5dAASTGphdmEvbGFuZy9TdHJpbmc7TAAPc291cmNlRGlyZWN0b3J5cQB+AAZ4cHQAUi9Vc2Vycy9ha2tob25nL21vb2MvZnBfZGVzaWduX2luX3NjYWxhL2NhbGN1bGF0b3Ivd2ViLXVpL3RhcmdldC9zY2FsYS0yLjExL2NsYXNzZXN0AAEv
+09 -> rO0ABXNyABV4c2J0aS5hcGkuQ29tcGlsYXRpb27t+uDDauigQgIAAkoACXN0YXJ0VGltZVsAB291dHB1dHN0ABpbTHhzYnRpL2FwaS9PdXRwdXRTZXR0aW5nO3hwAAABXWO/tqx1cgAaW0x4c2J0aS5hcGkuT3V0cHV0U2V0dGluZzt/asLzp4elQgIAAHhwAAAAAXNyABd4c2J0aS5hcGkuT3V0cHV0U2V0dGluZ3rZmkd0+x17AgACTAAPb3V0cHV0RGlyZWN0b3J5dAASTGphdmEvbGFuZy9TdHJpbmc7TAAPc291cmNlRGlyZWN0b3J5cQB+AAZ4cHQAUi9Vc2Vycy9ha2tob25nL21vb2MvZnBfZGVzaWduX2luX3NjYWxhL2NhbGN1bGF0b3Ivd2ViLXVpL3RhcmdldC9zY2FsYS0yLjExL2NsYXNzZXN0AAEv
+10 -> rO0ABXNyABV4c2J0aS5hcGkuQ29tcGlsYXRpb27t+uDDauigQgIAAkoACXN0YXJ0VGltZVsAB291dHB1dHN0ABpbTHhzYnRpL2FwaS9PdXRwdXRTZXR0aW5nO3hwAAABXWPEphV1cgAaW0x4c2J0aS5hcGkuT3V0cHV0U2V0dGluZzt/asLzp4elQgIAAHhwAAAAAXNyABd4c2J0aS5hcGkuT3V0cHV0U2V0dGluZ3rZmkd0+x17AgACTAAPb3V0cHV0RGlyZWN0b3J5dAASTGphdmEvbGFuZy9TdHJpbmc7TAAPc291cmNlRGlyZWN0b3J5cQB+AAZ4cHQAUi9Vc2Vycy9ha2tob25nL21vb2MvZnBfZGVzaWduX2luX3NjYWxhL2NhbGN1bGF0b3Ivd2ViLXVpL3RhcmdldC9zY2FsYS0yLjExL2NsYXNzZXN0AAEv
+11 -> rO0ABXNyABV4c2J0aS5hcGkuQ29tcGlsYXRpb27t+uDDauigQgIAAkoACXN0YXJ0VGltZVsAB291dHB1dHN0ABpbTHhzYnRpL2FwaS9PdXRwdXRTZXR0aW5nO3hwAAABXWPJgbF1cgAaW0x4c2J0aS5hcGkuT3V0cHV0U2V0dGluZzt/asLzp4elQgIAAHhwAAAAAXNyABd4c2J0aS5hcGkuT3V0cHV0U2V0dGluZ3rZmkd0+x17AgACTAAPb3V0cHV0RGlyZWN0b3J5dAASTGphdmEvbGFuZy9TdHJpbmc7TAAPc291cmNlRGlyZWN0b3J5cQB+AAZ4cHQAUi9Vc2Vycy9ha2tob25nL21vb2MvZnBfZGVzaWduX2luX3NjYWxhL2NhbGN1bGF0b3Ivd2ViLXVpL3RhcmdldC9zY2FsYS0yLjExL2NsYXNzZXN0AAEv
+12 -> rO0ABXNyABV4c2J0aS5hcGkuQ29tcGlsYXRpb27t+uDDauigQgIAAkoACXN0YXJ0VGltZVsAB291dHB1dHN0ABpbTHhzYnRpL2FwaS9PdXRwdXRTZXR0aW5nO3hwAAABXWPM8751cgAaW0x4c2J0aS5hcGkuT3V0cHV0U2V0dGluZzt/asLzp4elQgIAAHhwAAAAAXNyABd4c2J0aS5hcGkuT3V0cHV0U2V0dGluZ3rZmkd0+x17AgACTAAPb3V0cHV0RGlyZWN0b3J5dAASTGphdmEvbGFuZy9TdHJpbmc7TAAPc291cmNlRGlyZWN0b3J5cQB+AAZ4cHQAUi9Vc2Vycy9ha2tob25nL21vb2MvZnBfZGVzaWduX2luX3NjYWxhL2NhbGN1bGF0b3Ivd2ViLXVpL3RhcmdldC9zY2FsYS0yLjExL2NsYXNzZXN0AAEv
