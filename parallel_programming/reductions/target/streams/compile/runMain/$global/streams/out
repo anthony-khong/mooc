@@ -11,4 +11,20 @@
 [0m[[0mdebug[0m] [0m	/Users/akkhong/.ivy2/cache/org.scala-lang.modules/scala-parser-combinators_2.11/bundles/scala-parser-combinators_2.11-1.0.1.jar[0m
 [0m[[0mdebug[0m] [0m	/Users/akkhong/.ivy2/cache/com.github.scala-blitz/scala-blitz_2.11/jars/scala-blitz_2.11-1.1.jar[0m
 [0m[[0mdebug[0m] [0m	/Users/akkhong/.ivy2/cache/org.scala-lang.modules/scala-swing_2.11/bundles/scala-swing_2.11-1.0.1.jar[0m
-[0m[[0mdebug[0m] [0mWaiting for thread run-main-4 to terminate.[0m
+[0m[[0mdebug[0m] [0mWaiting for thread run-main-0 to terminate.[0m
+[0m[[0mdebug[0m] [0m	Thread run-main-0 exited.[0m
+[0m[[0mdebug[0m] [0mInterrupting remaining threads (should be all daemons).[0m
+[0m[[0mdebug[0m] [0mInterrupting thread ForkJoinPool-1-worker-1[0m
+[0m[[0mdebug[0m] [0m	Interrupted ForkJoinPool-1-worker-1[0m
+[0m[[0mdebug[0m] [0mInterrupting thread ForkJoinPool-1-worker-3[0m
+[0m[[0mdebug[0m] [0m	Interrupted ForkJoinPool-1-worker-3[0m
+[0m[[0mdebug[0m] [0mInterrupting thread ForkJoinPool-1-worker-4[0m
+[0m[[0mdebug[0m] [0m	Interrupted ForkJoinPool-1-worker-4[0m
+[0m[[0mdebug[0m] [0mInterrupting thread ForkJoinPool-1-worker-7[0m
+[0m[[0mdebug[0m] [0m	Interrupted ForkJoinPool-1-worker-7[0m
+[0m[[0mdebug[0m] [0mInterrupting thread ForkJoinPool-1-worker-0[0m
+[0m[[0mdebug[0m] [0m	Interrupted ForkJoinPool-1-worker-0[0m
+[0m[[0mdebug[0m] [0mInterrupting thread ForkJoinPool-1-worker-2[0m
+[0m[[0mdebug[0m] [0m	Interrupted ForkJoinPool-1-worker-2[0m
+[0m[[0mdebug[0m] [0mSandboxed run complete..[0m
+[0m[[0mdebug[0m] [0mExited with code 0[0m

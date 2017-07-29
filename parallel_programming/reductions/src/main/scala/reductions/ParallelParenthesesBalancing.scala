@@ -41,14 +41,17 @@ object ParallelParenthesesBalancing {
   /** Returns `true` iff the parentheses in the input `chars` are balanced.
    */
   def balance(chars: Array[Char]): Boolean = {
-    def countBrace(count: Int, char: Char): Int = char match {
-      case '(' => count + 1
-      case ')' => count - 1
-      case _ => count
+    var i, count = 0
+    while (i < chars.size) {
+      if (chars(i) == '(') 
+        count += 1
+      else if (chars(i) == ')')
+        count -= 1
+      if (count < 0)
+        return false
+      i += 1
     }
-    val braceCounts = chars.scanLeft(0)(countBrace)
-    val negativeCounts = braceCounts filter (_<0)
-    (negativeCounts.size == 0) & (braceCounts.last == 0)
+    count == 0
   }
 
   /** Returns `true` iff the parentheses in the input `chars` are balanced.
@@ -62,12 +65,12 @@ object ParallelParenthesesBalancing {
       var count, min = 0
       while (left < right) {
         if (chars(left) == '(')
-          count = count + 1
+          count += 1
         else if (chars(left) == ')')
-          count = count - 1
+          count -= 1
         if (count < min)
           min = count
-        left = left + 1
+        left += 1
       }
       (count, min)
     }
