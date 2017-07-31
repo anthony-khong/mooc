@@ -43,7 +43,7 @@ object ParallelParenthesesBalancing {
   def balance(chars: Array[Char]): Boolean = {
     var i, count = 0
     while (i < chars.size) {
-      if (chars(i) == '(') 
+      if (chars(i) == '(')
         count += 1
       else if (chars(i) == ')')
         count -= 1
@@ -76,7 +76,7 @@ object ParallelParenthesesBalancing {
     }
 
     def reduce(from: Int, until: Int): (Int, Int) = {
-      if (until - from < threshold) {
+      if (until - from <= threshold) {
         traverse(from, until)
       } else {
         val mid = (from + until) / 2
