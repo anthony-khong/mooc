@@ -1,6 +1,0 @@
-[0m[[0minfo[0m] [0m+ Heap.gen1: OK, passed 100 tests.[0m
-[0m[[0minfo[0m] [0m+ Heap.insert1: OK, passed 100 tests.[0m
-[0m[[0minfo[0m] [0m+ Heap.meld1: OK, passed 100 tests.[0m
-[0m[[0minfo[0m] [0m+ Heap.meld2: OK, passed 100 tests.[0m
-[0m[[0minfo[0m] [0m+ Heap.findMin1: OK, passed 100 tests.[0m
-[0m[[0minfo[0m] [0m+ Heap.deleteMin1: OK, passed 100 tests.[0m
