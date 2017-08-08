@@ -20,12 +20,12 @@ object StackOverflow extends StackOverflow {
   /** Main function */
   def main(args: Array[String]): Unit = {
 
-    val lines   = sc.textFile("src/main/resources/stackoverflow/stackoverflow.csv")
+    val lines   = sc.textFile("src/main/resources/stackoverflow/stackoverflow.csv").sample(true, 0.1, 0)
     val raw     = rawPostings(lines)
     val grouped = groupedPostings(raw)
     val scored  = scoredPostings(grouped)
     val vectors = vectorPostings(scored)
-//    assert(vectors.count() == 2121822, "Incorrect number of vectors: " + vectors.count())
+    //assert(vectors.count() == 2121822, "Incorrect number of vectors: " + vectors.count())
 
     val means   = kmeans(sampleVectors(vectors), vectors, debug = true)
     val results = clusterResults(means, vectors)
@@ -78,7 +78,9 @@ class StackOverflow extends Serializable {
 
   /** Group the questions and answers together */
   def groupedPostings(postings: RDD[Posting]): RDD[(Int, Iterable[(Posting, Posting)])] = {
-    ???
+    val questionPairs = postings.filter(post => post.postingType == 1).map(q => (q.id, q))
+    val answerPairs = postings.filter(post => post.postingType == 2).map(a => (a.parentId.get, a))
+    questionPairs.join(answerPairs).groupByKey()
   }
 
 
@@ -97,7 +99,14 @@ class StackOverflow extends Serializable {
       highScore
     }
 
-    ???
+    def getQuestionScorePair(postPairs: Iterable[(Posting, Posting)]): (Posting, Int) = {
+      val question = postPairs.head._1
+      val answers = postPairs.map(_._2)
+      val maxScore = answerHighScore(answers.toArray)
+      (question, maxScore)
+    }
+
+    grouped.values.map(getQuestionScorePair)
   }
 
 
@@ -117,7 +126,9 @@ class StackOverflow extends Serializable {
       }
     }
 
-    ???
+    scored.map({case (post, score) => (firstLangInTag(post.tags, langs), score)})
+          .filter({case (indexOption, score) => indexOption.isDefined})
+          .map({case (indexOption, score) => (indexOption.get * langSpread, score)})
   }
 
 
@@ -172,9 +183,9 @@ class StackOverflow extends Serializable {
 
   /** Main kmeans computation */
   @tailrec final def kmeans(means: Array[(Int, Int)], vectors: RDD[(Int, Int)], iter: Int = 1, debug: Boolean = false): Array[(Int, Int)] = {
-    val newMeans = means.clone() // you need to compute newMeans
-
-    // TODO: Fill in the newMeans array
+    val clustered = vectors.map(x => (findClosest(x, means), x)).groupByKey()
+    val newMeansMap = clustered.mapValues(averageVectors).collect().toMap
+    val newMeans = (for (i <- 0 until means.size) yield newMeansMap.getOrElse(i, means(i))).toArray
     val distance = euclideanDistance(means, newMeans)
 
     if (debug) {
