@@ -19,8 +19,7 @@ object StackOverflow extends StackOverflow {
 
   /** Main function */
   def main(args: Array[String]): Unit = {
-
-    val lines   = sc.textFile("src/main/resources/stackoverflow/stackoverflow.csv").sample(true, 0.1, 0)
+    val lines   = sc.textFile("src/main/resources/stackoverflow/stackoverflow.csv").sample(true, 0.05, 0)
     val raw     = rawPostings(lines)
     val grouped = groupedPostings(raw)
     val scored  = scoredPostings(grouped)
@@ -129,6 +128,7 @@ class StackOverflow extends Serializable {
     scored.map({case (post, score) => (firstLangInTag(post.tags, langs), score)})
           .filter({case (indexOption, score) => indexOption.isDefined})
           .map({case (indexOption, score) => (indexOption.get * langSpread, score)})
+          .persist()
   }
 
 
@@ -285,12 +285,15 @@ class StackOverflow extends Serializable {
 
     val median = closestGrouped.mapValues { vs =>
       val groupedByLang = vs.groupBy(_._1).map({case (k, v) => (langs(k / langSpread), v)})
+      val sortedScores = vs.map(_._2).toArray.sorted
+
       val langLabel: String   = groupedByLang.mapValues(_.size).maxBy(_._2)._1
       val langPercent: Double = 100 * groupedByLang(langLabel).size / vs.size.toDouble
       val clusterSize: Int    = vs.size
-      val sortedScores = vs.map(_._2).toArray.sorted
-      val medianScore: Int    = sortedScores(clusterSize / 2)
-
+      val medianScore: Int    = {
+        if (clusterSize % 2 == 1) sortedScores(clusterSize / 2)
+        else (sortedScores(clusterSize / 2 - 1) + sortedScores(clusterSize / 2)) / 2
+      }
       (langLabel, langPercent, clusterSize, medianScore)
     }
 
