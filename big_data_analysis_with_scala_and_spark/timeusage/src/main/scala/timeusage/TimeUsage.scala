@@ -18,6 +18,55 @@ object TimeUsage {
       .config("spark.master", "local")
       .getOrCreate()
 
+  //+-----------+------+------+------------+----+-----+
+  //|    working|   sex|   age|primaryNeeds|work|other|
+  //+-----------+------+------+------------+----+-----+
+  //|not working|female|active|        12.4| 0.5| 10.8|
+  //|not working|female| elder|        10.9| 0.4| 12.4|
+  //|not working|female| young|        12.5| 0.2| 11.1|
+  //|not working|  male|active|        11.4| 0.9| 11.4|
+  //|not working|  male| elder|        10.7| 0.7| 12.3|
+  //|not working|  male| young|        11.6| 0.2| 11.9|
+  //|    working|female|active|        11.5| 4.2|  8.1|
+  //|    working|female| elder|        10.6| 3.9|  9.3|
+  //|    working|female| young|        11.6| 3.3|  8.9|
+  //|    working|  male|active|        10.8| 5.2|  7.8|
+  //|    working|  male| elder|        10.4| 4.8|  8.6|
+  //|    working|  male| young|        10.9| 3.7|  9.2|
+  //+-----------+------+------+------------+----+-----+
+  //+-----------+------+------+------------+----+-----+
+  //|    working|   sex|   age|primaryNeeds|work|other|
+  //+-----------+------+------+------------+----+-----+
+  //|not working|female|active|        12.4| 0.5| 10.8|
+  //|not working|female| elder|        10.9| 0.4| 12.4|
+  //|not working|female| young|        12.5| 0.2| 11.1|
+  //|not working|  male|active|        11.4| 0.9| 11.4|
+  //|not working|  male| elder|        10.7| 0.7| 12.3|
+  //|not working|  male| young|        11.6| 0.2| 11.9|
+  //|    working|female|active|        11.5| 4.2|  8.1|
+  //|    working|female| elder|        10.6| 3.9|  9.3|
+  //|    working|female| young|        11.6| 3.3|  8.9|
+  //|    working|  male|active|        10.8| 5.2|  7.8|
+  //|    working|  male| elder|        10.4| 4.8|  8.6|
+  //|    working|  male| young|        10.9| 3.7|  9.2|
+  //+-----------+------+------+------------+----+-----+
+  //+-----------+------+------+------------+----+-----+
+  //|    working|   sex|   age|primaryNeeds|work|other|
+  //+-----------+------+------+------------+----+-----+
+  //|not working|female|active|        12.4| 0.5| 10.8|
+  //|not working|female| elder|        10.9| 0.4| 12.4|
+  //|not working|female| young|        12.5| 0.2| 11.1|
+  //|not working|  male|active|        11.4| 0.9| 11.4|
+  //|not working|  male| elder|        10.7| 0.7| 12.3|
+  //|not working|  male| young|        11.6| 0.2| 11.9|
+  //|    working|female|active|        11.5| 4.2|  8.1|
+  //|    working|female| elder|        10.6| 3.9|  9.3|
+  //|    working|female| young|        11.6| 3.3|  8.9|
+  //|    working|  male|active|        10.8| 5.2|  7.8|
+  //|    working|  male| elder|        10.4| 4.8|  8.6|
+  //|    working|  male| young|        10.9| 3.7|  9.2|
+  //+-----------+------+------+------------+----+-----+
+
   // For implicit conversions like converting RDDs to DataFrames
   import spark.implicits._
 
@@ -30,9 +79,9 @@ object TimeUsage {
     val (columns, initDf) = read("/timeusage/atussum.csv")
     val (primaryNeedsColumns, workColumns, otherColumns) = classifiedColumns(columns)
     val summaryDf = timeUsageSummary(primaryNeedsColumns, workColumns, otherColumns, initDf)
-    val finalDf = timeUsageGrouped(summaryDf)
+    //val finalDf = timeUsageGrouped(summaryDf)
     //val finalDf = timeUsageGroupedSql(summaryDf)
-    //val finalDf = timeUsageGroupedTyped(timeUsageSummaryTyped(summaryDf))
+    val finalDf = timeUsageGroupedTyped(timeUsageSummaryTyped(summaryDf))
     finalDf.show()
   }
 
@@ -97,12 +146,17 @@ object TimeUsage {
     *    “t10”, “t12”, “t13”, “t14”, “t15”, “t16” and “t18” (those which are not part of the previous groups only).
     */
   def classifiedColumns(columnNames: List[String]): (List[Column], List[Column], List[Column]) = {
-    def nameContains(name: String, codes: List[String]) = codes.exists(name contains _)
-    def isPrimary(name: String) = nameContains(name, List("t01", "t03", "t11", "t1801", "t1803"))
-    def isWork(name: String) = nameContains(name, List("t05", "t1805"))
-    def isOther(name: String) = nameContains(name, List("t02", "t04", "t06", "t07", "t08", "t09",
-                                                        "t10", "t12", "t13", "t14", "t15", "t16", "t18"))
-    def filterThenMapToColumn(names: List[String], predicate: String => Boolean) = names.filter(predicate).map(x => $"$x")
+    def nameStartsWith(name: String, codes: List[String]) = codes.exists(name.startsWith(_))
+    def isPrimary(name: String) = nameStartsWith(name, List("t01", "t03", "t11", "t1801", "t1803"))
+    def isWork(name: String) = nameStartsWith(name, List("t05", "t1805"))
+    def isOther(name: String) = {
+      val prefixBool = nameStartsWith(name, List("t02", "t04", "t06", "t07", "t08", "t09", "t10",
+                                                 "t12", "t13", "t14", "t15", "t16", "t18"))
+      prefixBool && !isPrimary(name) && !isWork(name)
+    }
+    def filterThenMapToColumn(names: List[String], predicate: String => Boolean) = {
+      names.filter(predicate).map(x => $"$x")
+    }
 
     (filterThenMapToColumn(columnNames, isPrimary),
      filterThenMapToColumn(columnNames, isWork),
@@ -181,8 +235,9 @@ object TimeUsage {
     */
   def timeUsageGrouped(summed: DataFrame): DataFrame = {
     summed.groupBy($"working", $"sex", $"age")
-          .agg(round(avg($"primaryNeeds")), round(avg($"work")), round(avg($"other")))
+          .agg(round(avg($"primaryNeeds"), 1), round(avg($"work"), 1), round(avg($"other"), 1))
           .orderBy($"working", $"sex", $"age")
+          .toDF("working", "sex", "age", "primaryNeeds", "work", "other")
   }
 
   /**
@@ -193,13 +248,14 @@ object TimeUsage {
     val viewName = s"summed"
     summed.createOrReplaceTempView(viewName)
     spark.sql(timeUsageGroupedSqlQuery(viewName))
+         .toDF("working", "sex", "age", "primaryNeeds", "work", "other")
   }
 
   /** @return SQL query equivalent to the transformation implemented in `timeUsageGrouped`
     * @param viewName Name of the SQL view to use
     */
   def timeUsageGroupedSqlQuery(viewName: String): String = {
-    s"""SELECT ROUND(AVG(primaryNeeds)), ROUND(AVG(work)), ROUND(AVG(other))
+    s"""SELECT working, sex, age, ROUND(AVG(primaryNeeds), 1), ROUND(AVG(work), 1), ROUND(AVG(other), 1)
         FROM $viewName
         GROUP BY working, sex, age
         ORDER BY working, sex, age """
@@ -213,7 +269,7 @@ object TimeUsage {
     * cast them at the same time.
     */
   def timeUsageSummaryTyped(timeUsageSummaryDf: DataFrame): Dataset[TimeUsageRow] = {
-    def makeTimeUsageRow(row: Row): TimeUsageRow = {
+    timeUsageSummaryDf map {row =>
       TimeUsageRow(
         row.getAs[String]("working"),
         row.getAs[String]("sex"),
@@ -223,8 +279,6 @@ object TimeUsage {
         row.getAs[Double]("other")
         )
     }
-
-    timeUsageSummaryDf map makeTimeUsageRow
   }
 
   /**
@@ -240,15 +294,16 @@ object TimeUsage {
     */
   def timeUsageGroupedTyped(summed: Dataset[TimeUsageRow]): Dataset[TimeUsageRow] = {
     import org.apache.spark.sql.expressions.scalalang.typed
-    type ResultingRow = (((String, String, String), Double, Double, Double))
+    type ResultingRow = ((String, String, String), Double, Double, Double)
     def makeTimeUsageRow(row: ResultingRow): TimeUsageRow = {
-      TimeUsageRow(row._1._1, row._1._2, row._1._3, row._2, row._3, row._4)
+      def round(x: Double): Double = Math.round(10 * x) / 10.0
+      TimeUsageRow(row._1._1, row._1._2, row._1._3, round(row._2), round(row._3), round(row._4))
     }
 
     summed.groupByKey(row => (row.working, row.sex, row.age))
-          .agg(typed.avg(row => row.primaryNeeds), typed.avg(row => row.work), typed.avg(row => row.other))
-          .orderBy($"working", $"sex", $"age")
+          .agg(typed.avg(_.primaryNeeds), typed.avg(_.work), typed.avg(_.other))
           .map(makeTimeUsageRow)
+          .sort($"working", $"sex", $"age")
   }
 }
 
