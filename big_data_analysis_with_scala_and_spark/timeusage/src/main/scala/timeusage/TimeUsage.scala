@@ -62,15 +62,22 @@ object TimeUsage {
     *         have type Double. None of the fields are nullable.
     * @param columnNames Column names of the DataFrame
     */
-  def dfSchema(columnNames: List[String]): StructType =
-    ???
+  def dfSchema(columnNames: List[String]): StructType = {
+    val structFields = for ((name, i) <- columnNames zip Stream.from(0)) yield {
+      val fieldType = if (i == 0) StringType else DoubleType
+      StructField(name, fieldType, false)
+    }
+    StructType(structFields)
+  }
 
 
   /** @return An RDD Row compatible with the schema produced by `dfSchema`
     * @param line Raw fields
     */
-  def row(line: List[String]): Row =
-    ???
+  def row(line: List[String]): Row = {
+    val values = for ((cell, i) <- line zip Stream.from(0)) yield if (i == 0) cell else cell.toDouble
+    Row(values)
+  }
 
   /** @return The initial data frame columns partitioned in three groups: primary needs (sleeping, eating, etc.),
     *         work and other (leisure activities)
@@ -88,7 +95,15 @@ object TimeUsage {
     *    “t10”, “t12”, “t13”, “t14”, “t15”, “t16” and “t18” (those which are not part of the previous groups only).
     */
   def classifiedColumns(columnNames: List[String]): (List[Column], List[Column], List[Column]) = {
-    ???
+    def nameContains(name: String, codes: List[String]) = codes.exists(name contains _)
+    def isPrimary(name: String) = nameContains(name, List("t01", "t03", "t11", "t1801", "t1803"))
+    def isWork(name: String) = nameContains(name, List("t05", "t1805"))
+    def isOther(name: String) = !isPrimary(name) && !isWork(name)
+    def filterThenMapToColumn(names: List[String], predicate: String => Boolean) = names.filter(predicate).map(x => $"$x")
+
+    (filterThenMapToColumn(columnNames, isPrimary),
+     filterThenMapToColumn(columnNames, isWork),
+     filterThenMapToColumn(columnNames, isOther))
   }
 
   /** @return a projection of the initial DataFrame such that all columns containing hours spent on primary needs
