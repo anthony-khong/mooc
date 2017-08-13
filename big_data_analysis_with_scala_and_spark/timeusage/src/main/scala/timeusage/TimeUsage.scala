@@ -76,7 +76,7 @@ object TimeUsage {
     */
   def row(line: List[String]): Row = {
     val values = for ((cell, i) <- line zip Stream.from(0)) yield if (i == 0) cell else cell.toDouble
-    Row(values)
+    Row.fromSeq(values)
   }
 
   /** @return The initial data frame columns partitioned in three groups: primary needs (sleeping, eating, etc.),
@@ -98,7 +98,8 @@ object TimeUsage {
     def nameContains(name: String, codes: List[String]) = codes.exists(name contains _)
     def isPrimary(name: String) = nameContains(name, List("t01", "t03", "t11", "t1801", "t1803"))
     def isWork(name: String) = nameContains(name, List("t05", "t1805"))
-    def isOther(name: String) = !isPrimary(name) && !isWork(name)
+    def isOther(name: String) = nameContains(name, List("t02", "t04", "t06", "t07", "t08", "t09",
+                                                        "t10", "t12", "t13", "t14", "t15", "t16", "t18"))
     def filterThenMapToColumn(names: List[String], predicate: String => Boolean) = names.filter(predicate).map(x => $"$x")
 
     (filterThenMapToColumn(columnNames, isPrimary),
@@ -142,16 +143,21 @@ object TimeUsage {
     otherColumns: List[Column],
     df: DataFrame
   ): DataFrame = {
-    val workingStatusProjection: Column = ???
-    val sexProjection: Column = ???
-    val ageProjection: Column = ???
+    val workingStatusProjection: Column = when($"telfs" >= 1 and $"telfs" < 3, "working").otherwise("not working")
+    val sexProjection: Column = when($"tesex" === 1, "male").otherwise("female")
+    val ageProjection: Column = (
+      when($"teage" >= 15 and $"teage" <= 22, "young")
+        .when($"teage" >= 23 and $"teage" <= 55, "active")
+        .otherwise("elder")
+      )
 
-    val primaryNeedsProjection: Column = ???
-    val workProjection: Column = ???
-    val otherProjection: Column = ???
+    val primaryNeedsProjection: Column = primaryNeedsColumns.reduce(_+_)
+    val workProjection: Column = workColumns.reduce(_+_)
+    val otherProjection: Column = otherColumns.reduce(_+_)
     df
       .select(workingStatusProjection, sexProjection, ageProjection, primaryNeedsProjection, workProjection, otherProjection)
       .where($"telfs" <= 4) // Discard people who are not in labor force
+      .toDF("working", "sex", "age", "primaryNeeds", "work", "other")
   }
 
   /** @return the average daily time (in hours) spent in primary needs, working or leisure, grouped by the different
